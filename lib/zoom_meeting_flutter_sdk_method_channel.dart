@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'zoom_meeting_flutter_sdk_platform_interface.dart';
 
 /// An implementation of [ZoomMeetingFlutterSdkPlatform] that uses method channels.
-class MethodChannelZoomMeetingFlutterSdk extends ZoomMetingFlutterSdkPlatform {
+class MethodChannelZoomMeetingFlutterSdk extends ZoomMeetingFlutterSdkPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
   final methodChannel = const MethodChannel('zoom_meeting_flutter_sdk');
