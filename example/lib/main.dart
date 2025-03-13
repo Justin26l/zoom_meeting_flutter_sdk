@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:zoom_native_sdk/zoom_native_sdk.dart';
+import 'package:zoom_native_sdk/zoom_meeting_flutter_sdk.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final _zoomNativelyPlugin = ZoomNativeSdk();
+  final _zoomNativelyPlugin = ZoomMeetingFlutterSdk();
   bool isInitialized = false;
 
   @override
@@ -33,10 +33,9 @@ class _MyAppState extends State<MyApp> {
     try {
       if (!isInitialized) {
         isInitialized = (await _zoomNativelyPlugin.initZoom(
-              appKey: "",
-              appSecret: "",
-            )) ??
-            false;
+          jwtToken: "",
+          )) ??
+          false;
       }
     } on PlatformException catch (e) {
       debugPrint(e.message);
@@ -63,6 +62,7 @@ class _MyAppState extends State<MyApp> {
                 await _zoomNativelyPlugin.joinMeting(
                   meetingNumber: "",
                   meetingPassword: "",
+                  displayName: ""
                 );
               }
             },

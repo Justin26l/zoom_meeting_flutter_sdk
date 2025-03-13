@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('zoom_native_sdk');
+  const MethodChannel channel = MethodChannel('zoom_meeting_flutter_sdk');
 
   TestWidgetsFlutterBinding.ensureInitialized();
 

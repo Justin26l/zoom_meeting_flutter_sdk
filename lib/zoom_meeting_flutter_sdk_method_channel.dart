@@ -1,24 +1,22 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-import 'zoom_native_sdk_platform_interface.dart';
+import 'zoom_meeting_flutter_sdk_platform_interface.dart';
 
-/// An implementation of [ZoomNativeSdkPlatform] that uses method channels.
-class MethodChannelZoomNativeSdk extends ZoomNativeSdkPlatform {
+/// An implementation of [ZoomMeetingFlutterSdkPlatform] that uses method channels.
+class MethodChannelZoomMeetingFlutterSdk extends ZoomMetingFlutterSdkPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
-  final methodChannel = const MethodChannel('zoom_native_sdk');
+  final methodChannel = const MethodChannel('zoom_meeting_flutter_sdk');
 
   @override
   Future<bool?> initZoom({
-    required String appKey,
-    required String appSecret,
+    required String jwtToken
   }) async {
     final version = await methodChannel.invokeMethod<bool>(
       'initZoom',
       {
-        "appKey": appKey,
-        "appSecret": appSecret,
+        "jwtToken": jwtToken,
       },
     );
     return version;
@@ -28,12 +26,14 @@ class MethodChannelZoomNativeSdk extends ZoomNativeSdkPlatform {
   Future<bool?> joinMeting({
     required String meetingNumber,
     required String meetingPassword,
+    required String displayName,
   }) async {
     final version = await methodChannel.invokeMethod<bool>(
       'joinMeeting',
       {
         "meetingNumber": meetingNumber,
         "meetingPassword": meetingPassword,
+        "displayName": displayName
       },
     );
     debugPrint("MethodChannelZoomNatively-joinMeting -> $version");

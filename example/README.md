@@ -4,7 +4,7 @@ this version is initial join zoom meeting using native sdk for android and ios
 using
 import 'package:zoom_native_sdk/zoom_native_sdk.dart';
 
-final _zoomNativelyPlugin = ZoomNativeSdk();
+final _zoomNativelyPlugin = ZoomMeetingFlutterSdk();
 
 isInitialized = (await _zoomNativelyPlugin.initZoom(
 appKey: "",

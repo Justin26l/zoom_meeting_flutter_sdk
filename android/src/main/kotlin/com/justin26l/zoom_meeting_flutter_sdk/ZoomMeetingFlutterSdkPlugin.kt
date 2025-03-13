@@ -1,4 +1,4 @@
-package com.aboelola.zoom_native_sdk
+package com.justin26l.zoom_flutter_sdk
 
 import android.app.Activity
 import android.util.Log
@@ -10,8 +10,8 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.Result
 import us.zoom.sdk.*
 
-/** ZoomNativeSdkPlugin */
-class ZoomNativeSdkPlugin : FlutterPlugin, MethodChannel.MethodCallHandler, MeetingServiceListener,
+/** ZoomMeetingFlutterSdkPlugin */
+class ZoomMeetingFlutterSdkPlugin : FlutterPlugin, MethodChannel.MethodCallHandler, MeetingServiceListener,
     ZoomSDKInitializeListener, ActivityAware {
 
 //    private val statusListener: MeetingServiceListener? = null
@@ -24,20 +24,26 @@ class ZoomNativeSdkPlugin : FlutterPlugin, MethodChannel.MethodCallHandler, Meet
 
 
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "zoom_native_sdk")
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "zoom_flutter_sdk")
         channel.setMethodCallHandler(this)
     }
 
     override fun onMethodCall(call: MethodCall, result: Result) {
         when (call.method) {
+            // https://marketplacefront.zoom.us/sdk/meeting/android/us/zoom/sdk/ZoomSDKInitParams.html
             "initZoom" -> {
                 val arguments: Map<String, String>? = call.arguments<Map<String, String>>()
-                initZoom(arguments?.get("appKey"), arguments?.get("appSecret"))
+                initZoom(arguments?.get("jwtToken"))
                 result.success(true)
             }
+            // https://marketplacefront.zoom.us/sdk/meeting/android/us/zoom/sdk/JoinMeetingParams.html
             "joinMeeting" -> {
                 val arguments: Map<String, String>? = call.arguments<Map<String, String>>()
-                joinMeeting(arguments?.get("meetingNumber"), arguments?.get("meetingPassword"))
+                joinMeeting(
+                    arguments?.get("meetingNumber"), 
+                    arguments?.get("meetingPassword"),
+                    arguments?.get("displayName")
+                )
                 Log.d("TAG", "onMethodCall: $arguments")
                 result.success(true)
             }
@@ -51,17 +57,16 @@ class ZoomNativeSdkPlugin : FlutterPlugin, MethodChannel.MethodCallHandler, Meet
         channel.setMethodCallHandler(null)
     }
 
-    fun initZoom(appKey: String?, appSecret: String?) {
+    fun initZoom(jwtToken: String?) {
         zoomSDK = ZoomSDK.getInstance()
         val initParams = ZoomSDKInitParams()
         initParams.domain = WEB_DOMAIN
-        initParams.appKey = appKey
-        initParams.appSecret = appSecret
+        initParams.jwtToken = jwtToken
 
         zoomSDK?.initialize(activity, this, initParams)
     }
 
-    fun joinMeeting(meetingId: String?, meetingPassword: String?) {
+    fun joinMeeting(meetingId: String?, meetingPassword: String?, displayName: String?) {
 
         val meetingService = zoomSDK?.meetingService
         val opts = JoinMeetingOptions()
@@ -81,6 +86,7 @@ class ZoomNativeSdkPlugin : FlutterPlugin, MethodChannel.MethodCallHandler, Meet
         val params = JoinMeetingParams()
         params.meetingNo = meetingId
         params.password = meetingPassword
+        params.displayName = displayName
 
         meetingService?.joinMeetingWithParams(activity, params, opts)
     }

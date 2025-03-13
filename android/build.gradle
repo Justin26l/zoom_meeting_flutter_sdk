@@ -1,4 +1,4 @@
-group 'com.aboelola.zoom_native_sdk'
+group 'com.justin26l.zoom_flutter_sdk'
 version '1.0-SNAPSHOT'
 
 buildscript {
@@ -27,7 +27,7 @@ rootProject.allprojects {
         jcenter()
 
         flatDir {
-            dirs project(':zoom_native_sdk').file('libs')
+            dirs project(':zoom_flutter_sdk').file('mobilertc')
         }
     }
 }

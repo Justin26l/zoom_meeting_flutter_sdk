@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.aboelola.zoom_native_sdk_example">
+    package="com.justin26l.zoom_native_sdk_example">
    <application
         android:label="zoom_native_sdk_example"
         android:name="${applicationName}"

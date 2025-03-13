@@ -1,4 +1,4 @@
-# zoom_native_sdk
+# zoom_flutter_sdk
 
 [![Pub](https://img.shields.io/pub/v/zoom_native_sdk.svg)](https://pub.dartlang.org/packages/zoom_native_sdk)
 [![likes](https://img.shields.io/pub/likes/zoom_native_sdk)](https://pub.dev/packages/zoom_native_sdk/score)
@@ -20,7 +20,6 @@ download zoom sdk for android by running this command in terminal
 ```
 dart run zoom_native_sdk:download
 ```
-
 </details>
 
 <details><summary>iOS</summary>
@@ -90,13 +89,12 @@ import 'package:zoom_native_sdk/zoom_native_sdk.dart';
 ```
 
 ```
-final _zoomNativelyPlugin = ZoomNativeSdk();
+final _zoomNativelyPlugin = ZoomMeetingFlutterSdk();
 ```
 
 ```
 isInitialized = (await _zoomNativelyPlugin.initZoom(
-  appKey: "",
-  appSecret: "",
+  jwtToken: "",
 )) ??
 false;
 ```
@@ -110,15 +108,6 @@ await _zoomNativelyPlugin.joinMeting(
 
 ### About Develpment
 -------------------------------
-
-develop and maintenance by **Al7osam company**
-<p align="center">
-<img align="center" src="https://play-lh.googleusercontent.com/T04y6F4hKkzh6fygIF9S45_quM2MmLkOOlKzuAg__uskxQQ9_bxrM0lZ8t8PchRRuS0=w3840-h2160-rw?raw=true" />
-</p>
-<p align="center">
-<a href="https://play.google.com/store/apps/dev?id=8288448436887856501" target="_blank"><img src="https://img.shields.io/badge/Google%20Play-Al7osam-darkred.svg?style=for-the-badge&logo=google&logoColor=white"></a>&nbsp;&nbsp;&nbsp;<a href="https://www.threads.net/@al7osamsolutions" target="_blank"><img src="https://img.shields.io/badge/instagram-@Al7osam-blue.svg?style=for-the-badge&logo=instagram&logoColor=white"></a>
-&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/Al7osamCompany/" target="_blank"><img src="https://img.shields.io/badge/facebook-Al7osam-darkblue.svg?style=for-the-badge&logo=Facebook&logoColor=white"></a>
- &nbsp;&nbsp;&nbsp;<a href="https://apps.apple.com/eg/developer/al7osam/id1292208382" target="_blank"><img src="https://img.shields.io/badge/apple-Al7osam-orange.svg?style=for-the-badge&logo=Apple&logoColor=white"></a>
-<br>
-</p>
+Develop & Maintain by Justin26l
+forked from **Al7osam company**
 <br>
