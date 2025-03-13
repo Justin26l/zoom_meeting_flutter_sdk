@@ -1,4 +1,4 @@
-package com.justin26l.zoom_flutter_sdk
+package com.justin26l.zoom_meeting_flutter_sdk
 
 import android.app.Activity
 import android.util.Log
@@ -24,7 +24,7 @@ class ZoomMeetingFlutterSdkPlugin : FlutterPlugin, MethodChannel.MethodCallHandl
 
 
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "zoom_flutter_sdk")
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "zoom_meeting_flutter_sdk")
         channel.setMethodCallHandler(this)
     }
 

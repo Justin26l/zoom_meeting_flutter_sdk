@@ -1,4 +1,4 @@
-# zoom_flutter_sdk
+# zoom_meeting_flutter_sdk
 
 [![Pub](https://img.shields.io/pub/v/zoom_native_sdk.svg)](https://pub.dartlang.org/packages/zoom_native_sdk)
 [![likes](https://img.shields.io/pub/likes/zoom_native_sdk)](https://pub.dev/packages/zoom_native_sdk/score)
