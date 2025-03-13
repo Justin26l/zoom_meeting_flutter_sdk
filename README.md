@@ -18,7 +18,7 @@ In order to work correctly there needs to be some platform specific setup. Check
 download zoom sdk for android by running this command in terminal
 
 ```
-dart run zoom_native_sdk:download
+dart run zoom_meeting_flutter_sdk:download
 ```
 </details>
 
