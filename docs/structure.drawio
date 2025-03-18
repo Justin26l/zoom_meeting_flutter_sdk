@@ -1,0 +1,117 @@
+<mxfile host="65bd71144e">
+    <diagram id="1XGc3kxn4AOt9pJSvt7Z" name="Page-1">
+        <mxGraphModel dx="1520" dy="2352" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="18" value="&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="1140" y="-5" width="20" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Flutter Application" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="79" y="80" width="1281" height="920" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=2;" edge="1" parent="34">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="681" y="910" as="sourcePoint"/>
+                        <mxPoint x="681" y="30" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="34" source="2" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="101" y="270"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="34" source="4" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="221" y="390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="34" source="4" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="221" y="630"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="Flutter ZoomSDKWrapper" style="rounded=0;whiteSpace=wrap;html=1;" parent="34" vertex="1">
+                    <mxGeometry x="161" y="240" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=none;html=1;" parent="34" source="5" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Flutter ZoomSDKWrapper&lt;br&gt;Macos" style="rounded=0;whiteSpace=wrap;html=1;" parent="34" vertex="1">
+                    <mxGeometry x="281" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="34" source="6" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Flutter ZoomSDKWrapper&lt;br&gt;Mobile" style="rounded=0;whiteSpace=wrap;html=1;" parent="34" vertex="1">
+                    <mxGeometry x="281" y="600" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="edgeStyle=none;html=1;" parent="34" source="10" target="11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Swift&lt;span style=&quot;color: rgb(63, 63, 63);&quot;&gt;&lt;br&gt;&lt;/span&gt;Flutter Channel &lt;br&gt;(b&lt;span style=&quot;color: rgb(63, 63, 63);&quot;&gt;ridge&lt;/span&gt;)" style="rounded=0;whiteSpace=wrap;html=1;" parent="34" vertex="1">
+                    <mxGeometry x="721" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="edgeStyle=none;html=1;" parent="34" source="11" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;Objective C&lt;br&gt;BridgeHeader&lt;br&gt;(bridge)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="34" vertex="1">
+                    <mxGeometry x="881" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;div&gt;ZoomSDK&lt;br&gt;macOS&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="34" vertex="1">
+                    <mxGeometry x="1121" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="edgeStyle=none;html=1;" parent="34" source="25" target="28" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="ZoomSDK&lt;br&gt;iOS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="34" vertex="1">
+                    <mxGeometry x="1121" y="780" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-weight: 400;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Flutter pakcage :&amp;nbsp;&lt;/span&gt;zoom_meeting_flutter_sdk&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=30;" parent="34" vertex="1">
+                    <mxGeometry x="441" y="550" width="598" height="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="32" source="19" target="23" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="119" y="160"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="32" source="19" target="25" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="119" y="260"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="" style="edgeStyle=none;html=1;" parent="32" source="23" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Android Kotlin" style="rounded=0;whiteSpace=wrap;html=1;" parent="32" vertex="1">
+                    <mxGeometry x="279" y="130" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="&lt;div&gt;ZoomSDK&lt;br&gt;Android&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="32" vertex="1">
+                    <mxGeometry x="439" y="130" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="iOS" style="rounded=0;whiteSpace=wrap;html=1;" parent="32" vertex="1">
+                    <mxGeometry x="279" y="230" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Flutter pakcage&lt;br&gt;zoom_meeting_flutter_sdk&lt;br&gt;Mobile" style="rounded=0;whiteSpace=wrap;html=1;" parent="32" vertex="1">
+                    <mxGeometry x="39" y="50" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Flutter App" style="rounded=0;whiteSpace=wrap;html=1;" parent="34" vertex="1">
+                    <mxGeometry x="41" y="120" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Platforms Native" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;" parent="34" vertex="1">
+                    <mxGeometry x="711" y="40" width="200" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

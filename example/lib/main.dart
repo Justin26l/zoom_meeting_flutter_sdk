@@ -1,22 +1,42 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
-
-import 'package:flutter/services.dart';
-import 'package:zoom_native_sdk/zoom_native_sdk.dart';
+import 'package:flutter/material.dart';
+import 'package:fixnum/fixnum.dart';
+import 'whoopwhoop/zoom_sdk_wrapper.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Zoom Meeting Flutter SDK Example',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(),
+    );
+  }
 }
 
-class _MyAppState extends State<MyApp> {
-  final _zoomNativeSdkPlugin = ZoomNativeSdk();
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  final _zoomSDK = ZoomSDKWrapper();
+  bool isInitialized = false;
+  
+  // Text controllers for the meeting form
+  final TextEditingController _meetingNumberController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
 
   @override
   void initState() {
@@ -24,36 +44,106 @@ class _MyAppState extends State<MyApp> {
     initPlatformState();
   }
 
-  // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-    String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    // We also handle the message potentially returning null.
     try {
-      // platformVersion =
-      //     await _zoomNativeSdkPlugin.getPlatformVersion() ?? 'Unknown platform version';
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
+      if (!isInitialized) {
+        debugPrint("initZoom -> isInitialized = $isInitialized");
+        isInitialized = (await _zoomSDK.initZoom(jwtToken: "")) ?? false;
+        debugPrint("initZoom -> result = $isInitialized");
+        
+        if (isInitialized) {
+          setState(() {}); // Update UI to reflect initialized state
+        }
+      }
+    } catch (e) {
+      debugPrint("Error initializing Zoom: $e");
     }
 
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
     if (!mounted) return;
-
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body: const Center(
-          child: Text('Running on: \n'),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Zoom SDK Cross-Platform Demo'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextField(
+              controller: _meetingNumberController,
+              decoration: const InputDecoration(labelText: 'Meeting Number'),
+              keyboardType: TextInputType.number,
+            ),
+            const SizedBox(height: 12),
+            TextField(
+              controller: _passwordController,
+              decoration: const InputDecoration(labelText: 'Meeting Password'),
+            ),
+            const SizedBox(height: 12),
+            TextField(
+              controller: _nameController,
+              decoration: const InputDecoration(labelText: 'Your Name'),
+            ),
+            const SizedBox(height: 24),
+            ElevatedButton(
+              onPressed: isInitialized ? _joinMeeting : initPlatformState,
+              child: Text(isInitialized ? "Join Meeting" : "Initialize SDK"),
+            ),
+            const SizedBox(height: 16),
+            Text(
+              isInitialized
+                  ? "SDK Initialized Successfully"
+                  : "SDK Not Initialized",
+              style: TextStyle(
+                color: isInitialized ? Colors.green : Colors.red,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
         ),
       ),
     );
+  }
+  
+  Future<void> _joinMeeting() async {
+    if (!isInitialized) {
+      debugPrint("SDK not initialized");
+      return;
+    }
+    
+    if (_meetingNumberController.text.isEmpty ||
+        _nameController.text.isEmpty) {
+      // Show an error message
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Please enter meeting number and your name")),
+      );
+      return;
+    }
+    
+    // try {
+      final meetingNumber_int = int.tryParse(_meetingNumberController.text);
+      if (meetingNumber_int == null) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("Invalid meeting number")),
+        );
+        return;
+      }
+
+      Int64 meetingNumber = Int64(meetingNumber_int);
+      await _zoomSDK.joinMeeting(
+        meetingNumber: meetingNumber,
+        meetingPassword: _passwordController.text,
+        displayName: _nameController.text,
+      );
+    // } catch (e) {
+    //   debugPrint("Error joining meeting: $e");
+    //   ScaffoldMessenger.of(context).showSnackBar(
+    //     SnackBar(content: Text("Failed to join meeting: $e")),
+    //   );
+    // }
   }
 }

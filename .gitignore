@@ -30,6 +30,8 @@ migrate_working_dir/
 build/
 pubspeclock
 
-
-example
 mobilertc.aar
+ZoomSDK/
+Plugins/
+
+.vscode/
