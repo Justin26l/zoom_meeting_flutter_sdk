@@ -2,7 +2,6 @@ import 'dart:io' show Platform;
 import 'ZoomPlatformInterface.dart';
 import 'ZoomMobileImplementation.dart';
 import 'ZoomMacOSImplementation.dart';
-import 'package:fixnum/fixnum.dart';
 import 'package:flutter/foundation.dart';
 
 class ZoomSDKWrapper implements ZoomPlatformInterface {
@@ -33,7 +32,7 @@ class ZoomSDKWrapper implements ZoomPlatformInterface {
 
   @override
   Future<bool?> joinMeeting({
-    required Int64 meetingNumber, 
+    required int meetingNumber, 
     required String meetingPassword, 
     required String displayName
   }) {

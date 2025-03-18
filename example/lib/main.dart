@@ -125,15 +125,14 @@ class _MyHomePageState extends State<MyHomePage> {
     }
     
     // try {
-      final meetingNumber_int = int.tryParse(_meetingNumberController.text);
-      if (meetingNumber_int == null) {
+      final meetingNumber = int.tryParse(_meetingNumberController.text);
+      if (meetingNumber == null) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text("Invalid meeting number")),
         );
         return;
       }
 
-      Int64 meetingNumber = Int64(meetingNumber_int);
       await _zoomSDK.joinMeeting(
         meetingNumber: meetingNumber,
         meetingPassword: _passwordController.text,

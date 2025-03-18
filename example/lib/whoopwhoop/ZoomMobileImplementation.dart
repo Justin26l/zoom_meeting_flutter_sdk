@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:fixnum/fixnum.dart';
 import 'package:flutter/foundation.dart';
 import 'package:zoom_meeting_flutter_sdk/zoom_meeting_flutter_sdk.dart';
 import 'ZoomPlatformInterface.dart';
@@ -20,7 +19,7 @@ class ZoomMobileImplementation implements ZoomPlatformInterface {
 
   @override
   Future<bool?> joinMeeting({
-    required Int64 meetingNumber,
+    required int meetingNumber,
     required String meetingPassword,
     required String displayName
   }) async {
