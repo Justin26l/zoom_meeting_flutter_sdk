@@ -6,6 +6,8 @@ import ZoomSDK
 
 @main
 class AppDelegate: FlutterAppDelegate {
+  let sdk = ZoomSDK.shared();
+
   override func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
     // NSLog("Swift: Application should terminate after last window closed")
     return true
@@ -20,7 +22,14 @@ class AppDelegate: FlutterAppDelegate {
       guard let self = self else { return }
       switch call.method {
       case "initZoom":
-        self.initializeSDK(result: result)
+        self.initializeSDK( result: result);
+      case "authSdk":
+        if let args = call.arguments as? [String: Any],
+           let jwtToken = args["jwtToken"] as? String {
+          self.auth(jwtToken: jwtToken, result: result);
+        } else {
+          result(FlutterError(code: "INVALID_ARGUMENTS", message: "Meeting details required", details: nil))
+        }
       case "joinMeeting":
         if let args = call.arguments as? [String: Any],
            let meetingNumber = args["meetingNumber"] as? Int64,
@@ -38,98 +47,169 @@ class AppDelegate: FlutterAppDelegate {
     super.applicationDidFinishLaunching(notification)
   }
 
-  private func initializeSDK(result: @escaping FlutterResult) {
-    let sdk = ZoomSDK.shared()
-    let initParams = ZoomSDKInitParams()
 
+    private func initializeSDK(result: @escaping FlutterResult) {
+    let initParams = ZoomSDKInitParams()
+    initParams.enableLog = true // Optional for debugging
     initParams.zoomDomain = "zoom.us"
-    initParams.enableLog = true
-    
     let initResult = sdk.initSDK(with: initParams)
-    
-    handleZoomSDKError("InitializeSDK", initResult, result: result);
+
+    let initSuccess = handleZoomSDKError("InitializeSDK", initResult);
+    result(initSuccess)
+  }
+
+  private func auth(jwtToken: String, result: @escaping FlutterResult){
+    let authService = sdk.getAuthService();
+    let authContext = ZoomSDKAuthContext()
+    NSLog("JWT Token: " + jwtToken);
+    authContext.jwtToken = jwtToken // Input your JWT
+
+    let authResult = authService.sdkAuth(authContext)
+    // sdk.setZoomDomain("zoom.us")
+
+    result(handleZoomSDKError("SdkAuth", authResult));
   }
 
   private func joinMeeting(meetingNumber: Int64, displayName: String, password: String, result: @escaping FlutterResult) {
     let meetingService = ZoomSDKMeetingService();
     let joinParam = ZoomSDKJoinMeetingElements()
     
-    joinParam.displayName = displayName 
     joinParam.meetingNumber = meetingNumber
+    joinParam.password = password
+    joinParam.displayName = displayName 
     joinParam.isNoAudio = true
     joinParam.isNoVideo = true
-    joinParam.password = password
     
     let joinResult = meetingService.joinMeeting(joinParam);
 
-    handleZoomSDKError("JoinMeeting", joinResult, result: result);
+    result(handleZoomSDKError("JoinMeeting", joinResult));
   }
 
-  private func handleZoomSDKError(_ tags: String, _ error: ZoomSDKError, result: @escaping FlutterResult) {
+  private func handleZoomSDKError(_ tags: String, _ error: ZoomSDKError) -> Bool {
     switch error {
       case ZoomSDKError_Success:
         NSLog(tags + " Successfully")
-        result(true)
+        return true
       case ZoomSDKError_Failed:
-        result(FlutterError(code: "INIT_FAILED", message: "SDK initialization failed", details: nil))
+        // NSLog(FlutterError(code: "INIT_FAILED", message: "SDK initialization failed", details: nil))
+        NSLog(">>>" + tags + " INIT_FAILED")
+        return false
       case ZoomSDKError_Uninit:
-        result(FlutterError(code: "UNINIT", message: "SDK is not initialized", details: nil))
+        // NSLog(FlutterError(code: "UNINIT", message: "SDK is not initialized", details: nil))
+        NSLog(">>>" + tags + " UNINIT")
+        return false
       case ZoomSDKError_ServiceFailed:
-        result(FlutterError(code: "SERVICE_FAILED", message: "Service failed", details: nil))
+        // NSLog(FlutterError(code: "SERVICE_FAILED", message: "Service failed", details: nil))
+        NSLog(">>>" + tags + " SERVICE_FAILED")
+        return false
       case ZoomSDKError_WrongUsage:
-        result(FlutterError(code: "WRONG_USAGE", message: "Incorrect usage of the feature", details: nil))
+        // NSLog(FlutterError(code: "WRONG_USAGE", message: "Incorrect usage of the feature", details: nil))
+        NSLog(">>>" + tags + " WRONG_USAGE")
+        return false
       case ZoomSDKError_InvalidParameter:
-        result(FlutterError(code: "INVALID_PARAMETER", message: "Wrong parameter", details: nil))
+        // NSLog(FlutterError(code: "INVALID_PARAMETER", message: "Wrong parameter", details: nil))
+        NSLog(">>>" + tags + " INVALID_PARAMETER")
+        return false
       case ZoomSDKError_NoPermission:
-        result(FlutterError(code: "NO_PERMISSION", message: "No permission", details: nil))
+        // NSLog(FlutterError(code: "NO_PERMISSION", message: "No permission", details: nil))
+        NSLog(">>>" + tags + " NO_PERMISSION")
+        return false
       case ZoomSDKError_NoRecordingInProgress:
-        result(FlutterError(code: "NO_RECORDING_IN_PROGRESS", message: "There is no recording in process", details: nil))
+        // NSLog(FlutterError(code: "NO_RECORDING_IN_PROGRESS", message: "There is no recording in process", details: nil))
+        NSLog(">>>" + tags + " NO_RECORDING_IN_PROGRESS")
+        return false
       case ZoomSDKError_TooFrequentCall:
-        result(FlutterError(code: "TOO_FREQUENT_CALL", message: "API calls are too frequent", details: nil))
+        // NSLog(FlutterError(code: "TOO_FREQUENT_CALL", message: "API calls are too frequent", details: nil))
+        NSLog(">>>" + tags + " TOO_FREQUENT_CALL")
+        return false
       case ZoomSDKError_UnSupportedFeature:
-        result(FlutterError(code: "UNSUPPORTED_FEATURE", message: "Unsupported feature", details: nil))
+        // NSLog(FlutterError(code: "UNSUPPORTED_FEATURE", message: "Unsupported feature", details: nil))
+        NSLog(">>>" + tags + " UNSUPPORTED_FEATURE")
+        return false
       case ZoomSDKError_EmailLoginIsDisabled:
-        result(FlutterError(code: "EMAIL_LOGIN_DISABLED", message: "Email login is disabled", details: nil))
+        // NSLog(FlutterError(code: "EMAIL_LOGIN_DISABLED", message: "Email login is disabled", details: nil))
+        NSLog(">>>" + tags + " EMAIL_LOGIN_DISABLED")
+        return false
       case ZoomSDKError_ModuleLoadFail:
-        result(FlutterError(code: "MODULE_LOAD_FAIL", message: "Module load failed", details: nil))
+        // NSLog(FlutterError(code: "MODULE_LOAD_FAIL", message: "Module load failed", details: nil))
+        NSLog(">>>" + tags + " MODULE_LOAD_FAIL")
+        return false
       case ZoomSDKError_NoVideoData:
-        result(FlutterError(code: "NO_VIDEO_DATA", message: "No video data", details: nil))
+        // NSLog(FlutterError(code: "NO_VIDEO_DATA", message: "No video data", details: nil))
+        NSLog(">>>" + tags + " NO_VIDEO_DATA")
+        return false
       case ZoomSDKError_NoAudioData:
-        result(FlutterError(code: "NO_AUDIO_DATA", message: "No audio data", details: nil))
+        // NSLog(FlutterError(code: "NO_AUDIO_DATA", message: "No audio data", details: nil))
+        NSLog(">>>" + tags + " NO_AUDIO_DATA")
+        return false
       case ZoomSDKError_NoShareData:
-        result(FlutterError(code: "NO_SHARE_DATA", message: "No share data", details: nil))
+        // NSLog(FlutterError(code: "NO_SHARE_DATA", message: "No share data", details: nil))
+        NSLog(">>>" + tags + " NO_SHARE_DATA")
+        return false
       case ZoomSDKError_NoVideoDeviceFound:
-        result(FlutterError(code: "NO_VIDEO_DEVICE_FOUND", message: "No video device found", details: nil))
+        // NSLog(FlutterError(code: "NO_VIDEO_DEVICE_FOUND", message: "No video device found", details: nil))
+        NSLog(">>>" + tags + " NO_VIDEO_DEVICE_FOUND")
+        return false
       case ZoomSDKError_DeviceError:
-        result(FlutterError(code: "DEVICE_ERROR", message: "Device error", details: nil))
+        // NSLog(FlutterError(code: "DEVICE_ERROR", message: "Device error", details: nil))
+        NSLog(">>>" + tags + " DEVICE_ERROR")
+        return false
       case ZoomSDKError_NotInMeeting:
-        result(FlutterError(code: "NOT_IN_MEETING", message: "Not in meeting", details: nil))
+        // NSLog(FlutterError(code: "NOT_IN_MEETING", message: "Not in meeting", details: nil))
+        NSLog(">>>" + tags + " NOT_IN_MEETING")
+        return false
       case ZoomSDKError_initDevice:
-        result(FlutterError(code: "INIT_DEVICE", message: "Init device error", details: nil))
+        // NSLog(FlutterError(code: "INIT_DEVICE", message: "Init device error", details: nil))
+        NSLog(">>>" + tags + " INIT_DEVICE")
+        return false
       case ZoomSDKError_CanNotChangeVirtualDevice:
-        result(FlutterError(code: "CANNOT_CHANGE_VIRTUAL_DEVICE", message: "Can't change virtual device", details: nil))
+        // NSLog(FlutterError(code: "CANNOT_CHANGE_VIRTUAL_DEVICE", message: "Can't change virtual device", details: nil))
+        NSLog(">>>" + tags + " CANNOT_CHANGE_VIRTUAL_DEVICE")
+        return false
       case ZoomSDKError_PreprocessRawdataError:
-        result(FlutterError(code: "PREPROCESS_RAWDATA_ERROR", message: "Preprocess rawdata error", details: nil))
+        // NSLog(FlutterError(code: "PREPROCESS_RAWDATA_ERROR", message: "Preprocess rawdata error", details: nil))
+        NSLog(">>>" + tags + " PREPROCESS_RAWDATA_ERROR")
+        return false
       case ZoomSDKError_NoLicense:
-        result(FlutterError(code: "NO_LICENSE", message: "No license", details: nil))
+        // NSLog(FlutterError(code: "NO_LICENSE", message: "No license", details: nil))
+        NSLog(">>>" + tags + " NO_LICENSE")
+        return false
       case ZoomSDKError_Malloc_Failed:
-        result(FlutterError(code: "MALLOC_FAILED", message: "Malloc failed", details: nil))
+        // NSLog(FlutterError(code: "MALLOC_FAILED", message: "Malloc failed", details: nil))
+        NSLog(">>>" + tags + " MALLOC_FAILED")
+        return false
       case ZoomSDKError_ShareCannotSubscribeMyself:
-        result(FlutterError(code: "SHARE_CANNOT_SUBSCRIBE_MYSELF", message: "Share cannot subscribe myself", details: nil))
+        // NSLog(FlutterError(code: "SHARE_CANNOT_SUBSCRIBE_MYSELF", message: "Share cannot subscribe myself", details: nil))
+        NSLog(">>>" + tags + " SHARE_CANNOT_SUBSCRIBE_MYSELF")
+        return false
       case ZoomSDKError_NeedUserConfirmRecordDisclaimer:
-        result(FlutterError(code: "NEED_USER_CONFIRM_RECORD_DISCLAIMER", message: "Need user confirm record disclaimer", details: nil))
+        // NSLog(FlutterError(code: "NEED_USER_CONFIRM_RECORD_DISCLAIMER", message: "Need user confirm record disclaimer", details: nil))
+        NSLog(">>>" + tags + " NEED_USER_CONFIRM_RECORD_DISCLAIMER")
+        return false
       case ZoomSDKError_UnKnown:
-        result(FlutterError(code: "UNKNOWN", message: "Unknown error", details: nil))
+        // NSLog(FlutterError(code: "UNKNOWN", message: "Unknown error", details: nil))
+        NSLog(">>>" + tags + " UNKNOWN")
+        return false
       case ZoomSDKError_NotJoinAudio:
-        result(FlutterError(code: "NOT_JOIN_AUDIO", message: "Not join audio", details: nil))
+        // NSLog(FlutterError(code: "NOT_JOIN_AUDIO", message: "Not join audio", details: nil))
+        NSLog(">>>" + tags + " NOT_JOIN_AUDIO")
+        return false
       case ZoomSDKError_HardwareDontSupport:
-        result(FlutterError(code: "HARDWARE_DONT_SUPPORT", message: "The current device doesn't support the feature", details: nil))
+        // NSLog(FlutterError(code: "HARDWARE_DONT_SUPPORT", message: "The current device doesn't support the feature", details: nil))
+        NSLog(">>>" + tags + " HARDWARE_DONT_SUPPORT")
+        return false
       case ZoomSDKError_DomainDontSupport:
-        result(FlutterError(code: "DOMAIN_DONT_SUPPORT", message: "Domain not support", details: nil))
+        // NSLog(FlutterError(code: "DOMAIN_DONT_SUPPORT", message: "Domain not support", details: nil))
+        NSLog(">>>" + tags + " DOMAIN_DONT_SUPPORT")
+        return false
       case ZoomSDKError_FileTransferError:
-        result(FlutterError(code: "FILE_TRANSFER_ERROR", message: "File transfer failed", details: nil))
+        // NSLog(FlutterError(code: "FILE_TRANSFER_ERROR", message: "File transfer failed", details: nil))
+        NSLog(">>>" + tags + " FILE_TRANSFER_ERROR")
+        return false
       default:
-        result(FlutterError(code: "INIT_FAILED", message: "ZoomSDKError failed with code: \(error.rawValue)", details: nil))
+        // NSLog(FlutterError(code: "INIT_FAILED", message: "ZoomSDKError failed with code: \(error.rawValue)", details: nil))
+        NSLog(">>>" + tags + " INIT_FAILED")
+        return false
     }
   }
 }

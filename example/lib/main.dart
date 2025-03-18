@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:fixnum/fixnum.dart';
 import 'whoopwhoop/zoom_sdk_wrapper.dart';
 
 void main() {
@@ -48,9 +47,9 @@ class _MyHomePageState extends State<MyHomePage> {
     try {
       if (!isInitialized) {
         debugPrint("initZoom -> isInitialized = $isInitialized");
-        isInitialized = (await _zoomSDK.initZoom(jwtToken: "")) ?? false;
+        isInitialized = (await _zoomSDK.initZoom(jwtToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBLZXkiOiJEV0R3T0VVRFJCU3RtSVB1T0U5S3RRIiwic2RrS2V5IjoiRFdEd09FVURSQlN0bUlQdU9FOUt0USIsIm1uIjoiNzU0MDQ2MTk2MDciLCJyb2xlIjowLCJ0b2tlbkV4cCI6MTc0MjI4OTA4NSwiaWF0IjoxNzQyMjg1NDg1LCJleHAiOjE3NDIyODkwODV9.vGqRxtmk3N_M7Mm_2KQSNqvx9GvHx2e88dOCz9DvIdw")) ?? false;
         debugPrint("initZoom -> result = $isInitialized");
-        
+                
         if (isInitialized) {
           setState(() {}); // Update UI to reflect initialized state
         }

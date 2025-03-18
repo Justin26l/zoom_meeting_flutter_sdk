@@ -1,10 +1,10 @@
 import Flutter
 import UIKit
 import MobileRTC
-public class SwiftZoomMeetingFlutterSdkPlugin: NSObject, FlutterPlugin {
+public class SwiftZoomNativeSdkPlugin: NSObject, FlutterPlugin {
     public static func register(with registrar: FlutterPluginRegistrar) {
-        let channel = FlutterMethodChannel(name: "zoom_meeting_flutter_sdk", binaryMessenger: registrar.messenger())
-        let instance = SwiftZoomMeetingFlutterSdkPlugin()
+        let channel = FlutterMethodChannel(name: "zoom_native_sdk", binaryMessenger: registrar.messenger())
+        let instance = SwiftZoomNativeSdkPlugin()
         registrar.addMethodCallDelegate(instance, channel: channel)
 
     }
@@ -23,10 +23,9 @@ public class SwiftZoomMeetingFlutterSdkPlugin: NSObject, FlutterPlugin {
             guard let args = call.arguments as? Dictionary<String, String> else { return }
             let meetingNumber = args["meetingNumber"] ?? ""
             let meetingPassword = args["meetingPassword"] ?? ""
-            let displayName = args["displayName"] ?? ""
 
 
-            self.joinMeeting(meetingNumber: meetingNumber, meetingPassword: meetingPassword, displayName: displayName)
+            self.joinMeeting(meetingNumber: meetingNumber, meetingPassword: meetingPassword)
         }
 
     }
@@ -44,7 +43,7 @@ public class SwiftZoomMeetingFlutterSdkPlugin: NSObject, FlutterPlugin {
         return topController
     }
 }
-extension SwiftZoomMeetingFlutterSdkPlugin{
+extension SwiftZoomNativeSdkPlugin{
 
     func joinAMeetingButtonPressed(meetingNumber: String, meetingPassword: String){
         //        requestSaveClientJoiningTime(id: id)
@@ -88,7 +87,7 @@ extension SwiftZoomMeetingFlutterSdkPlugin{
     }
 
 }
-extension SwiftZoomMeetingFlutterSdkPlugin: MobileRTCMeetingServiceDelegate {
+extension SwiftZoomNativeSdkPlugin: MobileRTCMeetingServiceDelegate {
 
     // Is called upon in-meeting errors, join meeting errors, start meeting errors, meeting connection errors, etc.
     public func onMeetingError(_ error: MobileRTCMeetError, message: String?) {
@@ -174,7 +173,7 @@ extension Date {
 
 
 
-extension SwiftZoomMeetingFlutterSdkPlugin: MobileRTCAuthDelegate {
+extension SwiftZoomNativeSdkPlugin: MobileRTCAuthDelegate {
 
     /// setupSDK Creates, Initializes, and Authorizes an instance of the Zoom SDK. This must be called before calling any other SDK functions.
 
@@ -240,5 +239,3 @@ extension SwiftZoomMeetingFlutterSdkPlugin: MobileRTCAuthDelegate {
         }
     }
 }
-
-

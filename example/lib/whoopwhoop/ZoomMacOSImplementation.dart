@@ -12,9 +12,9 @@ class ZoomMacOSImplementation implements ZoomPlatformInterface {
     try {
       // For macOS we use SDK key and secret instead of JWT
       // You'd need to store these securely or fetch them from a server
-      final result = await _channel.invokeMethod('initZoom', {
-        'sdkKey': 'YOUR_SDK_KEY',
-        'sdkSecret': 'YOUR_SDK_SECRET',
+      final result = await _channel.invokeMethod('initZoom');
+      final authResult = await _channel.invokeMethod('authSdk', {
+        'jwtToken': jwtToken,
       });
       return result as bool?;
     } catch (e) {
