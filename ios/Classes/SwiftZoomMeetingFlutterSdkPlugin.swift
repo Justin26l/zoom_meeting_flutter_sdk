@@ -1,10 +1,11 @@
 import Flutter
 import UIKit
 import MobileRTC
-public class SwiftZoomNativeSdkPlugin: NSObject, FlutterPlugin {
+
+public class SwiftZoomMeetingFlutterSdkPlugin: NSObject, FlutterPlugin {
     public static func register(with registrar: FlutterPluginRegistrar) {
-        let channel = FlutterMethodChannel(name: "zoom_native_sdk", binaryMessenger: registrar.messenger())
-        let instance = SwiftZoomNativeSdkPlugin()
+        let channel = FlutterMethodChannel(name: "zoom_meeting_flutter_sdk", binaryMessenger: registrar.messenger())
+        let instance = SwiftZoomMeetingFlutterSdkPlugin()
         registrar.addMethodCallDelegate(instance, channel: channel)
 
     }
@@ -23,6 +24,7 @@ public class SwiftZoomNativeSdkPlugin: NSObject, FlutterPlugin {
             guard let args = call.arguments as? Dictionary<String, String> else { return }
             let meetingNumber = args["meetingNumber"] ?? ""
             let meetingPassword = args["meetingPassword"] ?? ""
+            let displayName = args["displayName"] ?? ""
 
 
             self.joinMeeting(meetingNumber: meetingNumber, meetingPassword: meetingPassword)
@@ -43,7 +45,7 @@ public class SwiftZoomNativeSdkPlugin: NSObject, FlutterPlugin {
         return topController
     }
 }
-extension SwiftZoomNativeSdkPlugin{
+extension SwiftZoomMeetingFlutterSdkPlugin{
 
     func joinAMeetingButtonPressed(meetingNumber: String, meetingPassword: String){
         //        requestSaveClientJoiningTime(id: id)
@@ -55,13 +57,13 @@ extension SwiftZoomNativeSdkPlugin{
         //        joinMeeting(meetingNumber: meetingNumber, meetingPassword: meetingPassword)
     }
 
-    func joinMeeting(meetingNumber: String, meetingPassword: String) {
+    func joinMeeting(meetingNumber: String, meetingPassword: String, displayName: String = "Zoom User") {
         MobileRTC.shared().setMobileRTCRootController(UIApplication.shared.keyWindow?.rootViewController?.navigationController)
         print("Hello From method")
         if let meetingService = MobileRTC.shared().getMeetingService() {
             print("meetingNumber  \(meetingNumber)")
             print("meetingPassword  \(meetingPassword)")
-
+            print("displayName  \(displayName)")
 
             // Create a MobileRTCMeetingJoinParam to provide the MobileRTCMeetingService with the necessary info to join a meeting.
             // In this case, we will only need to provide a meeting number and password.
@@ -70,6 +72,7 @@ extension SwiftZoomNativeSdkPlugin{
             let joinMeetingParameters = MobileRTCMeetingJoinParam()
             joinMeetingParameters.meetingNumber = meetingNumber
             joinMeetingParameters.password = meetingPassword
+            joinMeetingParameters.userName = displayName
             joinMeetingParameters.noVideo = true
             joinMeetingParameters.noAudio = true
 
@@ -87,7 +90,7 @@ extension SwiftZoomNativeSdkPlugin{
     }
 
 }
-extension SwiftZoomNativeSdkPlugin: MobileRTCMeetingServiceDelegate {
+extension SwiftZoomMeetingFlutterSdkPlugin: MobileRTCMeetingServiceDelegate {
 
     // Is called upon in-meeting errors, join meeting errors, start meeting errors, meeting connection errors, etc.
     public func onMeetingError(_ error: MobileRTCMeetError, message: String?) {
@@ -132,9 +135,6 @@ extension SwiftZoomNativeSdkPlugin: MobileRTCMeetingServiceDelegate {
         case .ended:
             print("ended")
 
-        case .unknow:
-            print("unknow")
-
         case .locked:
             print("locked")
 
@@ -173,14 +173,14 @@ extension Date {
 
 
 
-extension SwiftZoomNativeSdkPlugin: MobileRTCAuthDelegate {
+extension SwiftZoomMeetingFlutterSdkPlugin: MobileRTCAuthDelegate {
 
     /// setupSDK Creates, Initializes, and Authorizes an instance of the Zoom SDK. This must be called before calling any other SDK functions.
 
     /// - Parameters:
     ///   - sdkKey: A valid SDK Client Key provided by the Zoom Marketplace.
     ///   - sdkSecret: A valid SDK Client Secret provided by the Zoom Marketplace.
-    func setupSDK(sdkKey: String, sdkSecret: String) {
+    func setupSDK(jwtToken: String) {
         let context = MobileRTCSDKInitContext()
         context.domain = "zoom.us"
         context.enableLog = false
@@ -189,8 +189,7 @@ extension SwiftZoomNativeSdkPlugin: MobileRTCAuthDelegate {
 
         if sdkInitializedSuccessfully == true, let authorizationService = MobileRTC.shared().getAuthService() {
             authorizationService.delegate = self
-            authorizationService.clientKey = sdkKey
-            authorizationService.clientSecret = sdkSecret
+            authorizationService.jwtToken = jwtToken
             authorizationService.sdkAuth()
         }
     }

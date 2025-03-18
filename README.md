@@ -69,12 +69,17 @@ is added in `TARGETS/Runner/Frameworks,Libraries, and Embedded Content`
 
 <br /> 
 
-and finally in xcode go to `Pods/TARGETS/zoom_native_sdk/Frameworks and Libraries`
+in xcode go to `Pods/TARGETS/zoom_native_sdk/Frameworks and Libraries`
 
 and add MobileRTC.xcframework to it and make sure it Do Not Embed as shown
 
 <img src="https://i.ibb.co/NYs2Ysz/config-pod.png?raw=true" hight="500 px"> 
-
+  
+and last, re-sign the sdk using command  
+``` bash
+codesign --force --deep --sign "Apple Development: ... (...)" MobileRTC.xcframework  
+codesign --force --deep --sign "Apple Development: ... (...)" MobileRTCScreenShare.xcframework
+```
 for more info
 [ios docs](https://marketplace.zoom.us/docs/sdk/native-sdks/iOS/getting-started/install-sdk/)
 
