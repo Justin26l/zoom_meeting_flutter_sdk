@@ -20,6 +20,8 @@ download zoom sdk for android by running this command in terminal
 ```
 dart run zoom_meeting_flutter_sdk:download
 ```
+thin command will download mobilertc.aar into package directory  
+"/Users/justin/.pub-cache/hosted/pub.dev/zoom_meeting_flutter_sdk/android/mobilertc/" 
 </details>
 
 <details><summary>iOS</summary>
@@ -110,8 +112,13 @@ await _zoomNativelyPlugin.joinMeting(
 );
 ```
 
+### Call Structure
+-------------------------------
+open with [drawio vscode plugin](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)  
+[structureChart.drawio](docs/structureChart.drawio)
+
 ### About Develpment
 -------------------------------
 Develop & Maintain by Justin26l
-forked from **Al7osam company**
+forked from **Al7osam company**'s [zoom_native_sdk](https://github.com/abo-el30la/zoom_native_sdk)
 <br>
