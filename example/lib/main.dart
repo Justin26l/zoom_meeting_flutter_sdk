@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:dart_jsonwebtoken/dart_jsonwebtoken.dart';
 import 'package:zoom_meeting_flutter_sdk/zoom_meeting_flutter_sdk.dart';
 
 void main() {
@@ -44,20 +45,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future<void> initPlatformState() async {
-    try {
-      if (!isInitialized) {
-        debugPrint("initZoom -> isInitialized = $isInitialized");
-        isInitialized = (await _zoomSDK.initZoom(jwtToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBLZXkiOiJEV0R3T0VVRFJCU3RtSVB1T0U5S3RRIiwic2RrS2V5IjoiRFdEd09FVURSQlN0bUlQdU9FOUt0USIsIm1uIjoiNzE0MTk3MTQ0OTIiLCJyb2xlIjowLCJ0b2tlbkV4cCI6MTc0MjM2MjUxMSwiaWF0IjoxNzQyMzU4OTExLCJleHAiOjE3NDIzNjI1MTF9._ecNp5Ml4fObrOe5jOfx6zUggPTH31QFsVXopuEDa4A")) ?? false;
-        debugPrint("initZoom -> result = $isInitialized");
-                
-        if (isInitialized) {
-          setState(() {}); // Update UI to reflect initialized state
-        }
-      }
-    } catch (e) {
-      debugPrint("Error initializing Zoom: $e");
-    }
-
     if (!mounted) return;
   }
 
@@ -89,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const SizedBox(height: 24),
             ElevatedButton(
-              onPressed: isInitialized ? _joinMeting : initPlatformState,
+              onPressed: isInitialized ? _joinMeting : initSDK,
               child: Text(isInitialized ? "Join Meeting" : "Initialize SDK"),
             ),
             const SizedBox(height: 16),
@@ -108,12 +95,27 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
   
-  Future<void> _joinMeting() async {
-    if (!isInitialized) {
-      debugPrint("SDK not initialized");
-      return;
+  Future<void> initSDK() async{
+    try {
+      debugPrint("initPlatformState");
+      if (!isInitialized) {
+        final jwtToken = generateJWT();
+        debugPrint("initZoom -> isInitialized = $isInitialized");
+        isInitialized = (await _zoomSDK.initZoom(jwtToken: jwtToken)) ?? false;
+        debugPrint("initZoom -> result = $isInitialized");
+                
+        if (isInitialized) {
+          setState(() {}); // Update UI to reflect initialized state
+        }
+      }
+    } catch (e) {
+      debugPrint("Error initializing Zoom: $e");
     }
-    
+  }
+
+  Future<void> _joinMeting() async {
+    debugPrint("Joining meeting");
+
     if (_meetingNumberController.text.isEmpty ||
         _nameController.text.isEmpty) {
       // Show an error message
@@ -122,13 +124,29 @@ class _MyHomePageState extends State<MyHomePage> {
       );
       return;
     }
-    
-          
+    await _zoomSDK.joinMeting(
+      meetingNumber: _meetingNumberController.text,
+      meetingPassword: _passwordController.text,
+      displayName: _nameController.text,
+    );
 
-      await _zoomSDK.joinMeting(
-        meetingNumber: _meetingNumberController.text,
-        meetingPassword: _passwordController.text,
-        displayName: _nameController.text,
-      );
   }
+
+
+  String generateJWT() {
+    final jwt = JWT(
+      {
+        'appKey': "DWDwOEUDRBStmIPuOE9KtQ",
+        'mn': _meetingNumberController.text,
+        'role': 0, // 0 for participant, 1 for host
+        'iat': DateTime.now().millisecondsSinceEpoch ~/ 1000,
+        'exp': (DateTime.now().millisecondsSinceEpoch ~/ 1000) + 3600, // 1 hour expiration
+        'tokenExp': (DateTime.now().millisecondsSinceEpoch ~/ 1000) + 3600, // 1 hour expiration
+      },
+    );
+
+    final token = jwt.sign(SecretKey("heQqzroET0uzSNlSAmb1mZ4EaoVolep5"), algorithm: JWTAlgorithm.HS256);
+    return token;
+  }
+
 }
