@@ -2,6 +2,7 @@ name: zoom_meeting_flutter_sdk
 description: Another plugin to join zoom meeting using native android and ios zoom sdk you need to darg and drop zoom ios meeting sdk manually to your application
 version: 0.3.7
 homepage: https://github.com/Justin26l/zoom_meeting_flutter_sdk
+repository: https://github.com/Justin26l/zoom_meeting_flutter_sdk
 
 environment:
   sdk: '>=2.18.6 <4.0.0'
