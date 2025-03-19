@@ -30,8 +30,13 @@ migrate_working_dir/
 build/
 pubspeclock
 
-mobilertc.aar
+.vscode/
+
+# android sdk
+android/mobilertc/mobilertc.aar
+# iOS sdk
+example/ios/MobileRTC.xcframework
+example/ios/MobileRTCResources.bundle
+# macos sdk
 ZoomSDK/
 Plugins/
-
-.vscode/

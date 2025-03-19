@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'whoopwhoop/zoom_sdk_wrapper.dart';
+import 'package:zoom_meeting_flutter_sdk/zoom_meeting_flutter_sdk.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +29,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final _zoomSDK = ZoomSDKWrapper();
+  final _zoomSDK = ZoomMeetingFlutterSdk();
   bool isInitialized = false;
   
   // Text controllers for the meeting form
@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
     try {
       if (!isInitialized) {
         debugPrint("initZoom -> isInitialized = $isInitialized");
-        isInitialized = (await _zoomSDK.initZoom(jwtToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBLZXkiOiJEV0R3T0VVRFJCU3RtSVB1T0U5S3RRIiwic2RrS2V5IjoiRFdEd09FVURSQlN0bUlQdU9FOUt0USIsIm1uIjoiNzU0MDQ2MTk2MDciLCJyb2xlIjowLCJ0b2tlbkV4cCI6MTc0MjI4OTA4NSwiaWF0IjoxNzQyMjg1NDg1LCJleHAiOjE3NDIyODkwODV9.vGqRxtmk3N_M7Mm_2KQSNqvx9GvHx2e88dOCz9DvIdw")) ?? false;
+        isInitialized = (await _zoomSDK.initZoom(jwtToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBLZXkiOiJEV0R3T0VVRFJCU3RtSVB1T0U5S3RRIiwic2RrS2V5IjoiRFdEd09FVURSQlN0bUlQdU9FOUt0USIsIm1uIjoiNzE0MTk3MTQ0OTIiLCJyb2xlIjowLCJ0b2tlbkV4cCI6MTc0MjM2MjUxMSwiaWF0IjoxNzQyMzU4OTExLCJleHAiOjE3NDIzNjI1MTF9._ecNp5Ml4fObrOe5jOfx6zUggPTH31QFsVXopuEDa4A")) ?? false;
         debugPrint("initZoom -> result = $isInitialized");
                 
         if (isInitialized) {
@@ -89,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const SizedBox(height: 24),
             ElevatedButton(
-              onPressed: isInitialized ? _joinMeeting : initPlatformState,
+              onPressed: isInitialized ? _joinMeting : initPlatformState,
               child: Text(isInitialized ? "Join Meeting" : "Initialize SDK"),
             ),
             const SizedBox(height: 16),
@@ -108,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
   
-  Future<void> _joinMeeting() async {
+  Future<void> _joinMeting() async {
     if (!isInitialized) {
       debugPrint("SDK not initialized");
       return;
@@ -123,25 +123,12 @@ class _MyHomePageState extends State<MyHomePage> {
       return;
     }
     
-    // try {
-      final meetingNumber = int.tryParse(_meetingNumberController.text);
-      if (meetingNumber == null) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("Invalid meeting number")),
-        );
-        return;
-      }
+          
 
-      await _zoomSDK.joinMeeting(
-        meetingNumber: meetingNumber,
+      await _zoomSDK.joinMeting(
+        meetingNumber: _meetingNumberController.text,
         meetingPassword: _passwordController.text,
         displayName: _nameController.text,
       );
-    // } catch (e) {
-    //   debugPrint("Error joining meeting: $e");
-    //   ScaffoldMessenger.of(context).showSnackBar(
-    //     SnackBar(content: Text("Failed to join meeting: $e")),
-    //   );
-    // }
   }
 }

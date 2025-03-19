@@ -78,7 +78,6 @@ and add MobileRTC.xcframework to it and make sure it Do Not Embed as shown
 and last, re-sign the sdk using command  
 ``` bash
 codesign --force --deep --sign "Apple Development: ... (...)" MobileRTC.xcframework  
-codesign --force --deep --sign "Apple Development: ... (...)" MobileRTCScreenShare.xcframework
 ```
 for more info
 [ios docs](https://marketplace.zoom.us/docs/sdk/native-sdks/iOS/getting-started/install-sdk/)

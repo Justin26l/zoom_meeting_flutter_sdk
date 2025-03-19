@@ -4,6 +4,7 @@ import MobileRTC
 
 public class SwiftZoomMeetingFlutterSdkPlugin: NSObject, FlutterPlugin {
     public static func register(with registrar: FlutterPluginRegistrar) {
+        
         let channel = FlutterMethodChannel(name: "zoom_meeting_flutter_sdk", binaryMessenger: registrar.messenger())
         let instance = SwiftZoomMeetingFlutterSdkPlugin()
         registrar.addMethodCallDelegate(instance, channel: channel)
@@ -11,7 +12,7 @@ public class SwiftZoomMeetingFlutterSdkPlugin: NSObject, FlutterPlugin {
     }
 
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
-        print("initZoom .......")
+        NSLog("Swift: initZoom .......")
 
         if call.method == "initZoom" {
             guard let args = call.arguments as? Dictionary<String, String> else { return }
@@ -34,12 +35,13 @@ public class SwiftZoomMeetingFlutterSdkPlugin: NSObject, FlutterPlugin {
 
 
     func getDeviceID() -> String {
-        print("Hello From method")
+        NSLog("Swift: getDeviceID")
         return UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
 
     }
 
     func getRootController() -> UIViewController {
+        NSLog("Swift: getRootController")
         let keyWindow = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) ?? UIApplication.shared.windows.first
         let topController = (keyWindow?.rootViewController)!
         return topController
@@ -58,12 +60,12 @@ extension SwiftZoomMeetingFlutterSdkPlugin{
     }
 
     func joinMeeting(meetingNumber: String, meetingPassword: String, displayName: String) {
+        NSLog("Swift: joinMeeting")
         MobileRTC.shared().setMobileRTCRootController(UIApplication.shared.keyWindow?.rootViewController?.navigationController)
-        print("Hello From method")
         if let meetingService = MobileRTC.shared().getMeetingService() {
-            print("meetingNumber  \(meetingNumber)")
-            print("meetingPassword  \(meetingPassword)")
-            print("displayName  \(displayName)")
+            NSLog("Swift: meetingNumber  \(meetingNumber)")
+            NSLog("Swift: meetingPassword  \(meetingPassword)")
+            NSLog("Swift: displayName  \(displayName)")
 
             // Create a MobileRTCMeetingJoinParam to provide the MobileRTCMeetingService with the necessary info to join a meeting.
             // In this case, we will only need to provide a meeting number and password.
@@ -84,7 +86,7 @@ extension SwiftZoomMeetingFlutterSdkPlugin{
             //            meetingService.video
             meetingService.joinMeeting(with: joinMeetingParameters)
         }else{
-            print("Hello From ffffff")
+            NSLog("Swift: tim cock you retarded")
 
         }
     }
@@ -96,65 +98,65 @@ extension SwiftZoomMeetingFlutterSdkPlugin: MobileRTCMeetingServiceDelegate {
     public func onMeetingError(_ error: MobileRTCMeetError, message: String?) {
         switch error {
         case MobileRTCMeetError.passwordError:
-            print("MobileRTCMeeting   :   Could not join or start meeting because the meeting password was incorrect.")
+            NSLog("Swift: MobileRTCMeeting   :   Could not join or start meeting because the meeting password was incorrect.")
         default:
-            print("MobileRTCMeeting   :   Could not join or start meeting with MobileRTCMeetError: \(error) \(message ?? "")")
+            NSLog("Swift: MobileRTCMeeting   :   Could not join or start meeting with MobileRTCMeetError: \(error) \(message ?? "")")
         }
     }
 
     // Is called when the user joins a meeting.
     public func onJoinMeetingConfirmed() {
-        print("MobileRTCMeeting   :   Join meeting confirmed.")
+        NSLog("Swift: MobileRTCMeeting   :   Join meeting confirmed.")
     }
 
     // Is called upon meeting state changes.
     public func onMeetingStateChange(_ state: MobileRTCMeetingState) {
-        print("MobileRTCMeeting   :   Current meeting state: \(state.rawValue)")
+        NSLog("Swift: MobileRTCMeeting   :   Current meeting state: \(state.rawValue)")
         switch state{
 
         case .idle:
-            print("idle")
+            NSLog("Swift: idle")
         case .connecting:
-            print("connecting")
+            NSLog("Swift: connecting")
 
         case .waitingForHost:
-            print("waitingForHost")
+            NSLog("Swift: waitingForHost")
 
         case .inMeeting:
-            print("inMeeting")
+            NSLog("Swift: inMeeting")
 
         case .disconnecting:
-            print("disconnecting")
+            NSLog("Swift: disconnecting")
 
         case .reconnecting:
-            print("reconnecting")
+            NSLog("Swift: reconnecting")
 
         case .failed:
-            print("failed")
+            NSLog("Swift: failed")
 
         case .ended:
-            print("ended")
+            NSLog("Swift: ended")
 
         case .locked:
-            print("locked")
+            NSLog("Swift: locked")
 
         case .unlocked:
-            print("unlocked")
+            NSLog("Swift: unlocked")
 
         case .inWaitingRoom:
-            print("inWaitingRoom")
+            NSLog("Swift: inWaitingRoom")
 
         case .webinarPromote:
-            print("webinarPromote")
+            NSLog("Swift: webinarPromote")
 
         case .webinarDePromote:
-            print("webinarDePromote")
+            NSLog("Swift: webinarDePromote")
 
         case .joinBO:
-            print("joinBO")
+            NSLog("Swift: joinBO")
 
         case .leaveBO:
-            print("leaveBO")
+            NSLog("Swift: leaveBO")
 
 //         case .waitingExternalSessionKey:
 //             print("waitingExternalSessionKey")
@@ -197,34 +199,34 @@ extension SwiftZoomMeetingFlutterSdkPlugin: MobileRTCAuthDelegate {
     public func onMobileRTCAuthReturn(_ returnValue: MobileRTCAuthError) {
         switch returnValue {
         case MobileRTCAuthError.success:
-            print("SDK successfully initialized.")
+            NSLog("Swift: SDK successfully initialized.")
         case MobileRTCAuthError.keyOrSecretEmpty:
-            print("SDK Key/Secret was not provided. Replace sdkKey and sdkSecret at the top of this file with your SDK Key/Secret.")
+            NSLog("Swift: SDK Key/Secret was not provided. Replace sdkKey and sdkSecret at the top of this file with your SDK Key/Secret.")
         case MobileRTCAuthError.keyOrSecretWrong, MobileRTCAuthError.unknown:
-            print("SDK Key/Secret is not valid.")
+            NSLog("Swift: SDK Key/Secret is not valid.")
         default:
-            print("SDK Authorization failed with MobileRTCAuthError: \(returnValue).")
+            NSLog("Swift: SDK Authorization failed with MobileRTCAuthError: \(returnValue).")
         }
     }
 
     private func onMobileRTCLoginReturn(_ returnValue: Int) {
         switch returnValue {
         case 0:
-            print("Successfully logged in")
+            NSLog("Swift: Successfully logged in")
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "userLoggedIn"), object: nil)
         case 1002:
-            print("Password incorrect")
+            NSLog("Swift: Password incorrect")
         default:
-            print("Could not log in. Error code: \(returnValue)")
+            NSLog("Swift: Could not log in. Error code: \(returnValue)")
         }
     }
     public func onMobileRTCLogoutReturn(_ returnValue: Int) {
         switch returnValue {
         case 0:
-            print("Successfully logged out")
+            NSLog("Swift: Successfully logged out")
             NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "userLoggedIn"), object: nil)
         default:
-            print("Could not log out. Error code: \(returnValue)")
+            NSLog("Swift: Could not log out. Error code: \(returnValue)")
         }
     }
 
