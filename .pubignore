@@ -23,11 +23,20 @@ migrate_working_dir/
 
 # Flutter/Dart/Pub related
 # Libraries should not include pubspec.lock, per https://dart.dev/guides/libraries/private-files#pubspeclock.
+/pubspec.lock
 **/doc/api/
 .dart_tool/
 .packages
 build/
+pubspeclock
 
+.vscode/
 
-example
-mobilertc.aar
+# android sdk
+android/mobilertc/mobilertc.aar
+# iOS sdk
+example/ios/MobileRTC.xcframework
+example/ios/MobileRTCResources.bundle
+# macos sdk
+ZoomSDK/
+Plugins/
