@@ -4,31 +4,32 @@ import MobileRTC
 
 public class SwiftZoomMeetingFlutterSdkPlugin: NSObject, FlutterPlugin {
     public static func register(with registrar: FlutterPluginRegistrar) {
-        
         let channel = FlutterMethodChannel(name: "zoom_meeting_flutter_sdk", binaryMessenger: registrar.messenger())
         let instance = SwiftZoomMeetingFlutterSdkPlugin()
         registrar.addMethodCallDelegate(instance, channel: channel)
-
     }
 
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         NSLog("Swift: initZoom .......")
+        switch call.method {
+            case "getPlatformVersion":
+                result("iOS " + UIDevice.current.systemVersion)
 
-        if call.method == "initZoom" {
-            guard let args = call.arguments as? Dictionary<String, String> else { return }
-            let jwtToken = args["jwtToken"] ?? ""
-            setupSDK(jwtToken: jwtToken)
-            result(true)
-        }
+            case "initZoom" :
+                guard let args = call.arguments as? Dictionary<String, String> else { return }
+                let jwtToken = args["jwtToken"] ?? ""
+                setupSDK(jwtToken: jwtToken)
+                result(true)
 
-        if call.method == "joinMeeting" {
-            guard let args = call.arguments as? Dictionary<String, String> else { return }
-            let meetingNumber = args["meetingNumber"] ?? ""
-            let meetingPassword = args["meetingPassword"] ?? ""
-            let displayName = args["displayName"] ?? ""
-
-
-            self.joinMeeting(meetingNumber: meetingNumber, meetingPassword: meetingPassword, displayName: displayName)
+            case "joinMeeting" :
+                guard let args = call.arguments as? Dictionary<String, String> else { return }
+                let meetingNumber = args["meetingNumber"] ?? ""
+                let meetingPassword = args["meetingPassword"] ?? ""
+                let displayName = args["displayName"] ?? ""
+                self.joinMeeting(meetingNumber: meetingNumber, meetingPassword: meetingPassword, displayName: displayName)
+                result(true)
+            default:
+                result(FlutterMethodNotImplemented)
         }
 
     }

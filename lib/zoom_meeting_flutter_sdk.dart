@@ -13,12 +13,11 @@ class ZoomMeetingFlutterSdk {
     );
   }
 
-  Future<bool?> joinMeting(
-      {
-        required String meetingNumber, 
-        required String meetingPassword,
-        required String displayName
-      }) {
+  Future<bool?> joinMeting({
+    required String meetingNumber, 
+    required String meetingPassword,
+    required String displayName
+  }) {
     debugPrint("ZoomNatively-joinMeting $meetingNumber");
     return ZoomMeetingFlutterSdkPlatform.instance.joinMeting(
       meetingNumber: meetingNumber,
