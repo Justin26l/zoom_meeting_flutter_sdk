@@ -122,6 +122,6 @@ open with [drawio vscode plugin](https://marketplace.visualstudio.com/items?item
 
 ### About Develpment
 -------------------------------
-Develop & Maintain by Justin26l
+Develop & Maintain by Justin26l @ SimIT Group  
 forked from **Al7osam company**'s [zoom_native_sdk](https://github.com/abo-el30la/zoom_native_sdk)
 <br>
