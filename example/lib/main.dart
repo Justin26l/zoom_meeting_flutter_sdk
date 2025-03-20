@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:dart_jsonwebtoken/dart_jsonwebtoken.dart';
-import 'package:zoom_meeting_flutter_sdk/zoom_meeting_flutter_sdk.dart';
+import 'zoom_sdk_wrapper.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +30,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final _zoomSDK = ZoomMeetingFlutterSdk();
+  final ZoomSDKWrapperImpl _zoomSDK = ZoomSDKWrapperImpl();
   bool isInitialized = false;
   
   // Text controllers for the meeting form
@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const SizedBox(height: 24),
             ElevatedButton(
-              onPressed: isInitialized ? _joinMeting : initSDK,
+              onPressed: isInitialized ? _joinMeeting : initSDK,
               child: Text(isInitialized ? "Join Meeting" : "Initialize SDK"),
             ),
             const SizedBox(height: 16),
@@ -113,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  Future<void> _joinMeting() async {
+  Future<void> _joinMeeting() async {
     debugPrint("Joining meeting");
 
     if (_meetingNumberController.text.isEmpty ||
@@ -132,7 +132,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   }
 
-
   String generateJWT() {
     final jwt = JWT(
       {
@@ -148,5 +147,4 @@ class _MyHomePageState extends State<MyHomePage> {
     final token = jwt.sign(SecretKey("heQqzroET0uzSNlSAmb1mZ4EaoVolep5"), algorithm: JWTAlgorithm.HS256);
     return token;
   }
-
 }
