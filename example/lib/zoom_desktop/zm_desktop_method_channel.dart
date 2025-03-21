@@ -13,6 +13,8 @@ class MethodChannelZoomMeetingDesktop extends ZoomMeetingDesktopPlatform {
   Future<bool?> initZoom({
     required String jwtToken
   }) async {
+    debugPrint("Desktop-initZoom");
+
     final version = await methodChannel.invokeMethod<bool>(
       'initZoom',
       {
@@ -28,6 +30,7 @@ class MethodChannelZoomMeetingDesktop extends ZoomMeetingDesktopPlatform {
     required String meetingPassword,
     required String displayName,
   }) async {
+    debugPrint("Desktop-joinMeting -> $meetingNumber, $meetingPassword, $displayName");
     final version = await methodChannel.invokeMethod<bool>(
       'joinMeeting',
       {

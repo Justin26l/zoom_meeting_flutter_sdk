@@ -1,8 +1,8 @@
-import 'package:zoom_meeting_flutter_sdk/zoom_meeting_flutter_sdk.dart';
+import 'package:zoom_meeting_flutter_sdk_example/zoom_desktop/zm_desktop.dart';
 import 'zoom_sdk_wrapper.dart';
 
 class ZoomSDKWrapperDesktop extends ZoomSDKWrapper {
-  final ZoomMeetingFlutterSdk _zoomSDK = ZoomMeetingFlutterSdk();
+  final ZoomMeetingDesktop _zoomSDK = ZoomMeetingDesktop();
 
   @override
   Future<bool?> initZoom({required String jwtToken}) {
