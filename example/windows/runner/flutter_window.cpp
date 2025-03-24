@@ -1,4 +1,11 @@
+#include <flutter/event_channel.h>
+#include <flutter/event_sink.h>
+#include <flutter/event_stream_handler_functions.h>
+#include <flutter/method_channel.h>
+#include <flutter/standard_method_codec.h>
+
 #include "flutter_window.h"
+#include "h/zoom_sdk.h"
 
 #include <optional>
 
@@ -36,6 +43,52 @@ bool FlutterWindow::OnCreate() {
   // window is shown. It is a no-op if the first frame hasn't completed yet.
   flutter_controller_->ForceRedraw();
 
+
+  // here : register method channels 
+  RegisterPlugins(flutter_controller_->engine());
+
+  flutter::MethodChannel<> channel(
+    flutter_controller_->engine()->messenger(), 
+    "zoom_meeting_flutter_sdk",
+    &flutter::StandardMethodCodec::GetInstance()
+  );
+  channel.SetMethodCallHandler(
+    [](
+      const flutter::MethodCall<>& call,
+      std::unique_ptr<flutter::MethodResult<>> result
+    ) {
+      std::cout << "Window: "+call.method_name() << std::endl;
+
+      if (call.method_name().compare("initZoom") == 0) {
+        // capture args from flutter
+        // const auto* arguments = std::get_if<flutter::EncodableMap>(call.arguments());
+
+        // call zoom sdk init function
+        ZOOMSDK::InitParam initParam;
+        initParam.strWebDomain = reinterpret_cast<const zchar_t*>(L"zoom.us");
+        initParam.strBrandingName = reinterpret_cast<const zchar_t*>(L"Zoom SDK");
+        initParam.strSupportUrl = reinterpret_cast<const zchar_t*>(L"https://zoom.us");
+
+        // switch InitSDK return to result
+        ZOOMSDK::SDKError err = ZOOMSDK::InitSDK(initParam);
+        if (err == ZOOMSDK::SDKError::SDKERR_SUCCESS) {
+          result->Success();
+        } else {
+          result->Error("windows: InitSDK Error", "Failed to initialize Zoom SDK", flutter::EncodableValue(static_cast<int>(err)));
+        }
+      } 
+      else if (call.method_name().compare("joinMeeting") == 0) {
+        // Call Zoom SDK join meeting function here
+        // Example: ZoomSDK::JoinMeeting(meetingNumber, meetingPassword, displayName);
+        result->Success();
+      } 
+      else {
+        result->NotImplemented();
+      }
+    }
+  );
+
+  SetChildContent(flutter_controller_->view()->GetNativeWindow());
   return true;
 }
 
