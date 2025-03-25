@@ -85,10 +85,7 @@ class AppDelegate: FlutterAppDelegate {
 
         // To Do
         let sdk = ZoomSDK.shared()
-        guard let meetingService = sdk.getMeetingService() else {
-            result(FlutterError(code: "SERVICE_UNAVAILABLE", message: "Failed to get meeting service", details: nil))
-            return
-        }
+        let sdkMeetSvc = sdk.getMeetingService()
         
         let joinParam = ZoomSDKJoinMeetingElements()
         joinParam.displayName = displayName 
@@ -97,7 +94,7 @@ class AppDelegate: FlutterAppDelegate {
         joinParam.isNoVideo = true
         joinParam.password = password
         
-        meetingService.joinMeeting(joinParam)
+        sdkMeetSvc?.joinMeeting(joinParam)
         result(true)
     }
 
