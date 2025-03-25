@@ -10,38 +10,33 @@ public class SwiftZoomMeetingFlutterSdkMacosPlugin: NSObject, FlutterPlugin {
     }
 
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
-        NSLog("Swift: initZoom .......")
+        NSLog("Swift: handle")
 
         switch call.method {
             case "getPlatformVersion":
                 result("macOS " + ProcessInfo.processInfo.operatingSystemVersionString)
-
-            case "initZoom" :
-                // guard let args = call.arguments as? Dictionary<String, String> else { return }
-                // let jwtToken = args["jwtToken"] ?? ""
-                // setupSDK(jwtToken: jwtToken)
+            case "initZoom":
+                // self.initializeSDK(result: result)
                 result(true)
-
-            case "joinMeeting" :
-                // guard let args = call.arguments as? Dictionary<String, String> else { return }
-                // let meetingNumber = args["meetingNumber"] ?? ""
-                // let meetingPassword = args["meetingPassword"] ?? ""
-                // let displayName = args["displayName"] ?? ""
-
-                // self.joinMeeting(meetingNumber: meetingNumber, meetingPassword: meetingPassword, displayName: displayName)
+            case "joinMeeting":
+                // if let args = call.arguments as? [String: Any],
+                //     let meetingNumber = args["meetingNumber"] as? Int64,
+                //     let displayName = args["displayName"] as? String,
+                //     let password = args["password"] as? String {
+                //         self.joinMeeting(meetingNumber: meetingNumber, displayName: displayName, password: password, result: result)
+                //     } 
+                //     else {
+                //         result(FlutterError(code: "INVALID_ARGUMENTS", message: "", details: nil))
+                //     }
                 result(true)
             default:
-                result(FlutterMethodNotImplemented)
-                
+              result(FlutterMethodNotImplemented)
         }
-
     }
-
-
+    
     // func getDeviceID() -> String {
     //     NSLog("Swift: getDeviceID")
     //     return UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
-
     // }
 
     // func getRootController() -> UIViewController {
@@ -50,10 +45,94 @@ public class SwiftZoomMeetingFlutterSdkMacosPlugin: NSObject, FlutterPlugin {
     //     let topController = (keyWindow?.rootViewController)!
     //     return topController
     // }
+
+    // private func initializeSDK(result: @escaping FlutterResult) {
+    //     NSLog("init SDK")
+    //     let sdk = ZoomSDK.shared()
+    //     var sdkInitializedSuccessfully = false
+
+    //     let initParams = ZoomSDKInitParams()
+    //     initParams.zoomDomain = "zoom.us"
+    //     initParams.enableLog = true
+    //     // initParams.jwtToken = jwtToken
+        
+    //     let initResult = sdk.initSDK(with: initParams)
+
+    //     switch initResult {
+    //     case ZoomSDKError_Success:
+    //         NSLog("SDK initialized successfully")
+    //         let authorizationService = sdk.getAuthService() {
+    //             authorizationService.delegate = self;
+    //             authorizationService.jwtToken = jwtToken;
+    //             authorizationService.sdkAuth();
+    //         }
+    //         result(true)
+    //     case ZoomSDKError_Failed:
+    //         result(FlutterError(code: "INIT_FAILED", message: "SDK initialization failed", details: nil))
+    //     case ZoomSDKError_Uninit:
+    //         result(FlutterError(code: "UNINIT", message: "SDK is not initialized", details: nil))
+    //     case ZoomSDKError_ServiceFailed:
+    //         result(FlutterError(code: "SERVICE_FAILED", message: "Service failed", details: nil))
+    //     case ZoomSDKError_WrongUsage:
+    //         result(FlutterError(code: "WRONG_USAGE", message: "Incorrect usage of the feature", details: nil))
+    //     case ZoomSDKError_InvalidParameter:
+    //         result(FlutterError(code: "INVALID_PARAMETER", message: "Wrong parameter", details: nil))
+    //     case ZoomSDKError_NoPermission:
+    //         result(FlutterError(code: "NO_PERMISSION", message: "No permission", details: nil))
+    //     case ZoomSDKError_NoRecordingInProgress:
+    //         result(FlutterError(code: "NO_RECORDING_IN_PROGRESS", message: "There is no recording in process", details: nil))
+    //     case ZoomSDKError_TooFrequentCall:
+    //         result(FlutterError(code: "TOO_FREQUENT_CALL", message: "API calls are too frequent", details: nil))
+    //     case ZoomSDKError_UnSupportedFeature:
+    //         result(FlutterError(code: "UNSUPPORTED_FEATURE", message: "Unsupported feature", details: nil))
+    //     case ZoomSDKError_EmailLoginIsDisabled:
+    //         result(FlutterError(code: "EMAIL_LOGIN_DISABLED", message: "Email login is disabled", details: nil))
+    //     case ZoomSDKError_ModuleLoadFail:
+    //         result(FlutterError(code: "MODULE_LOAD_FAIL", message: "Module load failed", details: nil))
+    //     case ZoomSDKError_NoVideoData:
+    //         result(FlutterError(code: "NO_VIDEO_DATA", message: "No video data", details: nil))
+    //     case ZoomSDKError_NoAudioData:
+    //         result(FlutterError(code: "NO_AUDIO_DATA", message: "No audio data", details: nil))
+    //     case ZoomSDKError_NoShareData:
+    //         result(FlutterError(code: "NO_SHARE_DATA", message: "No share data", details: nil))
+    //     case ZoomSDKError_NoVideoDeviceFound:
+    //         result(FlutterError(code: "NO_VIDEO_DEVICE_FOUND", message: "No video device found", details: nil))
+    //     case ZoomSDKError_DeviceError:
+    //         result(FlutterError(code: "DEVICE_ERROR", message: "Device error", details: nil))
+    //     case ZoomSDKError_NotInMeeting:
+    //         result(FlutterError(code: "NOT_IN_MEETING", message: "Not in meeting", details: nil))
+    //     case ZoomSDKError_initDevice:
+    //         result(FlutterError(code: "INIT_DEVICE", message: "Init device error", details: nil))
+    //     case ZoomSDKError_CanNotChangeVirtualDevice:
+    //         result(FlutterError(code: "CANNOT_CHANGE_VIRTUAL_DEVICE", message: "Can't change virtual device", details: nil))
+    //     case ZoomSDKError_PreprocessRawdataError:
+    //         result(FlutterError(code: "PREPROCESS_RAWDATA_ERROR", message: "Preprocess rawdata error", details: nil))
+    //     case ZoomSDKError_NoLicense:
+    //         result(FlutterError(code: "NO_LICENSE", message: "No license", details: nil))
+    //     case ZoomSDKError_Malloc_Failed:
+    //         result(FlutterError(code: "MALLOC_FAILED", message: "Malloc failed", details: nil))
+    //     case ZoomSDKError_ShareCannotSubscribeMyself:
+    //         result(FlutterError(code: "SHARE_CANNOT_SUBSCRIBE_MYSELF", message: "Share cannot subscribe myself", details: nil))
+    //     case ZoomSDKError_NeedUserConfirmRecordDisclaimer:
+    //         result(FlutterError(code: "NEED_USER_CONFIRM_RECORD_DISCLAIMER", message: "Need user confirm record disclaimer", details: nil))
+    //     case ZoomSDKError_UnKnown:
+    //         result(FlutterError(code: "UNKNOWN", message: "Unknown error", details: nil))
+    //     case ZoomSDKError_NotJoinAudio:
+    //         result(FlutterError(code: "NOT_JOIN_AUDIO", message: "Not join audio", details: nil))
+    //     case ZoomSDKError_HardwareDontSupport:
+    //         result(FlutterError(code: "HARDWARE_DONT_SUPPORT", message: "The current device doesn't support the feature", details: nil))
+    //     case ZoomSDKError_DomainDontSupport:
+    //         result(FlutterError(code: "DOMAIN_DONT_SUPPORT", message: "Domain not support", details: nil))
+    //     case ZoomSDKError_FileTransferError:
+    //         result(FlutterError(code: "FILE_TRANSFER_ERROR", message: "File transfer failed", details: nil))
+    //     default:
+    //         result(FlutterError(code: "INIT_FAILED", message: "SDK initialization failed with code: \(initResult.rawValue)", details: nil))
+    //     }
+    // }
+
 }
 
-// extension SwiftZoomMeetingFlutterSdkMacos
-//Plugin{
+extension SwiftZoomMeetingFlutterSdkMacosPlugin{
 
     // func joinAMeetingButtonPressed(meetingNumber: String, meetingPassword: String){
     //     //        requestSaveClientJoiningTime(id: id)
@@ -97,81 +176,7 @@ public class SwiftZoomMeetingFlutterSdkMacosPlugin: NSObject, FlutterPlugin {
     //     }
     // }
 
-// }
-// extension SwiftZoomMeetingFlutterSdkMacos
-//Plugin: MobileRTCMeetingServiceDelegate {
-
-//     // Is called upon in-meeting errors, join meeting errors, start meeting errors, meeting connection errors, etc.
-//     public func onMeetingError(_ error: MobileRTCMeetError, message: String?) {
-//         switch error {
-//         case MobileRTCMeetError.passwordError:
-//             NSLog("Swift: MobileRTCMeeting   :   Could not join or start meeting because the meeting password was incorrect.")
-//         default:
-//             NSLog("Swift: MobileRTCMeeting   :   Could not join or start meeting with MobileRTCMeetError: \(error) \(message ?? "")")
-//         }
-//     }
-
-//     // Is called when the user joins a meeting.
-//     public func onJoinMeetingConfirmed() {
-//         NSLog("Swift: MobileRTCMeeting   :   Join meeting confirmed.")
-//     }
-
-//     // Is called upon meeting state changes.
-//     public func onMeetingStateChange(_ state: MobileRTCMeetingState) {
-//         NSLog("Swift: MobileRTCMeeting   :   Current meeting state: \(state.rawValue)")
-//         switch state{
-
-//         case .idle:
-//             NSLog("Swift: idle")
-//         case .connecting:
-//             NSLog("Swift: connecting")
-
-//         case .waitingForHost:
-//             NSLog("Swift: waitingForHost")
-
-//         case .inMeeting:
-//             NSLog("Swift: inMeeting")
-
-//         case .disconnecting:
-//             NSLog("Swift: disconnecting")
-
-//         case .reconnecting:
-//             NSLog("Swift: reconnecting")
-
-//         case .failed:
-//             NSLog("Swift: failed")
-
-//         case .ended:
-//             NSLog("Swift: ended")
-
-//         case .locked:
-//             NSLog("Swift: locked")
-
-//         case .unlocked:
-//             NSLog("Swift: unlocked")
-
-//         case .inWaitingRoom:
-//             NSLog("Swift: inWaitingRoom")
-
-//         case .webinarPromote:
-//             NSLog("Swift: webinarPromote")
-
-//         case .webinarDePromote:
-//             NSLog("Swift: webinarDePromote")
-
-//         case .joinBO:
-//             NSLog("Swift: joinBO")
-
-//         case .leaveBO:
-//             NSLog("Swift: leaveBO")
-
-// //         case .waitingExternalSessionKey:
-// //             print("waitingExternalSessionKey")
-//         @unknown default:
-//             break
-//         }
-//     }
-// }
+}
 
 
 extension Date {
@@ -179,71 +184,3 @@ extension Date {
         return Calendar.current.date(byAdding: .minute, value: minutes, to: self)!
     }
 }
-
-
-
-// extension SwiftZoomMeetingFlutterSdkMacos
-//Plugin: MobileRTCAuthDelegate {
-
-//     /// setupSDK Creates, Initializes, and Authorizes an instance of the Zoom SDK. This must be called before calling any other SDK functions.
-
-//     /// - Parameters:
-//     ///   - jwtToken: refer to https://developers.zoom.us/docs/meeting-sdk/auth/
-//     func setupSDK(jwtToken: String) {
-//         let context = MobileRTCSDKInitContext()
-//         context.domain = "zoom.us"
-//         context.enableLog = false
-
-//         let sdkInitializedSuccessfully = MobileRTC.shared().initialize(context)
-
-//         if sdkInitializedSuccessfully == true, let authorizationService = MobileRTC.shared().getAuthService() {
-//             authorizationService.delegate = self
-//             authorizationService.jwtToken = jwtToken
-//             authorizationService.sdkAuth()
-//         }
-//     }
-
-//     // Result of calling sdkAuth(). MobileRTCAuthError_Success represents a successful authorization.
-//     public func onMobileRTCAuthReturn(_ returnValue: MobileRTCAuthError) {
-//         switch returnValue {
-//         case MobileRTCAuthError.success:
-//             NSLog("Swift: SDK successfully initialized.")
-//         case MobileRTCAuthError.keyOrSecretEmpty:
-//             NSLog("Swift: SDK Key/Secret was not provided. Replace sdkKey and sdkSecret at the top of this file with your SDK Key/Secret.")
-//         case MobileRTCAuthError.keyOrSecretWrong, MobileRTCAuthError.unknown:
-//             NSLog("Swift: SDK Key/Secret is not valid.")
-//         default:
-//             NSLog("Swift: SDK Authorization failed with MobileRTCAuthError: \(returnValue).")
-//         }
-//     }
-
-//     private func onMobileRTCLoginReturn(_ returnValue: Int) {
-//         switch returnValue {
-//         case 0:
-//             NSLog("Swift: Successfully logged in")
-//             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "userLoggedIn"), object: nil)
-//         case 1002:
-//             NSLog("Swift: Password incorrect")
-//         default:
-//             NSLog("Swift: Could not log in. Error code: \(returnValue)")
-//         }
-//     }
-//     public func onMobileRTCLogoutReturn(_ returnValue: Int) {
-//         switch returnValue {
-//         case 0:
-//             NSLog("Swift: Successfully logged out")
-//             NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "userLoggedIn"), object: nil)
-//         default:
-//             NSLog("Swift: Could not log out. Error code: \(returnValue)")
-//         }
-//     }
-
-//     public func applicationWillTerminate(_ application: UIApplication) {
-//         // Obtain the MobileRTCAuthService from the Zoom SDK, this service can log in a Zoom user, log out a Zoom user, authorize the Zoom SDK etc.
-//         if let authorizationService = MobileRTC.shared().getAuthService() {
-
-//             // Call logoutRTC() to log the user out.
-//             authorizationService.logoutRTC()
-//         }
-//     }
-// }
