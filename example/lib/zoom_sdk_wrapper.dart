@@ -1,6 +1,6 @@
 import 'dart:io' show Platform;
-import 'package:zoom_meeting_flutter_sdk/zoom_meeting_flutter_sdk.dart';
 import 'package:flutter/foundation.dart';
+import 'package:zoom_meeting_flutter_sdk/zoom_meeting_flutter_sdk.dart';
 import 'zoom_sdk_wrapper_desktop.dart';
 
 abstract class ZoomSDKWrapper implements ZoomMeetingFlutterSdk {
@@ -12,14 +12,12 @@ abstract class ZoomSDKWrapper implements ZoomMeetingFlutterSdk {
 }
 
 class ZoomSDKWrapperImpl extends ZoomMeetingFlutterSdk {
-  final ZoomMeetingFlutterSdk _zoomSDK;
+  final _zoomSDK = Platform.isMacOS || Platform.isWindows ? ZoomSDKWrapperDesktop() : ZoomMeetingFlutterSdk();
 
-  ZoomSDKWrapperImpl() : _zoomSDK = Platform.isMacOS || Platform.isWindows ? ZoomSDKWrapperDesktop() : ZoomMeetingFlutterSdk() {
-    debugPrint("ZoomSDKWrapper-Platform : ${Platform.operatingSystem}");
-  }
 
   @override
   Future<bool?> initZoom({required String jwtToken}) {
+    debugPrint(Platform.isMacOS ? "MacOS" : Platform.isWindows ? "Windows" : "Mobile");
     return _zoomSDK.initZoom(jwtToken: jwtToken);
   }
 

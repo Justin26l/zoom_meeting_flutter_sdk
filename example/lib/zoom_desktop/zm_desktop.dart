@@ -6,7 +6,7 @@ class ZoomMeetingDesktop {
   Future<bool?> initZoom({
     required String jwtToken,
   }) {
-    debugPrint("ZoomNatively-initZoom");
+    debugPrint("Desktop initZoom");
 
     return ZoomMeetingDesktopPlatform.instance.initZoom(
       jwtToken: jwtToken,
@@ -19,7 +19,7 @@ class ZoomMeetingDesktop {
     required String meetingPassword,
     required String displayName
   }) {
-    debugPrint("ZoomNatively-joinMeting $meetingNumber");
+    debugPrint("Desktop joinMeting $meetingNumber");
     return ZoomMeetingDesktopPlatform.instance.joinMeting(
       meetingNumber: meetingNumber,
       meetingPassword: meetingPassword,
