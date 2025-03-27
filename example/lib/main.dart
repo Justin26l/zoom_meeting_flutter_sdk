@@ -136,11 +136,12 @@ class _MyHomePageState extends State<MyHomePage> {
     final jwt = JWT(
       {
         'appKey': "DWDwOEUDRBStmIPuOE9KtQ",
+        'sdkKey': "DWDwOEUDRBStmIPuOE9KtQ",
         'mn': _meetingNumberController.text,
         'role': 0, // 0 for participant, 1 for host
+        'tokenExp': (DateTime.now().millisecondsSinceEpoch ~/ 1000) + 3600, // 1 hour expiration
         'iat': DateTime.now().millisecondsSinceEpoch ~/ 1000,
         'exp': (DateTime.now().millisecondsSinceEpoch ~/ 1000) + 3600, // 1 hour expiration
-        'tokenExp': (DateTime.now().millisecondsSinceEpoch ~/ 1000) + 3600, // 1 hour expiration
       },
     );
 
