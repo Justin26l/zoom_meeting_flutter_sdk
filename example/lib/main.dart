@@ -37,6 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _meetingNumberController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _jwtController = TextEditingController();
 
   @override
   void initState() {
@@ -71,6 +72,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const SizedBox(height: 12),
             TextField(
+              controller: _jwtController,
+              decoration: const InputDecoration(labelText: 'Jwt Token'),
+            ),
+            const SizedBox(height: 12),
+            TextField(
               controller: _nameController,
               decoration: const InputDecoration(labelText: 'Your Name'),
             ),
@@ -99,8 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
     try {
       debugPrint("initPlatformState");
       if (!isInitialized) {
-        final jwtToken = generateJWT();
-        debugPrint("initZoom -> isInitialized = $isInitialized");
+        final jwtToken = _jwtController.text;
+        // debugPrint("initZoom -> isInitialized = $isInitialized");
         isInitialized = (await _zoomSDK.initZoom(jwtToken: jwtToken)) ?? false;
         debugPrint("initZoom -> result = $isInitialized");
                 
@@ -136,11 +142,12 @@ class _MyHomePageState extends State<MyHomePage> {
     final jwt = JWT(
       {
         'appKey': "DWDwOEUDRBStmIPuOE9KtQ",
+        'sdkKey': "DWDwOEUDRBStmIPuOE9KtQ",
         'mn': _meetingNumberController.text,
         'role': 0, // 0 for participant, 1 for host
+        'tokenExp': (DateTime.now().millisecondsSinceEpoch ~/ 1000) + 3600, // 1 hour expiration
         'iat': DateTime.now().millisecondsSinceEpoch ~/ 1000,
         'exp': (DateTime.now().millisecondsSinceEpoch ~/ 1000) + 3600, // 1 hour expiration
-        'tokenExp': (DateTime.now().millisecondsSinceEpoch ~/ 1000) + 3600, // 1 hour expiration
       },
     );
 
