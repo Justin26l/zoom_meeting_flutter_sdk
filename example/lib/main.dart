@@ -37,6 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _meetingNumberController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _jwtController = TextEditingController();
 
   @override
   void initState() {
@@ -71,6 +72,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const SizedBox(height: 12),
             TextField(
+              controller: _jwtController,
+              decoration: const InputDecoration(labelText: 'Jwt Token'),
+            ),
+            const SizedBox(height: 12),
+            TextField(
               controller: _nameController,
               decoration: const InputDecoration(labelText: 'Your Name'),
             ),
@@ -99,8 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
     try {
       debugPrint("initPlatformState");
       if (!isInitialized) {
-        final jwtToken = generateJWT();
-        debugPrint("initZoom -> isInitialized = $isInitialized");
+        final jwtToken = _jwtController.text;
+        // debugPrint("initZoom -> isInitialized = $isInitialized");
         isInitialized = (await _zoomSDK.initZoom(jwtToken: jwtToken)) ?? false;
         debugPrint("initZoom -> result = $isInitialized");
                 
