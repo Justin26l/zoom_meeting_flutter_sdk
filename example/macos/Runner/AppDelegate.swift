@@ -6,6 +6,8 @@ import AuthenticationServices
 @main
 class AppDelegate: FlutterAppDelegate, ZoomSDKAuthDelegate, ZoomSDKMeetingServiceDelegate {
     var sdk = ZoomSDK.shared()
+    var authService = ZoomSDKAuthService();
+    var meetingService = ZoomSDKMeetingService();
 
     override func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true
@@ -55,6 +57,14 @@ class AppDelegate: FlutterAppDelegate, ZoomSDKAuthDelegate, ZoomSDKMeetingServic
         let initResult = self.sdk.initSDK(with: initParams)
         NSLog("Swift : initializeSDK() : initResult = \(initResult)")
         if initResult != ZoomSDKError_Success {
+            authService = self.sdk.getAuthService();
+            
+            guard let meetingService = self.sdk.getMeetingService() else {
+                result(FlutterError(code: "MEETING_SERVICE_UNAVAILABLE", message: "Failed to get meeting service", details: nil))
+                return
+            }
+            self.meetingService = meetingService
+
             result(FlutterError(code: "INIT_FAILED", message: "SDK initialization failed", details: nil))
         }
         else{
@@ -63,13 +73,12 @@ class AppDelegate: FlutterAppDelegate, ZoomSDKAuthDelegate, ZoomSDKMeetingServic
     }
 
     private func authenticateSDK( jwtToken: String, result: @escaping FlutterResult) {
-        let authService = self.sdk.getAuthService();
         NSLog("Swift : call authenticateSDK()");
 
-        authService.delegate = self
+        self.authService.delegate = self
         let authContext = ZoomSDKAuthContext()
         authContext.jwtToken = jwtToken
-        let authResult = authService.sdkAuth(authContext)
+        let authResult = self.authService.sdkAuth(authContext)
         NSLog("Swift : authenticateSDK() : authResult = \(authResult)")
         
         if authResult != ZoomSDKError_Success {
@@ -107,11 +116,7 @@ class AppDelegate: FlutterAppDelegate, ZoomSDKAuthDelegate, ZoomSDKMeetingServic
 
 
     private func joinMeeting(meetingNumber: Int64, displayName: String, password: String, result: @escaping FlutterResult) {
-        guard let meetingService = self.sdk.getMeetingService() else {
-            result(FlutterError(code: "SERVICE_UNAVAILABLE", message: "Failed to get meeting service", details: nil))
-            return 
-        }
-        
+
         let joinParam = ZoomSDKJoinMeetingElements()
         joinParam.userType = ZoomSDKUserType_WithoutLogin;
         joinParam.webinarToken = nil;
@@ -126,7 +131,15 @@ class AppDelegate: FlutterAppDelegate, ZoomSDKAuthDelegate, ZoomSDKMeetingServic
         joinParam.vanityID = nil
         joinParam.zak = nil
 
-        meetingService.joinMeeting(joinParam)
+        let joinResult = self.meetingService.joinMeeting(joinParam)
+        NSLog("Swift: joinMeeting() : joinResult = \(String(describing: joinResult))")
+        if joinResult == ZoomSDKError_Success {
+            NSLog("Successfully joined the meeting")
+            result(true)
+        } else {
+            NSLog("Failed to join the meeting")
+            result(FlutterError(code: "JOIN_MEETING_FAILED", message: "Failed to join the meeting", details: nil))
+        }
     }
 
 }
