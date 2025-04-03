@@ -148,8 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> _joinMeeting() async {
     debugPrint("Joining meeting");
 
-    if (_meetingNumberController.text.isEmpty ||
-        _nameController.text.isEmpty) {
+    if (_meetingNumberController.text.isEmpty) {
       // Show an error message
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Please enter meeting number and your name")),
@@ -162,7 +161,6 @@ class _MyHomePageState extends State<MyHomePage> {
       meetingPassword: _passwordController.text,
       displayName: _nameController.text,
     );
-
   }
 
   String generateJWT() {

@@ -74,6 +74,7 @@ class AppDelegate: FlutterAppDelegate, ZoomSDKAuthDelegate, ZoomSDKMeetingServic
 
     private func authenticateSDK( jwtToken: String, result: @escaping FlutterResult) {
         NSLog("Swift : call authenticateSDK()");
+        NSLog("Swift : authenticateSDK : jwtToken = \(jwtToken)")
 
         self.authService.delegate = self
         let authContext = ZoomSDKAuthContext()
@@ -84,7 +85,7 @@ class AppDelegate: FlutterAppDelegate, ZoomSDKAuthDelegate, ZoomSDKMeetingServic
         if authResult != ZoomSDKError_Success {
             result(FlutterError(code: "AUTH_FAILED", message: "SDK authentication failed", details: nil))
         }
-        else{
+        else {
             result(true)
         }
     }
