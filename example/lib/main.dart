@@ -130,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
         }
       }
       else if (!isAuthorized) {
-        final jwtToken = _jwtController.text ?? generateJWT();
+        final jwtToken = generateJWT();
         // debugPrint("initZoom -> isAuthorized = $isAuthorized");
         isAuthorized = (await _zoomSDK.initZoom(jwtToken: jwtToken)) ?? false;
         debugPrint("sdkAuth -> result = $isAuthorized");
@@ -156,7 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
       );
       return;
     }
-    
+
     await _zoomSDK.joinMeting(
       meetingNumber: _meetingNumberController.text,
       meetingPassword: _passwordController.text,
