@@ -23,10 +23,13 @@ abstract class ZoomMeetingDesktopPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<bool?> initZoom({
+  Future<bool?> initZoom() {
+    throw UnimplementedError('initZoom() has not been implemented.');
+  }
+  Future<bool?> sdkAuth({
     required String jwtToken,
   }) {
-    throw UnimplementedError('initZoom() has not been implemented.');
+    throw UnimplementedError('sdkAuth() has not been implemented.');
   }
 
   Future<bool?> joinMeting({

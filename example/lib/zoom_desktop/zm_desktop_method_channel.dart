@@ -10,13 +10,23 @@ class MethodChannelZoomMeetingDesktop extends ZoomMeetingDesktopPlatform {
   final methodChannel = const MethodChannel('zoom_meeting_flutter_sdk');
 
   @override
-  Future<bool?> initZoom({
-    required String jwtToken
-  }) async {
+  Future<bool?> initZoom() async {
     debugPrint("Desktop-initZoom");
 
     final version = await methodChannel.invokeMethod<bool>(
-      'initZoom',
+      'initZoom'
+    );
+    return version;
+  }
+
+  @override
+  Future<bool?> sdkAuth({
+    required String jwtToken
+  }) async {
+    debugPrint("Desktop-sdkAuth");
+
+    final version = await methodChannel.invokeMethod<bool>(
+      'sdkAuth',
       {
         "jwtToken": jwtToken,
       },

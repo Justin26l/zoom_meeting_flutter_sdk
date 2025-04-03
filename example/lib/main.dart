@@ -32,6 +32,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final ZoomSDKWrapperImpl _zoomSDK = ZoomSDKWrapperImpl();
   bool isInitialized = false;
+  bool isAuthorized = false;
   
   // Text controllers for the meeting form
   final TextEditingController _meetingNumberController = TextEditingController();
@@ -82,8 +83,13 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const SizedBox(height: 24),
             ElevatedButton(
-              onPressed: isInitialized ? _joinMeeting : initSDK,
-              child: Text(isInitialized ? "Join Meeting" : "Initialize SDK"),
+              onPressed : initSDK,
+              child: Text(isInitialized ? "Authorize Zoom" : "Initialize SDK"),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed : _joinMeeting,
+              child: const Text("Join Meeting"),
             ),
             const SizedBox(height: 16),
             Text(
@@ -92,6 +98,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   : "SDK Not Initialized",
               style: TextStyle(
                 color: isInitialized ? Colors.green : Colors.red,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              isAuthorized
+                  ? "SDK Authorized Successfully"
+                  : "SDK Not Authorized",
+              style: TextStyle(
+                color: isAuthorized ? Colors.green : Colors.red,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -105,19 +120,30 @@ class _MyHomePageState extends State<MyHomePage> {
     try {
       debugPrint("initPlatformState");
       if (!isInitialized) {
-        final jwtToken = _jwtController.text;
+        final jwtToken = _jwtController.text ?? generateJWT();
         // debugPrint("initZoom -> isInitialized = $isInitialized");
         isInitialized = (await _zoomSDK.initZoom(jwtToken: jwtToken)) ?? false;
         debugPrint("initZoom -> result = $isInitialized");
-                
+
         if (isInitialized) {
           setState(() {}); // Update UI to reflect initialized state
         }
       }
+      else if (!isAuthorized) {
+        final jwtToken = _jwtController.text ?? generateJWT();
+        // debugPrint("initZoom -> isAuthorized = $isAuthorized");
+        isAuthorized = (await _zoomSDK.initZoom(jwtToken: jwtToken)) ?? false;
+        debugPrint("sdkAuth -> result = $isAuthorized");
+
+        if (isAuthorized) {
+          setState(() {}); // Update UI to reflect initialized state
+        }
+      }
     } catch (e) {
-      debugPrint("Error initializing Zoom: $e");
+      debugPrint("Error Authorising Zoom: $e");
     }
   }
+
 
   Future<void> _joinMeeting() async {
     debugPrint("Joining meeting");
@@ -130,6 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
       );
       return;
     }
+    
     await _zoomSDK.joinMeting(
       meetingNumber: _meetingNumberController.text,
       meetingPassword: _passwordController.text,
