@@ -21,142 +21,174 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		2974C29D2B0824B92F028A90 /* Pods_RunnerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159E218B43112AE4E583AC68 /* Pods_RunnerTests.framework */; };
 		331C80D8294CF71000263BE5 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C80D7294CF71000263BE5 /* RunnerTests.swift */; };
 		335BBD1B22A9A15E00E9071D /* GeneratedPluginRegistrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335BBD1A22A9A15E00E9071D /* GeneratedPluginRegistrant.swift */; };
 		33CC10F12044A3C60003C045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CC10F02044A3C60003C045 /* AppDelegate.swift */; };
 		33CC10F32044A3C60003C045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33CC10F22044A3C60003C045 /* Assets.xcassets */; };
 		33CC10F62044A3C60003C045 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CC10F42044A3C60003C045 /* MainMenu.xib */; };
 		33CC11132044BFA00003C045 /* MainFlutterWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CC11122044BFA00003C045 /* MainFlutterWindow.swift */; };
-		7085E890EB3EEF040B654DC2 /* Pods_RunnerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A20BAB0DB5DC525690E8F4 /* Pods_RunnerTests.framework */; };
-		D066F00B2D8BB9B0000BD5C4 /* airhost.app in Resources */ = {isa = PBXBuildFile; fileRef = D066EFBA2D8BB9B0000BD5C4 /* airhost.app */; };
-		D066F00C2D8BB9B0000BD5C4 /* annoter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFBB2D8BB9B0000BD5C4 /* annoter.bundle */; };
-		D066F00D2D8BB9B0000BD5C4 /* AnnoUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFBC2D8BB9B0000BD5C4 /* AnnoUI.bundle */; };
-		D066F00E2D8BB9B0000BD5C4 /* aomagent.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFBD2D8BB9B0000BD5C4 /* aomagent.bundle */; };
-		D066F00F2D8BB9B0000BD5C4 /* aomhost.app in Resources */ = {isa = PBXBuildFile; fileRef = D066EFBE2D8BB9B0000BD5C4 /* aomhost.app */; };
-		D066F0112D8BB9B0000BD5C4 /* capHost.app in Resources */ = {isa = PBXBuildFile; fileRef = D066EFC02D8BB9B0000BD5C4 /* capHost.app */; };
-		D066F0142D8BB9B0000BD5C4 /* CptHost.app in Resources */ = {isa = PBXBuildFile; fileRef = D066EFC32D8BB9B0000BD5C4 /* CptHost.app */; };
-		D066F0162D8BB9B0000BD5C4 /* libcares.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFC52D8BB9B0000BD5C4 /* libcares.dylib */; };
-		D066F0172D8BB9B0000BD5C4 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFC62D8BB9B0000BD5C4 /* libcrypto.dylib */; };
-		D066F0182D8BB9B0000BD5C4 /* libjson.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFC72D8BB9B0000BD5C4 /* libjson.dylib */; };
-		D066F0192D8BB9B0000BD5C4 /* liblooper.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFC82D8BB9B0000BD5C4 /* liblooper.dylib */; };
-		D066F01A2D8BB9B0000BD5C4 /* libminizip.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFC92D8BB9B0000BD5C4 /* libminizip.dylib */; };
-		D066F01B2D8BB9B1000BD5C4 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFCA2D8BB9B0000BD5C4 /* libssl.dylib */; };
-		D066F01C2D8BB9B1000BD5C4 /* libzContext.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFCB2D8BB9B0000BD5C4 /* libzContext.dylib */; };
-		D066F01D2D8BB9B1000BD5C4 /* libzoombase_crypto_shared.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFCC2D8BB9B0000BD5C4 /* libzoombase_crypto_shared.dylib */; };
-		D066F01E2D8BB9B1000BD5C4 /* libzoombase_shared.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFCD2D8BB9B0000BD5C4 /* libzoombase_shared.dylib */; };
-		D066F0202D8BB9B1000BD5C4 /* mcm.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFCF2D8BB9B0000BD5C4 /* mcm.bundle */; };
-		D066F0252D8BB9B1000BD5C4 /* RingtoneRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFD42D8BB9B0000BD5C4 /* RingtoneRes.bundle */; };
-		D066F0262D8BB9B1000BD5C4 /* SDK_Transcode.app in Resources */ = {isa = PBXBuildFile; fileRef = D066EFD52D8BB9B0000BD5C4 /* SDK_Transcode.app */; };
-		D066F0272D8BB9B1000BD5C4 /* ssb_sdk.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFD62D8BB9B0000BD5C4 /* ssb_sdk.bundle */; };
-		D066F02C2D8BB9B1000BD5C4 /* viperex.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFDB2D8BB9B0000BD5C4 /* viperex.bundle */; };
-		D066F02F2D8BB9B1000BD5C4 /* zApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFDE2D8BB9B0000BD5C4 /* zApp.bundle */; };
-		D066F0302D8BB9B1000BD5C4 /* zAppUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFDF2D8BB9B0000BD5C4 /* zAppUI.bundle */; };
-		D066F0312D8BB9B1000BD5C4 /* zbt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFE02D8BB9B0000BD5C4 /* zbt.dylib */; };
-		D066F0342D8BB9B1000BD5C4 /* zConfUniversalUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFE32D8BB9B0000BD5C4 /* zConfUniversalUI.bundle */; };
-		D066F0352D8BB9B1000BD5C4 /* zData.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFE42D8BB9B0000BD5C4 /* zData.bundle */; };
-		D066F0372D8BB9B1000BD5C4 /* zKBCrypto.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFE62D8BB9B0000BD5C4 /* zKBCrypto.bundle */; };
-		D066F0382D8BB9B1000BD5C4 /* zlt.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFE72D8BB9B0000BD5C4 /* zlt.bundle */; };
-		D066F0392D8BB9B1000BD5C4 /* zMacRes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFE82D8BB9B0000BD5C4 /* zMacRes.bundle */; };
-		D066F03A2D8BB9B1000BD5C4 /* zMacResRetina.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFE92D8BB9B0000BD5C4 /* zMacResRetina.bundle */; };
-		D066F03B2D8BB9B1000BD5C4 /* zmb.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFEA2D8BB9B0000BD5C4 /* zmb.bundle */; };
-		D066F03D2D8BB9B1000BD5C4 /* zmLoader.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFEC2D8BB9B0000BD5C4 /* zmLoader.bundle */; };
-		D066F03E2D8BB9B1000BD5C4 /* ZMScreenshot.app in Resources */ = {isa = PBXBuildFile; fileRef = D066EFED2D8BB9B0000BD5C4 /* ZMScreenshot.app */; };
-		D066F0412D8BB9B1000BD5C4 /* zNet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFF02D8BB9B0000BD5C4 /* zNet.bundle */; };
-		D066F04D2D8BB9B1000BD5C4 /* ZoomTelemetry.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFFC2D8BB9B0000BD5C4 /* ZoomTelemetry.bundle */; };
-		D066F04F2D8BB9B1000BD5C4 /* zPSApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFFE2D8BB9B0000BD5C4 /* zPSApp.bundle */; };
-		D066F0502D8BB9B1000BD5C4 /* zPTApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066EFFF2D8BB9B0000BD5C4 /* zPTApp.bundle */; };
-		D066F0512D8BB9B1000BD5C4 /* zPTKBCrypto.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066F0002D8BB9B0000BD5C4 /* zPTKBCrypto.bundle */; };
-		D066F0522D8BB9B1000BD5C4 /* zTelemetryBiz.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066F0012D8BB9B0000BD5C4 /* zTelemetryBiz.bundle */; };
-		D066F0572D8BB9B1000BD5C4 /* zVideoApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066F0062D8BB9B0000BD5C4 /* zVideoApp.bundle */; };
-		D066F0592D8BB9B1000BD5C4 /* zVideoUIEx.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066F0082D8BB9B0000BD5C4 /* zVideoUIEx.bundle */; };
-		D066F05A2D8BB9B1000BD5C4 /* zWebService.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D066F0092D8BB9B0000BD5C4 /* zWebService.bundle */; };
-		D066F05B2D8BB9D5000BD5C4 /* asproxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFBF2D8BB9B0000BD5C4 /* asproxy.framework */; };
-		D066F05C2D8BB9D5000BD5C4 /* asproxy.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFBF2D8BB9B0000BD5C4 /* asproxy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F05D2D8BB9D6000BD5C4 /* cmmbiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFC12D8BB9B0000BD5C4 /* cmmbiz.framework */; };
-		D066F05E2D8BB9D6000BD5C4 /* cmmbiz.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFC12D8BB9B0000BD5C4 /* cmmbiz.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F05F2D8BB9D6000BD5C4 /* cmmlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFC22D8BB9B0000BD5C4 /* cmmlib.framework */; };
-		D066F0602D8BB9D6000BD5C4 /* cmmlib.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFC22D8BB9B0000BD5C4 /* cmmlib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0612D8BB9D6000BD5C4 /* curl64.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFC42D8BB9B0000BD5C4 /* curl64.framework */; };
-		D066F0622D8BB9D6000BD5C4 /* curl64.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFC42D8BB9B0000BD5C4 /* curl64.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0632D8BB9D6000BD5C4 /* libcares.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFC52D8BB9B0000BD5C4 /* libcares.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		D066F0642D8BB9D6000BD5C4 /* libcrypto.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFC62D8BB9B0000BD5C4 /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		D066F0652D8BB9D6000BD5C4 /* libjson.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFC72D8BB9B0000BD5C4 /* libjson.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		D066F0662D8BB9D6000BD5C4 /* liblooper.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFC82D8BB9B0000BD5C4 /* liblooper.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		D066F0672D8BB9D6000BD5C4 /* libminizip.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFC92D8BB9B0000BD5C4 /* libminizip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		D066F0682D8BB9D6000BD5C4 /* libssl.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFCA2D8BB9B0000BD5C4 /* libssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		D066F0692D8BB9D6000BD5C4 /* libzContext.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFCB2D8BB9B0000BD5C4 /* libzContext.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		D066F06A2D8BB9D6000BD5C4 /* libzoombase_crypto_shared.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFCC2D8BB9B0000BD5C4 /* libzoombase_crypto_shared.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		D066F06B2D8BB9D6000BD5C4 /* libzoombase_shared.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFCD2D8BB9B0000BD5C4 /* libzoombase_shared.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		D066F06C2D8BB9D6000BD5C4 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFCE2D8BB9B0000BD5C4 /* Lottie.framework */; };
-		D066F06D2D8BB9D6000BD5C4 /* Lottie.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFCE2D8BB9B0000BD5C4 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F06E2D8BB9D6000BD5C4 /* nydus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFD02D8BB9B0000BD5C4 /* nydus.framework */; };
-		D066F06F2D8BB9D6000BD5C4 /* nydus.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFD02D8BB9B0000BD5C4 /* nydus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0702D8BB9D6000BD5C4 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC772E319D45B098E263AE6 /* Pods_Runner.framework */; };
-		D066F0722D8BB9D6000BD5C4 /* Prism.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFD12D8BB9B0000BD5C4 /* Prism.framework */; };
-		D066F0732D8BB9D6000BD5C4 /* Prism.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFD12D8BB9B0000BD5C4 /* Prism.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0742D8BB9D6000BD5C4 /* protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFD22D8BB9B0000BD5C4 /* protobuf.framework */; };
-		D066F0752D8BB9D6000BD5C4 /* protobuf.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFD22D8BB9B0000BD5C4 /* protobuf.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0762D8BB9D6000BD5C4 /* PTUIBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFD32D8BB9B0000BD5C4 /* PTUIBridge.framework */; };
-		D066F0772D8BB9D6000BD5C4 /* PTUIBridge.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFD32D8BB9B0000BD5C4 /* PTUIBridge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0782D8BB9D6000BD5C4 /* SwiftZoomKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFD72D8BB9B0000BD5C4 /* SwiftZoomKit.framework */; };
-		D066F0792D8BB9D6000BD5C4 /* SwiftZoomKit.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFD72D8BB9B0000BD5C4 /* SwiftZoomKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F07A2D8BB9D6000BD5C4 /* tp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFD82D8BB9B0000BD5C4 /* tp.framework */; };
-		D066F07B2D8BB9D6000BD5C4 /* tp.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFD82D8BB9B0000BD5C4 /* tp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F07C2D8BB9D6000BD5C4 /* util.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFD92D8BB9B0000BD5C4 /* util.framework */; };
-		D066F07D2D8BB9D6000BD5C4 /* util.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFD92D8BB9B0000BD5C4 /* util.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F07E2D8BB9D6000BD5C4 /* viper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFDA2D8BB9B0000BD5C4 /* viper.framework */; };
-		D066F07F2D8BB9D6000BD5C4 /* viper.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFDA2D8BB9B0000BD5C4 /* viper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0802D8BB9D6000BD5C4 /* vtAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFDC2D8BB9B0000BD5C4 /* vtAdapter.framework */; };
-		D066F0812D8BB9D6000BD5C4 /* vtAdapter.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFDC2D8BB9B0000BD5C4 /* vtAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0822D8BB9D6000BD5C4 /* xmpp_framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFDD2D8BB9B0000BD5C4 /* xmpp_framework.framework */; };
-		D066F0832D8BB9D7000BD5C4 /* xmpp_framework.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFDD2D8BB9B0000BD5C4 /* xmpp_framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0842D8BB9D7000BD5C4 /* zbt.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFE02D8BB9B0000BD5C4 /* zbt.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		D066F0852D8BB9D7000BD5C4 /* zBusinessUIComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFE12D8BB9B0000BD5C4 /* zBusinessUIComponent.framework */; };
-		D066F0862D8BB9D7000BD5C4 /* zBusinessUIComponent.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFE12D8BB9B0000BD5C4 /* zBusinessUIComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0872D8BB9D7000BD5C4 /* zChatComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFE22D8BB9B0000BD5C4 /* zChatComponent.framework */; };
-		D066F0882D8BB9D7000BD5C4 /* zChatComponent.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFE22D8BB9B0000BD5C4 /* zChatComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0892D8BB9D7000BD5C4 /* zEventTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFE52D8BB9B0000BD5C4 /* zEventTracker.framework */; };
-		D066F08A2D8BB9D7000BD5C4 /* zEventTracker.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFE52D8BB9B0000BD5C4 /* zEventTracker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F08B2D8BB9D7000BD5C4 /* ZMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFEB2D8BB9B0000BD5C4 /* ZMDB.framework */; };
-		D066F08C2D8BB9D7000BD5C4 /* ZMDB.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFEB2D8BB9B0000BD5C4 /* ZMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F08D2D8BB9D7000BD5C4 /* ZMScreenshotKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFEE2D8BB9B0000BD5C4 /* ZMScreenshotKit.framework */; };
-		D066F08E2D8BB9D7000BD5C4 /* ZMScreenshotKit.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFEE2D8BB9B0000BD5C4 /* ZMScreenshotKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F08F2D8BB9D7000BD5C4 /* zMsgAppCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFEF2D8BB9B0000BD5C4 /* zMsgAppCommon.framework */; };
-		D066F0902D8BB9D7000BD5C4 /* zMsgAppCommon.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFEF2D8BB9B0000BD5C4 /* zMsgAppCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0912D8BB9D7000BD5C4 /* zNetUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFF12D8BB9B0000BD5C4 /* zNetUtils.framework */; };
-		D066F0922D8BB9D7000BD5C4 /* zNetUtils.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFF12D8BB9B0000BD5C4 /* zNetUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0932D8BB9D7000BD5C4 /* ZoomAIC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFF22D8BB9B0000BD5C4 /* ZoomAIC.framework */; };
-		D066F0942D8BB9D7000BD5C4 /* ZoomAIC.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFF22D8BB9B0000BD5C4 /* ZoomAIC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0952D8BB9D7000BD5C4 /* ZoomAppUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFF32D8BB9B0000BD5C4 /* ZoomAppUISDK.framework */; };
-		D066F0962D8BB9D7000BD5C4 /* ZoomAppUISDK.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFF32D8BB9B0000BD5C4 /* ZoomAppUISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0972D8BB9D7000BD5C4 /* ZoomKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFF42D8BB9B0000BD5C4 /* ZoomKit.framework */; };
-		D066F0982D8BB9D7000BD5C4 /* ZoomKit.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFF42D8BB9B0000BD5C4 /* ZoomKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0992D8BB9D7000BD5C4 /* ZoomMeetingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFF52D8BB9B0000BD5C4 /* ZoomMeetingBridge.framework */; };
-		D066F09A2D8BB9D7000BD5C4 /* ZoomMeetingBridge.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFF52D8BB9B0000BD5C4 /* ZoomMeetingBridge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F09B2D8BB9D7000BD5C4 /* ZoomSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFF62D8BB9B0000BD5C4 /* ZoomSDK.framework */; };
-		D066F09C2D8BB9D7000BD5C4 /* ZoomSDK.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFF62D8BB9B0000BD5C4 /* ZoomSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F09D2D8BB9D7000BD5C4 /* ZoomSDKChatUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFF72D8BB9B0000BD5C4 /* ZoomSDKChatUI.framework */; };
-		D066F09E2D8BB9D7000BD5C4 /* ZoomSDKChatUI.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFF72D8BB9B0000BD5C4 /* ZoomSDKChatUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F09F2D8BB9D7000BD5C4 /* ZoomSDKCustomVideoUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFF82D8BB9B0000BD5C4 /* ZoomSDKCustomVideoUI.framework */; };
-		D066F0A02D8BB9D7000BD5C4 /* ZoomSDKCustomVideoUI.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFF82D8BB9B0000BD5C4 /* ZoomSDKCustomVideoUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0A12D8BB9D7000BD5C4 /* ZoomSDKVideoUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFF92D8BB9B0000BD5C4 /* ZoomSDKVideoUI.framework */; };
-		D066F0A22D8BB9D7000BD5C4 /* ZoomSDKVideoUI.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFF92D8BB9B0000BD5C4 /* ZoomSDKVideoUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0A32D8BB9D7000BD5C4 /* ZoomSetting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFFA2D8BB9B0000BD5C4 /* ZoomSetting.framework */; };
-		D066F0A42D8BB9D7000BD5C4 /* ZoomSetting.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFFA2D8BB9B0000BD5C4 /* ZoomSetting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0A52D8BB9D7000BD5C4 /* ZoomTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFFB2D8BB9B0000BD5C4 /* ZoomTask.framework */; };
-		D066F0A62D8BB9D8000BD5C4 /* ZoomTask.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFFB2D8BB9B0000BD5C4 /* ZoomTask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0A72D8BB9D8000BD5C4 /* ZoomUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066EFFD2D8BB9B0000BD5C4 /* ZoomUnit.framework */; };
-		D066F0A82D8BB9D8000BD5C4 /* ZoomUnit.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066EFFD2D8BB9B0000BD5C4 /* ZoomUnit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0A92D8BB9D8000BD5C4 /* zUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066F0022D8BB9B0000BD5C4 /* zUI.framework */; };
-		D066F0AA2D8BB9D8000BD5C4 /* zUI.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066F0022D8BB9B0000BD5C4 /* zUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0AB2D8BB9D8000BD5C4 /* zUIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066F0032D8BB9B0000BD5C4 /* zUIClient.framework */; };
-		D066F0AC2D8BB9D8000BD5C4 /* zUIClient.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066F0032D8BB9B0000BD5C4 /* zUIClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0AD2D8BB9D8000BD5C4 /* zUIRes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066F0042D8BB9B0000BD5C4 /* zUIRes.framework */; };
-		D066F0AE2D8BB9D8000BD5C4 /* zUIRes.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066F0042D8BB9B0000BD5C4 /* zUIRes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0AF2D8BB9D8000BD5C4 /* zUnifyWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066F0052D8BB9B0000BD5C4 /* zUnifyWebView.framework */; };
-		D066F0B02D8BB9D8000BD5C4 /* zUnifyWebView.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066F0052D8BB9B0000BD5C4 /* zUnifyWebView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D066F0B12D8BB9D8000BD5C4 /* zVideoUIBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D066F0072D8BB9B0000BD5C4 /* zVideoUIBridge.framework */; };
-		D066F0B22D8BB9D8000BD5C4 /* zVideoUIBridge.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D066F0072D8BB9B0000BD5C4 /* zVideoUIBridge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB162D9F933500F9BFA0 /* ZoomMeetingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAC62D9F933300F9BFA0 /* ZoomMeetingBridge.framework */; };
+		D092AB172D9F933500F9BFA0 /* ZoomMeetingBridge.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAC62D9F933300F9BFA0 /* ZoomMeetingBridge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB182D9F933500F9BFA0 /* ZoomSetting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAC72D9F933300F9BFA0 /* ZoomSetting.framework */; };
+		D092AB192D9F933500F9BFA0 /* ZoomSetting.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAC72D9F933300F9BFA0 /* ZoomSetting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB1A2D9F933500F9BFA0 /* CptHost.app in Resources */ = {isa = PBXBuildFile; fileRef = D092AAC82D9F933300F9BFA0 /* CptHost.app */; };
+		D092AB1B2D9F933500F9BFA0 /* protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAC92D9F933300F9BFA0 /* protobuf.framework */; };
+		D092AB1C2D9F933500F9BFA0 /* protobuf.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAC92D9F933300F9BFA0 /* protobuf.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB1D2D9F933500F9BFA0 /* capHost.app in Resources */ = {isa = PBXBuildFile; fileRef = D092AACA2D9F933300F9BFA0 /* capHost.app */; };
+		D092AB1E2D9F933500F9BFA0 /* zNet.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AACB2D9F933300F9BFA0 /* zNet.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB1F2D9F933500F9BFA0 /* mcm.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AACC2D9F933300F9BFA0 /* mcm.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB202D9F933500F9BFA0 /* libjson.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AACD2D9F933300F9BFA0 /* libjson.dylib */; };
+		D092AB212D9F933500F9BFA0 /* libjson.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AACD2D9F933300F9BFA0 /* libjson.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D092AB222D9F933500F9BFA0 /* airhost.app in Resources */ = {isa = PBXBuildFile; fileRef = D092AACE2D9F933300F9BFA0 /* airhost.app */; };
+		D092AB232D9F933500F9BFA0 /* SDK_Transcode.app in Resources */ = {isa = PBXBuildFile; fileRef = D092AACF2D9F933300F9BFA0 /* SDK_Transcode.app */; };
+		D092AB242D9F933500F9BFA0 /* zmb.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AAD02D9F933300F9BFA0 /* zmb.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB252D9F933500F9BFA0 /* zmLoader.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AAD12D9F933300F9BFA0 /* zmLoader.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB262D9F933500F9BFA0 /* vtAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAD22D9F933300F9BFA0 /* vtAdapter.framework */; };
+		D092AB272D9F933500F9BFA0 /* vtAdapter.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAD22D9F933300F9BFA0 /* vtAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB282D9F933500F9BFA0 /* zMsgAppCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAD32D9F933300F9BFA0 /* zMsgAppCommon.framework */; };
+		D092AB292D9F933500F9BFA0 /* zMsgAppCommon.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAD32D9F933300F9BFA0 /* zMsgAppCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB2A2D9F933500F9BFA0 /* aomhost.app in Resources */ = {isa = PBXBuildFile; fileRef = D092AAD42D9F933300F9BFA0 /* aomhost.app */; };
+		D092AB2B2D9F933500F9BFA0 /* zEventTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAD52D9F933300F9BFA0 /* zEventTracker.framework */; };
+		D092AB2C2D9F933500F9BFA0 /* zEventTracker.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAD52D9F933300F9BFA0 /* zEventTracker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB2D2D9F933500F9BFA0 /* cmmbiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAD62D9F933300F9BFA0 /* cmmbiz.framework */; };
+		D092AB2E2D9F933500F9BFA0 /* cmmbiz.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAD62D9F933300F9BFA0 /* cmmbiz.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB2F2D9F933500F9BFA0 /* ZoomSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAD72D9F933300F9BFA0 /* ZoomSDK.framework */; };
+		D092AB302D9F933500F9BFA0 /* ZoomSDK.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAD72D9F933300F9BFA0 /* ZoomSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB312D9F933500F9BFA0 /* libminizip.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAD82D9F933300F9BFA0 /* libminizip.dylib */; };
+		D092AB322D9F933500F9BFA0 /* libminizip.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAD82D9F933300F9BFA0 /* libminizip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D092AB332D9F933500F9BFA0 /* zMacRes.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AAD92D9F933300F9BFA0 /* zMacRes.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB342D9F933500F9BFA0 /* zBusinessUIComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AADA2D9F933300F9BFA0 /* zBusinessUIComponent.framework */; };
+		D092AB352D9F933500F9BFA0 /* zBusinessUIComponent.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AADA2D9F933300F9BFA0 /* zBusinessUIComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB362D9F933500F9BFA0 /* zUIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AADB2D9F933300F9BFA0 /* zUIClient.framework */; };
+		D092AB372D9F933500F9BFA0 /* zUIClient.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AADB2D9F933300F9BFA0 /* zUIClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB382D9F933500F9BFA0 /* cmmlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AADC2D9F933300F9BFA0 /* cmmlib.framework */; };
+		D092AB392D9F933500F9BFA0 /* cmmlib.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AADC2D9F933300F9BFA0 /* cmmlib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB3A2D9F933500F9BFA0 /* SwiftZoomKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AADD2D9F933300F9BFA0 /* SwiftZoomKit.framework */; };
+		D092AB3B2D9F933500F9BFA0 /* SwiftZoomKit.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AADD2D9F933300F9BFA0 /* SwiftZoomKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB3C2D9F933500F9BFA0 /* viperex.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AADE2D9F933300F9BFA0 /* viperex.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB3D2D9F933500F9BFA0 /* ZoomSDKCustomVideoUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AADF2D9F933300F9BFA0 /* ZoomSDKCustomVideoUI.framework */; };
+		D092AB3E2D9F933500F9BFA0 /* ZoomSDKCustomVideoUI.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AADF2D9F933300F9BFA0 /* ZoomSDKCustomVideoUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB3F2D9F933500F9BFA0 /* zUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAE02D9F933300F9BFA0 /* zUI.framework */; };
+		D092AB402D9F933500F9BFA0 /* zUI.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAE02D9F933300F9BFA0 /* zUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB412D9F933500F9BFA0 /* PTUIBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAE12D9F933300F9BFA0 /* PTUIBridge.framework */; };
+		D092AB422D9F933500F9BFA0 /* PTUIBridge.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAE12D9F933300F9BFA0 /* PTUIBridge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB432D9F933500F9BFA0 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAE22D9F933300F9BFA0 /* libcrypto.dylib */; };
+		D092AB442D9F933500F9BFA0 /* libcrypto.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAE22D9F933300F9BFA0 /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D092AB452D9F933500F9BFA0 /* zPTApp.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AAE32D9F933300F9BFA0 /* zPTApp.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB462D9F933500F9BFA0 /* zUnifyWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAE42D9F933300F9BFA0 /* zUnifyWebView.framework */; };
+		D092AB472D9F933500F9BFA0 /* zUnifyWebView.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAE42D9F933300F9BFA0 /* zUnifyWebView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB482D9F933500F9BFA0 /* ssb_sdk.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AAE52D9F933300F9BFA0 /* ssb_sdk.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB492D9F933500F9BFA0 /* nydus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAE62D9F933300F9BFA0 /* nydus.framework */; };
+		D092AB4A2D9F933500F9BFA0 /* nydus.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAE62D9F933300F9BFA0 /* nydus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB4B2D9F933500F9BFA0 /* aomagent.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AAE72D9F933300F9BFA0 /* aomagent.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB4C2D9F933500F9BFA0 /* libzoombase_crypto_shared.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAE82D9F933300F9BFA0 /* libzoombase_crypto_shared.dylib */; };
+		D092AB4D2D9F933500F9BFA0 /* libzoombase_crypto_shared.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAE82D9F933300F9BFA0 /* libzoombase_crypto_shared.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D092AB4E2D9F933500F9BFA0 /* viper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAE92D9F933400F9BFA0 /* viper.framework */; };
+		D092AB4F2D9F933500F9BFA0 /* viper.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAE92D9F933400F9BFA0 /* viper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB502D9F933500F9BFA0 /* ZoomKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAEA2D9F933400F9BFA0 /* ZoomKit.framework */; };
+		D092AB512D9F933500F9BFA0 /* ZoomKit.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAEA2D9F933400F9BFA0 /* ZoomKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB522D9F933500F9BFA0 /* ZoomSDKChatUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAEB2D9F933400F9BFA0 /* ZoomSDKChatUI.framework */; };
+		D092AB532D9F933500F9BFA0 /* ZoomSDKChatUI.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAEB2D9F933400F9BFA0 /* ZoomSDKChatUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB542D9F933500F9BFA0 /* zVideoApp.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AAEC2D9F933400F9BFA0 /* zVideoApp.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB552D9F933500F9BFA0 /* ZoomAIC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAED2D9F933400F9BFA0 /* ZoomAIC.framework */; };
+		D092AB562D9F933500F9BFA0 /* ZoomAIC.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAED2D9F933400F9BFA0 /* ZoomAIC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB572D9F933600F9BFA0 /* util.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAEE2D9F933400F9BFA0 /* util.framework */; };
+		D092AB582D9F933600F9BFA0 /* util.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAEE2D9F933400F9BFA0 /* util.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB592D9F933600F9BFA0 /* liblooper.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAEF2D9F933400F9BFA0 /* liblooper.dylib */; };
+		D092AB5A2D9F933600F9BFA0 /* liblooper.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAEF2D9F933400F9BFA0 /* liblooper.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D092AB5B2D9F933600F9BFA0 /* zApp.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AAF02D9F933400F9BFA0 /* zApp.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB5C2D9F933600F9BFA0 /* annoter.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AAF12D9F933400F9BFA0 /* annoter.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB5D2D9F933600F9BFA0 /* zUIRes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAF22D9F933400F9BFA0 /* zUIRes.framework */; };
+		D092AB5E2D9F933600F9BFA0 /* zUIRes.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAF22D9F933400F9BFA0 /* zUIRes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB5F2D9F933600F9BFA0 /* zChatComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAF32D9F933400F9BFA0 /* zChatComponent.framework */; };
+		D092AB602D9F933600F9BFA0 /* zChatComponent.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAF32D9F933400F9BFA0 /* zChatComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB612D9F933600F9BFA0 /* ZoomTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAF42D9F933400F9BFA0 /* ZoomTask.framework */; };
+		D092AB622D9F933600F9BFA0 /* ZoomTask.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAF42D9F933400F9BFA0 /* ZoomTask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB632D9F933600F9BFA0 /* zMacResRetina.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AAF52D9F933400F9BFA0 /* zMacResRetina.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB642D9F933600F9BFA0 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAF62D9F933400F9BFA0 /* Lottie.framework */; };
+		D092AB652D9F933600F9BFA0 /* Lottie.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAF62D9F933400F9BFA0 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB662D9F933600F9BFA0 /* RingtoneRes.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AAF72D9F933400F9BFA0 /* RingtoneRes.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB672D9F933600F9BFA0 /* ZMScreenshotKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAF82D9F933400F9BFA0 /* ZMScreenshotKit.framework */; };
+		D092AB682D9F933600F9BFA0 /* ZMScreenshotKit.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAF82D9F933400F9BFA0 /* ZMScreenshotKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB692D9F933600F9BFA0 /* ZoomUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAF92D9F933400F9BFA0 /* ZoomUnit.framework */; };
+		D092AB6A2D9F933600F9BFA0 /* ZoomUnit.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAF92D9F933400F9BFA0 /* ZoomUnit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB6B2D9F933600F9BFA0 /* xmpp_framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAFA2D9F933400F9BFA0 /* xmpp_framework.framework */; };
+		D092AB6C2D9F933600F9BFA0 /* xmpp_framework.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAFA2D9F933400F9BFA0 /* xmpp_framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB6D2D9F933600F9BFA0 /* ZMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAFB2D9F933400F9BFA0 /* ZMDB.framework */; };
+		D092AB6E2D9F933600F9BFA0 /* ZMDB.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAFB2D9F933400F9BFA0 /* ZMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB6F2D9F933600F9BFA0 /* zPTKBCrypto.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AAFC2D9F933400F9BFA0 /* zPTKBCrypto.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB702D9F933600F9BFA0 /* zlt.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AAFD2D9F933400F9BFA0 /* zlt.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB712D9F933600F9BFA0 /* zNetUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AAFE2D9F933400F9BFA0 /* zNetUtils.framework */; };
+		D092AB722D9F933600F9BFA0 /* zNetUtils.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AAFE2D9F933400F9BFA0 /* zNetUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB732D9F933600F9BFA0 /* zWebService.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AAFF2D9F933400F9BFA0 /* zWebService.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB742D9F933600F9BFA0 /* ZoomSDKVideoUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AB002D9F933400F9BFA0 /* ZoomSDKVideoUI.framework */; };
+		D092AB752D9F933600F9BFA0 /* ZoomSDKVideoUI.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AB002D9F933400F9BFA0 /* ZoomSDKVideoUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB762D9F933700F9BFA0 /* zPSApp.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AB012D9F933400F9BFA0 /* zPSApp.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB772D9F933700F9BFA0 /* zVideoUIEx.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AB022D9F933400F9BFA0 /* zVideoUIEx.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB782D9F933700F9BFA0 /* AnnoUI.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AB032D9F933400F9BFA0 /* AnnoUI.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB792D9F933700F9BFA0 /* zbt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AB042D9F933400F9BFA0 /* zbt.dylib */; };
+		D092AB7A2D9F933700F9BFA0 /* zbt.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AB042D9F933400F9BFA0 /* zbt.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D092AB7B2D9F933700F9BFA0 /* zAppUI.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AB052D9F933400F9BFA0 /* zAppUI.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB7C2D9F933700F9BFA0 /* asproxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AB062D9F933400F9BFA0 /* asproxy.framework */; };
+		D092AB7D2D9F933700F9BFA0 /* asproxy.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AB062D9F933400F9BFA0 /* asproxy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB7E2D9F933700F9BFA0 /* zConfUniversalUI.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AB072D9F933400F9BFA0 /* zConfUniversalUI.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB7F2D9F933700F9BFA0 /* libzContext.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AB082D9F933400F9BFA0 /* libzContext.dylib */; };
+		D092AB802D9F933700F9BFA0 /* libzContext.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AB082D9F933400F9BFA0 /* libzContext.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D092AB812D9F933700F9BFA0 /* zData.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AB092D9F933400F9BFA0 /* zData.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB822D9F933700F9BFA0 /* tp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AB0A2D9F933400F9BFA0 /* tp.framework */; };
+		D092AB832D9F933700F9BFA0 /* tp.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AB0A2D9F933400F9BFA0 /* tp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB842D9F933700F9BFA0 /* libcares.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AB0B2D9F933400F9BFA0 /* libcares.dylib */; };
+		D092AB852D9F933700F9BFA0 /* libcares.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AB0B2D9F933400F9BFA0 /* libcares.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D092AB862D9F933700F9BFA0 /* ZMScreenshot.app in Resources */ = {isa = PBXBuildFile; fileRef = D092AB0C2D9F933400F9BFA0 /* ZMScreenshot.app */; };
+		D092AB872D9F933700F9BFA0 /* Prism.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AB0D2D9F933400F9BFA0 /* Prism.framework */; };
+		D092AB882D9F933700F9BFA0 /* Prism.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AB0D2D9F933400F9BFA0 /* Prism.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB892D9F933700F9BFA0 /* zTelemetryBiz.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AB0E2D9F933400F9BFA0 /* zTelemetryBiz.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB8A2D9F933700F9BFA0 /* zKBCrypto.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AB0F2D9F933400F9BFA0 /* zKBCrypto.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB8B2D9F933700F9BFA0 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AB102D9F933400F9BFA0 /* libssl.dylib */; };
+		D092AB8C2D9F933700F9BFA0 /* libssl.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AB102D9F933400F9BFA0 /* libssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D092AB8D2D9F933700F9BFA0 /* ZoomAppUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AB112D9F933500F9BFA0 /* ZoomAppUISDK.framework */; };
+		D092AB8E2D9F933800F9BFA0 /* ZoomAppUISDK.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AB112D9F933500F9BFA0 /* ZoomAppUISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB8F2D9F933800F9BFA0 /* zVideoUIBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AB122D9F933500F9BFA0 /* zVideoUIBridge.framework */; };
+		D092AB902D9F933800F9BFA0 /* zVideoUIBridge.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AB122D9F933500F9BFA0 /* zVideoUIBridge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB912D9F933800F9BFA0 /* curl64.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AB132D9F933500F9BFA0 /* curl64.framework */; };
+		D092AB922D9F933800F9BFA0 /* curl64.framework in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AB132D9F933500F9BFA0 /* curl64.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D092AB932D9F933800F9BFA0 /* ZoomTelemetry.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D092AB142D9F933500F9BFA0 /* ZoomTelemetry.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AB942D9F933800F9BFA0 /* libzoombase_shared.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D092AB152D9F933500F9BFA0 /* libzoombase_shared.dylib */; };
+		D092AB952D9F933800F9BFA0 /* libzoombase_shared.dylib in Bundle Framework */ = {isa = PBXBuildFile; fileRef = D092AB152D9F933500F9BFA0 /* libzoombase_shared.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D092AC382D9F947100F9BFA0 /* airhost.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AACE2D9F933300F9BFA0 /* airhost.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC392D9F947100F9BFA0 /* aomhost.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAD42D9F933300F9BFA0 /* aomhost.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC3A2D9F947100F9BFA0 /* capHost.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AACA2D9F933300F9BFA0 /* capHost.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC3B2D9F947100F9BFA0 /* CptHost.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAC82D9F933300F9BFA0 /* CptHost.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC3C2D9F947100F9BFA0 /* SDK_Transcode.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AACF2D9F933300F9BFA0 /* SDK_Transcode.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC3D2D9F947100F9BFA0 /* ZMScreenshot.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AB0C2D9F933400F9BFA0 /* ZMScreenshot.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC3E2D9F9B9B00F9BFA0 /* annoter.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAF12D9F933400F9BFA0 /* annoter.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC3F2D9F9B9B00F9BFA0 /* AnnoUI.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AB032D9F933400F9BFA0 /* AnnoUI.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC402D9F9B9B00F9BFA0 /* aomagent.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAE72D9F933300F9BFA0 /* aomagent.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC412D9F9B9B00F9BFA0 /* mcm.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AACC2D9F933300F9BFA0 /* mcm.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC422D9F9B9B00F9BFA0 /* RingtoneRes.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAF72D9F933400F9BFA0 /* RingtoneRes.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC432D9F9B9B00F9BFA0 /* ssb_sdk.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAE52D9F933300F9BFA0 /* ssb_sdk.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC442D9F9B9B00F9BFA0 /* viperex.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AADE2D9F933300F9BFA0 /* viperex.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC452D9F9B9B00F9BFA0 /* zApp.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAF02D9F933400F9BFA0 /* zApp.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC462D9F9B9B00F9BFA0 /* zAppUI.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AB052D9F933400F9BFA0 /* zAppUI.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC472D9F9B9B00F9BFA0 /* zConfUniversalUI.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AB072D9F933400F9BFA0 /* zConfUniversalUI.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC482D9F9B9B00F9BFA0 /* zData.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AB092D9F933400F9BFA0 /* zData.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC492D9F9B9B00F9BFA0 /* zKBCrypto.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AB0F2D9F933400F9BFA0 /* zKBCrypto.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC4A2D9F9B9B00F9BFA0 /* zlt.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAFD2D9F933400F9BFA0 /* zlt.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC4B2D9F9B9B00F9BFA0 /* zMacRes.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAD92D9F933300F9BFA0 /* zMacRes.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC4C2D9F9B9B00F9BFA0 /* zMacResRetina.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAF52D9F933400F9BFA0 /* zMacResRetina.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC4D2D9F9B9B00F9BFA0 /* zmb.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAD02D9F933300F9BFA0 /* zmb.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC4E2D9F9B9B00F9BFA0 /* zmLoader.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAD12D9F933300F9BFA0 /* zmLoader.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC4F2D9F9B9B00F9BFA0 /* zNet.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AACB2D9F933300F9BFA0 /* zNet.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC502D9F9B9B00F9BFA0 /* ZoomTelemetry.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AB142D9F933500F9BFA0 /* ZoomTelemetry.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC512D9F9B9B00F9BFA0 /* zPSApp.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AB012D9F933400F9BFA0 /* zPSApp.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC522D9F9B9B00F9BFA0 /* zPTApp.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAE32D9F933300F9BFA0 /* zPTApp.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC532D9F9B9B00F9BFA0 /* zPTKBCrypto.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAFC2D9F933400F9BFA0 /* zPTKBCrypto.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC542D9F9B9B00F9BFA0 /* zTelemetryBiz.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AB0E2D9F933400F9BFA0 /* zTelemetryBiz.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC552D9F9B9B00F9BFA0 /* zVideoApp.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAEC2D9F933400F9BFA0 /* zVideoApp.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC562D9F9B9B00F9BFA0 /* zVideoUIEx.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AB022D9F933400F9BFA0 /* zVideoUIEx.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D092AC572D9F9B9B00F9BFA0 /* zWebService.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D092AAFF2D9F933400F9BFA0 /* zWebService.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DF65BE9C2F61B80AB466F91D /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98FF398C3AD4C7688B596D7 /* Pods_Runner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,64 +215,139 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D066F08E2D8BB9D7000BD5C4 /* ZMScreenshotKit.framework in Bundle Framework */,
-				D066F07F2D8BB9D6000BD5C4 /* viper.framework in Bundle Framework */,
-				D066F0622D8BB9D6000BD5C4 /* curl64.framework in Bundle Framework */,
-				D066F07B2D8BB9D6000BD5C4 /* tp.framework in Bundle Framework */,
-				D066F0772D8BB9D6000BD5C4 /* PTUIBridge.framework in Bundle Framework */,
-				D066F0982D8BB9D7000BD5C4 /* ZoomKit.framework in Bundle Framework */,
-				D066F0662D8BB9D6000BD5C4 /* liblooper.dylib in Bundle Framework */,
-				D066F0732D8BB9D6000BD5C4 /* Prism.framework in Bundle Framework */,
-				D066F0842D8BB9D7000BD5C4 /* zbt.dylib in Bundle Framework */,
-				D066F0B22D8BB9D8000BD5C4 /* zVideoUIBridge.framework in Bundle Framework */,
-				D066F07D2D8BB9D6000BD5C4 /* util.framework in Bundle Framework */,
-				D066F0AA2D8BB9D8000BD5C4 /* zUI.framework in Bundle Framework */,
-				D066F0862D8BB9D7000BD5C4 /* zBusinessUIComponent.framework in Bundle Framework */,
-				D066F09E2D8BB9D7000BD5C4 /* ZoomSDKChatUI.framework in Bundle Framework */,
-				D066F05E2D8BB9D6000BD5C4 /* cmmbiz.framework in Bundle Framework */,
-				D066F0752D8BB9D6000BD5C4 /* protobuf.framework in Bundle Framework */,
-				D066F0632D8BB9D6000BD5C4 /* libcares.dylib in Bundle Framework */,
-				D066F0882D8BB9D7000BD5C4 /* zChatComponent.framework in Bundle Framework */,
-				D066F0A02D8BB9D7000BD5C4 /* ZoomSDKCustomVideoUI.framework in Bundle Framework */,
-				D066F05C2D8BB9D5000BD5C4 /* asproxy.framework in Bundle Framework */,
-				D066F08A2D8BB9D7000BD5C4 /* zEventTracker.framework in Bundle Framework */,
-				D066F06D2D8BB9D6000BD5C4 /* Lottie.framework in Bundle Framework */,
-				D066F0A62D8BB9D8000BD5C4 /* ZoomTask.framework in Bundle Framework */,
-				D066F0672D8BB9D6000BD5C4 /* libminizip.dylib in Bundle Framework */,
-				D066F0A82D8BB9D8000BD5C4 /* ZoomUnit.framework in Bundle Framework */,
-				D066F0AE2D8BB9D8000BD5C4 /* zUIRes.framework in Bundle Framework */,
-				D066F09C2D8BB9D7000BD5C4 /* ZoomSDK.framework in Bundle Framework */,
-				D066F06A2D8BB9D6000BD5C4 /* libzoombase_crypto_shared.dylib in Bundle Framework */,
-				D066F0792D8BB9D6000BD5C4 /* SwiftZoomKit.framework in Bundle Framework */,
-				D066F0602D8BB9D6000BD5C4 /* cmmlib.framework in Bundle Framework */,
-				D066F08C2D8BB9D7000BD5C4 /* ZMDB.framework in Bundle Framework */,
-				D066F0692D8BB9D6000BD5C4 /* libzContext.dylib in Bundle Framework */,
-				D066F0A42D8BB9D7000BD5C4 /* ZoomSetting.framework in Bundle Framework */,
-				D066F0B02D8BB9D8000BD5C4 /* zUnifyWebView.framework in Bundle Framework */,
-				D066F0962D8BB9D7000BD5C4 /* ZoomAppUISDK.framework in Bundle Framework */,
-				D066F0832D8BB9D7000BD5C4 /* xmpp_framework.framework in Bundle Framework */,
-				D066F0922D8BB9D7000BD5C4 /* zNetUtils.framework in Bundle Framework */,
-				D066F0812D8BB9D6000BD5C4 /* vtAdapter.framework in Bundle Framework */,
-				D066F09A2D8BB9D7000BD5C4 /* ZoomMeetingBridge.framework in Bundle Framework */,
-				D066F0942D8BB9D7000BD5C4 /* ZoomAIC.framework in Bundle Framework */,
-				D066F0AC2D8BB9D8000BD5C4 /* zUIClient.framework in Bundle Framework */,
-				D066F0652D8BB9D6000BD5C4 /* libjson.dylib in Bundle Framework */,
-				D066F06B2D8BB9D6000BD5C4 /* libzoombase_shared.dylib in Bundle Framework */,
-				D066F0642D8BB9D6000BD5C4 /* libcrypto.dylib in Bundle Framework */,
-				D066F0A22D8BB9D7000BD5C4 /* ZoomSDKVideoUI.framework in Bundle Framework */,
-				D066F06F2D8BB9D6000BD5C4 /* nydus.framework in Bundle Framework */,
-				D066F0902D8BB9D7000BD5C4 /* zMsgAppCommon.framework in Bundle Framework */,
-				D066F0682D8BB9D6000BD5C4 /* libssl.dylib in Bundle Framework */,
+				D092AB562D9F933500F9BFA0 /* ZoomAIC.framework in Bundle Framework */,
+				D092AB6A2D9F933600F9BFA0 /* ZoomUnit.framework in Bundle Framework */,
+				D092AB532D9F933500F9BFA0 /* ZoomSDKChatUI.framework in Bundle Framework */,
+				D092AB682D9F933600F9BFA0 /* ZMScreenshotKit.framework in Bundle Framework */,
+				D092AB272D9F933500F9BFA0 /* vtAdapter.framework in Bundle Framework */,
+				D092AB402D9F933500F9BFA0 /* zUI.framework in Bundle Framework */,
+				D092AB832D9F933700F9BFA0 /* tp.framework in Bundle Framework */,
+				D092AB952D9F933800F9BFA0 /* libzoombase_shared.dylib in Bundle Framework */,
+				D092AB2C2D9F933500F9BFA0 /* zEventTracker.framework in Bundle Framework */,
+				D092AB4D2D9F933500F9BFA0 /* libzoombase_crypto_shared.dylib in Bundle Framework */,
+				D092AB882D9F933700F9BFA0 /* Prism.framework in Bundle Framework */,
+				D092AB922D9F933800F9BFA0 /* curl64.framework in Bundle Framework */,
+				D092AB6C2D9F933600F9BFA0 /* xmpp_framework.framework in Bundle Framework */,
+				D092AB802D9F933700F9BFA0 /* libzContext.dylib in Bundle Framework */,
+				D092AB472D9F933500F9BFA0 /* zUnifyWebView.framework in Bundle Framework */,
+				D092AB352D9F933500F9BFA0 /* zBusinessUIComponent.framework in Bundle Framework */,
+				D092AB212D9F933500F9BFA0 /* libjson.dylib in Bundle Framework */,
+				D092AB192D9F933500F9BFA0 /* ZoomSetting.framework in Bundle Framework */,
+				D092AB722D9F933600F9BFA0 /* zNetUtils.framework in Bundle Framework */,
+				D092AB582D9F933600F9BFA0 /* util.framework in Bundle Framework */,
+				D092AB852D9F933700F9BFA0 /* libcares.dylib in Bundle Framework */,
+				D092AB8C2D9F933700F9BFA0 /* libssl.dylib in Bundle Framework */,
+				D092AB652D9F933600F9BFA0 /* Lottie.framework in Bundle Framework */,
+				D092AB7D2D9F933700F9BFA0 /* asproxy.framework in Bundle Framework */,
+				D092AB902D9F933800F9BFA0 /* zVideoUIBridge.framework in Bundle Framework */,
+				D092AB172D9F933500F9BFA0 /* ZoomMeetingBridge.framework in Bundle Framework */,
+				D092AB372D9F933500F9BFA0 /* zUIClient.framework in Bundle Framework */,
+				D092AB3E2D9F933500F9BFA0 /* ZoomSDKCustomVideoUI.framework in Bundle Framework */,
+				D092AB602D9F933600F9BFA0 /* zChatComponent.framework in Bundle Framework */,
+				D092AB512D9F933500F9BFA0 /* ZoomKit.framework in Bundle Framework */,
+				D092AB292D9F933500F9BFA0 /* zMsgAppCommon.framework in Bundle Framework */,
+				D092AB392D9F933500F9BFA0 /* cmmlib.framework in Bundle Framework */,
+				D092AB2E2D9F933500F9BFA0 /* cmmbiz.framework in Bundle Framework */,
+				D092AB5E2D9F933600F9BFA0 /* zUIRes.framework in Bundle Framework */,
+				D092AB7A2D9F933700F9BFA0 /* zbt.dylib in Bundle Framework */,
+				D092AB322D9F933500F9BFA0 /* libminizip.dylib in Bundle Framework */,
+				D092AB4F2D9F933500F9BFA0 /* viper.framework in Bundle Framework */,
+				D092AB8E2D9F933800F9BFA0 /* ZoomAppUISDK.framework in Bundle Framework */,
+				D092AB6E2D9F933600F9BFA0 /* ZMDB.framework in Bundle Framework */,
+				D092AB1C2D9F933500F9BFA0 /* protobuf.framework in Bundle Framework */,
+				D092AB3B2D9F933500F9BFA0 /* SwiftZoomKit.framework in Bundle Framework */,
+				D092AB302D9F933500F9BFA0 /* ZoomSDK.framework in Bundle Framework */,
+				D092AB422D9F933500F9BFA0 /* PTUIBridge.framework in Bundle Framework */,
+				D092AB622D9F933600F9BFA0 /* ZoomTask.framework in Bundle Framework */,
+				D092AB4A2D9F933500F9BFA0 /* nydus.framework in Bundle Framework */,
+				D092AB442D9F933500F9BFA0 /* libcrypto.dylib in Bundle Framework */,
+				D092AB5A2D9F933600F9BFA0 /* liblooper.dylib in Bundle Framework */,
+				D092AB752D9F933600F9BFA0 /* ZoomSDKVideoUI.framework in Bundle Framework */,
 			);
 			name = "Bundle Framework";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D092AB962D9F933800F9BFA0 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D092AB7B2D9F933700F9BFA0 /* zAppUI.bundle in Embed PlugIns */,
+				D092AB662D9F933600F9BFA0 /* RingtoneRes.bundle in Embed PlugIns */,
+				D092AB242D9F933500F9BFA0 /* zmb.bundle in Embed PlugIns */,
+				D092AB3C2D9F933500F9BFA0 /* viperex.bundle in Embed PlugIns */,
+				D092AB932D9F933800F9BFA0 /* ZoomTelemetry.bundle in Embed PlugIns */,
+				D092AB782D9F933700F9BFA0 /* AnnoUI.bundle in Embed PlugIns */,
+				D092AB8A2D9F933700F9BFA0 /* zKBCrypto.bundle in Embed PlugIns */,
+				D092AB252D9F933500F9BFA0 /* zmLoader.bundle in Embed PlugIns */,
+				D092AB772D9F933700F9BFA0 /* zVideoUIEx.bundle in Embed PlugIns */,
+				D092AB452D9F933500F9BFA0 /* zPTApp.bundle in Embed PlugIns */,
+				D092AB1E2D9F933500F9BFA0 /* zNet.bundle in Embed PlugIns */,
+				D092AB5C2D9F933600F9BFA0 /* annoter.bundle in Embed PlugIns */,
+				D092AB1F2D9F933500F9BFA0 /* mcm.bundle in Embed PlugIns */,
+				D092AB542D9F933500F9BFA0 /* zVideoApp.bundle in Embed PlugIns */,
+				D092AB6F2D9F933600F9BFA0 /* zPTKBCrypto.bundle in Embed PlugIns */,
+				D092AB4B2D9F933500F9BFA0 /* aomagent.bundle in Embed PlugIns */,
+				D092AB732D9F933600F9BFA0 /* zWebService.bundle in Embed PlugIns */,
+				D092AB812D9F933700F9BFA0 /* zData.bundle in Embed PlugIns */,
+				D092AB5B2D9F933600F9BFA0 /* zApp.bundle in Embed PlugIns */,
+				D092AB762D9F933700F9BFA0 /* zPSApp.bundle in Embed PlugIns */,
+				D092AB702D9F933600F9BFA0 /* zlt.bundle in Embed PlugIns */,
+				D092AB332D9F933500F9BFA0 /* zMacRes.bundle in Embed PlugIns */,
+				D092AB632D9F933600F9BFA0 /* zMacResRetina.bundle in Embed PlugIns */,
+				D092AB7E2D9F933700F9BFA0 /* zConfUniversalUI.bundle in Embed PlugIns */,
+				D092AB892D9F933700F9BFA0 /* zTelemetryBiz.bundle in Embed PlugIns */,
+				D092AB482D9F933500F9BFA0 /* ssb_sdk.bundle in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		D092AB972D9F939F00F9BFA0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D092AC3E2D9F9B9B00F9BFA0 /* annoter.bundle in CopyFiles */,
+				D092AC3F2D9F9B9B00F9BFA0 /* AnnoUI.bundle in CopyFiles */,
+				D092AC402D9F9B9B00F9BFA0 /* aomagent.bundle in CopyFiles */,
+				D092AC412D9F9B9B00F9BFA0 /* mcm.bundle in CopyFiles */,
+				D092AC422D9F9B9B00F9BFA0 /* RingtoneRes.bundle in CopyFiles */,
+				D092AC432D9F9B9B00F9BFA0 /* ssb_sdk.bundle in CopyFiles */,
+				D092AC442D9F9B9B00F9BFA0 /* viperex.bundle in CopyFiles */,
+				D092AC452D9F9B9B00F9BFA0 /* zApp.bundle in CopyFiles */,
+				D092AC462D9F9B9B00F9BFA0 /* zAppUI.bundle in CopyFiles */,
+				D092AC472D9F9B9B00F9BFA0 /* zConfUniversalUI.bundle in CopyFiles */,
+				D092AC482D9F9B9B00F9BFA0 /* zData.bundle in CopyFiles */,
+				D092AC492D9F9B9B00F9BFA0 /* zKBCrypto.bundle in CopyFiles */,
+				D092AC4A2D9F9B9B00F9BFA0 /* zlt.bundle in CopyFiles */,
+				D092AC4B2D9F9B9B00F9BFA0 /* zMacRes.bundle in CopyFiles */,
+				D092AC4C2D9F9B9B00F9BFA0 /* zMacResRetina.bundle in CopyFiles */,
+				D092AC4D2D9F9B9B00F9BFA0 /* zmb.bundle in CopyFiles */,
+				D092AC4E2D9F9B9B00F9BFA0 /* zmLoader.bundle in CopyFiles */,
+				D092AC4F2D9F9B9B00F9BFA0 /* zNet.bundle in CopyFiles */,
+				D092AC502D9F9B9B00F9BFA0 /* ZoomTelemetry.bundle in CopyFiles */,
+				D092AC512D9F9B9B00F9BFA0 /* zPSApp.bundle in CopyFiles */,
+				D092AC522D9F9B9B00F9BFA0 /* zPTApp.bundle in CopyFiles */,
+				D092AC532D9F9B9B00F9BFA0 /* zPTKBCrypto.bundle in CopyFiles */,
+				D092AC542D9F9B9B00F9BFA0 /* zTelemetryBiz.bundle in CopyFiles */,
+				D092AC552D9F9B9B00F9BFA0 /* zVideoApp.bundle in CopyFiles */,
+				D092AC562D9F9B9B00F9BFA0 /* zVideoUIEx.bundle in CopyFiles */,
+				D092AC572D9F9B9B00F9BFA0 /* zWebService.bundle in CopyFiles */,
+				D092AC382D9F947100F9BFA0 /* airhost.app in CopyFiles */,
+				D092AC392D9F947100F9BFA0 /* aomhost.app in CopyFiles */,
+				D092AC3A2D9F947100F9BFA0 /* capHost.app in CopyFiles */,
+				D092AC3B2D9F947100F9BFA0 /* CptHost.app in CopyFiles */,
+				D092AC3C2D9F947100F9BFA0 /* SDK_Transcode.app in CopyFiles */,
+				D092AC3D2D9F947100F9BFA0 /* ZMScreenshot.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0C38FB2377FAD7A64B292387 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
-		27D501D948B08F1AFF304EEB /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
-		31A20BAB0DB5DC525690E8F4 /* Pods_RunnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		159E218B43112AE4E583AC68 /* Pods_RunnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		331C80D5294CF71000263BE5 /* RunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		331C80D7294CF71000263BE5 /* RunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerTests.swift; sourceTree = "<group>"; };
 		333000ED22D3DE5D00554162 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
@@ -257,93 +364,95 @@
 		33E51913231747F40026EE4D /* DebugProfile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DebugProfile.entitlements; sourceTree = "<group>"; };
 		33E51914231749380026EE4D /* Release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Release.entitlements; sourceTree = "<group>"; };
 		33E5194F232828860026EE4D /* AppInfo.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppInfo.xcconfig; sourceTree = "<group>"; };
-		38B16797C7AAE452AEC8511E /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
-		4F3514519A9DBF0C9B644AFC /* Pods-RunnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.release.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release.xcconfig"; sourceTree = "<group>"; };
-		5AE12B4D022D893E29D566DD /* Pods-RunnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		349D52CB20DD2FE8087CE2CD /* Pods-RunnerTests.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile.xcconfig"; sourceTree = "<group>"; };
+		49F437FA17CB50C25480427A /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
+		5820C8753CBB02891719D4C1 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
+		72748E500B62C3A4517EB100 /* Pods-RunnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.release.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release.xcconfig"; sourceTree = "<group>"; };
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		AFC772E319D45B098E263AE6 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB2450C6384E4779F6E6022C /* Pods-RunnerTests.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile.xcconfig"; sourceTree = "<group>"; };
-		D066EFBA2D8BB9B0000BD5C4 /* airhost.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = airhost.app; sourceTree = "<group>"; };
-		D066EFBB2D8BB9B0000BD5C4 /* annoter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = annoter.bundle; sourceTree = "<group>"; };
-		D066EFBC2D8BB9B0000BD5C4 /* AnnoUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AnnoUI.bundle; sourceTree = "<group>"; };
-		D066EFBD2D8BB9B0000BD5C4 /* aomagent.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = aomagent.bundle; sourceTree = "<group>"; };
-		D066EFBE2D8BB9B0000BD5C4 /* aomhost.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = aomhost.app; sourceTree = "<group>"; };
-		D066EFBF2D8BB9B0000BD5C4 /* asproxy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = asproxy.framework; sourceTree = "<group>"; };
-		D066EFC02D8BB9B0000BD5C4 /* capHost.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = capHost.app; sourceTree = "<group>"; };
-		D066EFC12D8BB9B0000BD5C4 /* cmmbiz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = cmmbiz.framework; sourceTree = "<group>"; };
-		D066EFC22D8BB9B0000BD5C4 /* cmmlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = cmmlib.framework; sourceTree = "<group>"; };
-		D066EFC32D8BB9B0000BD5C4 /* CptHost.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = CptHost.app; sourceTree = "<group>"; };
-		D066EFC42D8BB9B0000BD5C4 /* curl64.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = curl64.framework; sourceTree = "<group>"; };
-		D066EFC52D8BB9B0000BD5C4 /* libcares.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcares.dylib; sourceTree = "<group>"; };
-		D066EFC62D8BB9B0000BD5C4 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.dylib; sourceTree = "<group>"; };
-		D066EFC72D8BB9B0000BD5C4 /* libjson.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libjson.dylib; sourceTree = "<group>"; };
-		D066EFC82D8BB9B0000BD5C4 /* liblooper.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liblooper.dylib; sourceTree = "<group>"; };
-		D066EFC92D8BB9B0000BD5C4 /* libminizip.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libminizip.dylib; sourceTree = "<group>"; };
-		D066EFCA2D8BB9B0000BD5C4 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libssl.dylib; sourceTree = "<group>"; };
-		D066EFCB2D8BB9B0000BD5C4 /* libzContext.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzContext.dylib; sourceTree = "<group>"; };
-		D066EFCC2D8BB9B0000BD5C4 /* libzoombase_crypto_shared.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzoombase_crypto_shared.dylib; sourceTree = "<group>"; };
-		D066EFCD2D8BB9B0000BD5C4 /* libzoombase_shared.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzoombase_shared.dylib; sourceTree = "<group>"; };
-		D066EFCE2D8BB9B0000BD5C4 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Lottie.framework; sourceTree = "<group>"; };
-		D066EFCF2D8BB9B0000BD5C4 /* mcm.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mcm.bundle; sourceTree = "<group>"; };
-		D066EFD02D8BB9B0000BD5C4 /* nydus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nydus.framework; sourceTree = "<group>"; };
-		D066EFD12D8BB9B0000BD5C4 /* Prism.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Prism.framework; sourceTree = "<group>"; };
-		D066EFD22D8BB9B0000BD5C4 /* protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = protobuf.framework; sourceTree = "<group>"; };
-		D066EFD32D8BB9B0000BD5C4 /* PTUIBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PTUIBridge.framework; sourceTree = "<group>"; };
-		D066EFD42D8BB9B0000BD5C4 /* RingtoneRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RingtoneRes.bundle; sourceTree = "<group>"; };
-		D066EFD52D8BB9B0000BD5C4 /* SDK_Transcode.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = SDK_Transcode.app; sourceTree = "<group>"; };
-		D066EFD62D8BB9B0000BD5C4 /* ssb_sdk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ssb_sdk.bundle; sourceTree = "<group>"; };
-		D066EFD72D8BB9B0000BD5C4 /* SwiftZoomKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftZoomKit.framework; sourceTree = "<group>"; };
-		D066EFD82D8BB9B0000BD5C4 /* tp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = tp.framework; sourceTree = "<group>"; };
-		D066EFD92D8BB9B0000BD5C4 /* util.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = util.framework; sourceTree = "<group>"; };
-		D066EFDA2D8BB9B0000BD5C4 /* viper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = viper.framework; sourceTree = "<group>"; };
-		D066EFDB2D8BB9B0000BD5C4 /* viperex.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = viperex.bundle; sourceTree = "<group>"; };
-		D066EFDC2D8BB9B0000BD5C4 /* vtAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = vtAdapter.framework; sourceTree = "<group>"; };
-		D066EFDD2D8BB9B0000BD5C4 /* xmpp_framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = xmpp_framework.framework; sourceTree = "<group>"; };
-		D066EFDE2D8BB9B0000BD5C4 /* zApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zApp.bundle; sourceTree = "<group>"; };
-		D066EFDF2D8BB9B0000BD5C4 /* zAppUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zAppUI.bundle; sourceTree = "<group>"; };
-		D066EFE02D8BB9B0000BD5C4 /* zbt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = zbt.dylib; sourceTree = "<group>"; };
-		D066EFE12D8BB9B0000BD5C4 /* zBusinessUIComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = zBusinessUIComponent.framework; sourceTree = "<group>"; };
-		D066EFE22D8BB9B0000BD5C4 /* zChatComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = zChatComponent.framework; sourceTree = "<group>"; };
-		D066EFE32D8BB9B0000BD5C4 /* zConfUniversalUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zConfUniversalUI.bundle; sourceTree = "<group>"; };
-		D066EFE42D8BB9B0000BD5C4 /* zData.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zData.bundle; sourceTree = "<group>"; };
-		D066EFE52D8BB9B0000BD5C4 /* zEventTracker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = zEventTracker.framework; sourceTree = "<group>"; };
-		D066EFE62D8BB9B0000BD5C4 /* zKBCrypto.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zKBCrypto.bundle; sourceTree = "<group>"; };
-		D066EFE72D8BB9B0000BD5C4 /* zlt.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zlt.bundle; sourceTree = "<group>"; };
-		D066EFE82D8BB9B0000BD5C4 /* zMacRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zMacRes.bundle; sourceTree = "<group>"; };
-		D066EFE92D8BB9B0000BD5C4 /* zMacResRetina.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zMacResRetina.bundle; sourceTree = "<group>"; };
-		D066EFEA2D8BB9B0000BD5C4 /* zmb.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zmb.bundle; sourceTree = "<group>"; };
-		D066EFEB2D8BB9B0000BD5C4 /* ZMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZMDB.framework; sourceTree = "<group>"; };
-		D066EFEC2D8BB9B0000BD5C4 /* zmLoader.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zmLoader.bundle; sourceTree = "<group>"; };
-		D066EFED2D8BB9B0000BD5C4 /* ZMScreenshot.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = ZMScreenshot.app; sourceTree = "<group>"; };
-		D066EFEE2D8BB9B0000BD5C4 /* ZMScreenshotKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZMScreenshotKit.framework; sourceTree = "<group>"; };
-		D066EFEF2D8BB9B0000BD5C4 /* zMsgAppCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = zMsgAppCommon.framework; sourceTree = "<group>"; };
-		D066EFF02D8BB9B0000BD5C4 /* zNet.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zNet.bundle; sourceTree = "<group>"; };
-		D066EFF12D8BB9B0000BD5C4 /* zNetUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = zNetUtils.framework; sourceTree = "<group>"; };
-		D066EFF22D8BB9B0000BD5C4 /* ZoomAIC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZoomAIC.framework; sourceTree = "<group>"; };
-		D066EFF32D8BB9B0000BD5C4 /* ZoomAppUISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZoomAppUISDK.framework; sourceTree = "<group>"; };
-		D066EFF42D8BB9B0000BD5C4 /* ZoomKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZoomKit.framework; sourceTree = "<group>"; };
-		D066EFF52D8BB9B0000BD5C4 /* ZoomMeetingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZoomMeetingBridge.framework; sourceTree = "<group>"; };
-		D066EFF62D8BB9B0000BD5C4 /* ZoomSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZoomSDK.framework; sourceTree = "<group>"; };
-		D066EFF72D8BB9B0000BD5C4 /* ZoomSDKChatUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZoomSDKChatUI.framework; sourceTree = "<group>"; };
-		D066EFF82D8BB9B0000BD5C4 /* ZoomSDKCustomVideoUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZoomSDKCustomVideoUI.framework; sourceTree = "<group>"; };
-		D066EFF92D8BB9B0000BD5C4 /* ZoomSDKVideoUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZoomSDKVideoUI.framework; sourceTree = "<group>"; };
-		D066EFFA2D8BB9B0000BD5C4 /* ZoomSetting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZoomSetting.framework; sourceTree = "<group>"; };
-		D066EFFB2D8BB9B0000BD5C4 /* ZoomTask.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZoomTask.framework; sourceTree = "<group>"; };
-		D066EFFC2D8BB9B0000BD5C4 /* ZoomTelemetry.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZoomTelemetry.bundle; sourceTree = "<group>"; };
-		D066EFFD2D8BB9B0000BD5C4 /* ZoomUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZoomUnit.framework; sourceTree = "<group>"; };
-		D066EFFE2D8BB9B0000BD5C4 /* zPSApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zPSApp.bundle; sourceTree = "<group>"; };
-		D066EFFF2D8BB9B0000BD5C4 /* zPTApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zPTApp.bundle; sourceTree = "<group>"; };
-		D066F0002D8BB9B0000BD5C4 /* zPTKBCrypto.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zPTKBCrypto.bundle; sourceTree = "<group>"; };
-		D066F0012D8BB9B0000BD5C4 /* zTelemetryBiz.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zTelemetryBiz.bundle; sourceTree = "<group>"; };
-		D066F0022D8BB9B0000BD5C4 /* zUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = zUI.framework; sourceTree = "<group>"; };
-		D066F0032D8BB9B0000BD5C4 /* zUIClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = zUIClient.framework; sourceTree = "<group>"; };
-		D066F0042D8BB9B0000BD5C4 /* zUIRes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = zUIRes.framework; sourceTree = "<group>"; };
-		D066F0052D8BB9B0000BD5C4 /* zUnifyWebView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = zUnifyWebView.framework; sourceTree = "<group>"; };
-		D066F0062D8BB9B0000BD5C4 /* zVideoApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zVideoApp.bundle; sourceTree = "<group>"; };
-		D066F0072D8BB9B0000BD5C4 /* zVideoUIBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = zVideoUIBridge.framework; sourceTree = "<group>"; };
-		D066F0082D8BB9B0000BD5C4 /* zVideoUIEx.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zVideoUIEx.bundle; sourceTree = "<group>"; };
-		D066F0092D8BB9B0000BD5C4 /* zWebService.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = zWebService.bundle; sourceTree = "<group>"; };
+		D092AAC62D9F933300F9BFA0 /* ZoomMeetingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomMeetingBridge.framework; path = ../macPlugins/ZoomSDK/ZoomMeetingBridge.framework; sourceTree = "<group>"; };
+		D092AAC72D9F933300F9BFA0 /* ZoomSetting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomSetting.framework; path = ../macPlugins/ZoomSDK/ZoomSetting.framework; sourceTree = "<group>"; };
+		D092AAC82D9F933300F9BFA0 /* CptHost.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = CptHost.app; path = ../macPlugins/ZoomSDK/CptHost.app; sourceTree = "<group>"; };
+		D092AAC92D9F933300F9BFA0 /* protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = protobuf.framework; path = ../macPlugins/ZoomSDK/protobuf.framework; sourceTree = "<group>"; };
+		D092AACA2D9F933300F9BFA0 /* capHost.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = capHost.app; path = ../macPlugins/ZoomSDK/capHost.app; sourceTree = "<group>"; };
+		D092AACB2D9F933300F9BFA0 /* zNet.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zNet.bundle; path = ../macPlugins/ZoomSDK/zNet.bundle; sourceTree = "<group>"; };
+		D092AACC2D9F933300F9BFA0 /* mcm.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mcm.bundle; path = ../macPlugins/ZoomSDK/mcm.bundle; sourceTree = "<group>"; };
+		D092AACD2D9F933300F9BFA0 /* libjson.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjson.dylib; path = ../macPlugins/ZoomSDK/libjson.dylib; sourceTree = "<group>"; };
+		D092AACE2D9F933300F9BFA0 /* airhost.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = airhost.app; path = ../macPlugins/ZoomSDK/airhost.app; sourceTree = "<group>"; };
+		D092AACF2D9F933300F9BFA0 /* SDK_Transcode.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = SDK_Transcode.app; path = ../macPlugins/ZoomSDK/SDK_Transcode.app; sourceTree = "<group>"; };
+		D092AAD02D9F933300F9BFA0 /* zmb.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zmb.bundle; path = ../macPlugins/ZoomSDK/zmb.bundle; sourceTree = "<group>"; };
+		D092AAD12D9F933300F9BFA0 /* zmLoader.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zmLoader.bundle; path = ../macPlugins/ZoomSDK/zmLoader.bundle; sourceTree = "<group>"; };
+		D092AAD22D9F933300F9BFA0 /* vtAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vtAdapter.framework; path = ../macPlugins/ZoomSDK/vtAdapter.framework; sourceTree = "<group>"; };
+		D092AAD32D9F933300F9BFA0 /* zMsgAppCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = zMsgAppCommon.framework; path = ../macPlugins/ZoomSDK/zMsgAppCommon.framework; sourceTree = "<group>"; };
+		D092AAD42D9F933300F9BFA0 /* aomhost.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = aomhost.app; path = ../macPlugins/ZoomSDK/aomhost.app; sourceTree = "<group>"; };
+		D092AAD52D9F933300F9BFA0 /* zEventTracker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = zEventTracker.framework; path = ../macPlugins/ZoomSDK/zEventTracker.framework; sourceTree = "<group>"; };
+		D092AAD62D9F933300F9BFA0 /* cmmbiz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = cmmbiz.framework; path = ../macPlugins/ZoomSDK/cmmbiz.framework; sourceTree = "<group>"; };
+		D092AAD72D9F933300F9BFA0 /* ZoomSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomSDK.framework; path = ../macPlugins/ZoomSDK/ZoomSDK.framework; sourceTree = "<group>"; };
+		D092AAD82D9F933300F9BFA0 /* libminizip.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libminizip.dylib; path = ../macPlugins/ZoomSDK/libminizip.dylib; sourceTree = "<group>"; };
+		D092AAD92D9F933300F9BFA0 /* zMacRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zMacRes.bundle; path = ../macPlugins/ZoomSDK/zMacRes.bundle; sourceTree = "<group>"; };
+		D092AADA2D9F933300F9BFA0 /* zBusinessUIComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = zBusinessUIComponent.framework; path = ../macPlugins/ZoomSDK/zBusinessUIComponent.framework; sourceTree = "<group>"; };
+		D092AADB2D9F933300F9BFA0 /* zUIClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = zUIClient.framework; path = ../macPlugins/ZoomSDK/zUIClient.framework; sourceTree = "<group>"; };
+		D092AADC2D9F933300F9BFA0 /* cmmlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = cmmlib.framework; path = ../macPlugins/ZoomSDK/cmmlib.framework; sourceTree = "<group>"; };
+		D092AADD2D9F933300F9BFA0 /* SwiftZoomKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftZoomKit.framework; path = ../macPlugins/ZoomSDK/SwiftZoomKit.framework; sourceTree = "<group>"; };
+		D092AADE2D9F933300F9BFA0 /* viperex.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = viperex.bundle; path = ../macPlugins/ZoomSDK/viperex.bundle; sourceTree = "<group>"; };
+		D092AADF2D9F933300F9BFA0 /* ZoomSDKCustomVideoUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomSDKCustomVideoUI.framework; path = ../macPlugins/ZoomSDK/ZoomSDKCustomVideoUI.framework; sourceTree = "<group>"; };
+		D092AAE02D9F933300F9BFA0 /* zUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = zUI.framework; path = ../macPlugins/ZoomSDK/zUI.framework; sourceTree = "<group>"; };
+		D092AAE12D9F933300F9BFA0 /* PTUIBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PTUIBridge.framework; path = ../macPlugins/ZoomSDK/PTUIBridge.framework; sourceTree = "<group>"; };
+		D092AAE22D9F933300F9BFA0 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = ../macPlugins/ZoomSDK/libcrypto.dylib; sourceTree = "<group>"; };
+		D092AAE32D9F933300F9BFA0 /* zPTApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zPTApp.bundle; path = ../macPlugins/ZoomSDK/zPTApp.bundle; sourceTree = "<group>"; };
+		D092AAE42D9F933300F9BFA0 /* zUnifyWebView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = zUnifyWebView.framework; path = ../macPlugins/ZoomSDK/zUnifyWebView.framework; sourceTree = "<group>"; };
+		D092AAE52D9F933300F9BFA0 /* ssb_sdk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ssb_sdk.bundle; path = ../macPlugins/ZoomSDK/ssb_sdk.bundle; sourceTree = "<group>"; };
+		D092AAE62D9F933300F9BFA0 /* nydus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = nydus.framework; path = ../macPlugins/ZoomSDK/nydus.framework; sourceTree = "<group>"; };
+		D092AAE72D9F933300F9BFA0 /* aomagent.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = aomagent.bundle; path = ../macPlugins/ZoomSDK/aomagent.bundle; sourceTree = "<group>"; };
+		D092AAE82D9F933300F9BFA0 /* libzoombase_crypto_shared.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libzoombase_crypto_shared.dylib; path = ../macPlugins/ZoomSDK/libzoombase_crypto_shared.dylib; sourceTree = "<group>"; };
+		D092AAE92D9F933400F9BFA0 /* viper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = viper.framework; path = ../macPlugins/ZoomSDK/viper.framework; sourceTree = "<group>"; };
+		D092AAEA2D9F933400F9BFA0 /* ZoomKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomKit.framework; path = ../macPlugins/ZoomSDK/ZoomKit.framework; sourceTree = "<group>"; };
+		D092AAEB2D9F933400F9BFA0 /* ZoomSDKChatUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomSDKChatUI.framework; path = ../macPlugins/ZoomSDK/ZoomSDKChatUI.framework; sourceTree = "<group>"; };
+		D092AAEC2D9F933400F9BFA0 /* zVideoApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zVideoApp.bundle; path = ../macPlugins/ZoomSDK/zVideoApp.bundle; sourceTree = "<group>"; };
+		D092AAED2D9F933400F9BFA0 /* ZoomAIC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomAIC.framework; path = ../macPlugins/ZoomSDK/ZoomAIC.framework; sourceTree = "<group>"; };
+		D092AAEE2D9F933400F9BFA0 /* util.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = util.framework; path = ../macPlugins/ZoomSDK/util.framework; sourceTree = "<group>"; };
+		D092AAEF2D9F933400F9BFA0 /* liblooper.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liblooper.dylib; path = ../macPlugins/ZoomSDK/liblooper.dylib; sourceTree = "<group>"; };
+		D092AAF02D9F933400F9BFA0 /* zApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zApp.bundle; path = ../macPlugins/ZoomSDK/zApp.bundle; sourceTree = "<group>"; };
+		D092AAF12D9F933400F9BFA0 /* annoter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = annoter.bundle; path = ../macPlugins/ZoomSDK/annoter.bundle; sourceTree = "<group>"; };
+		D092AAF22D9F933400F9BFA0 /* zUIRes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = zUIRes.framework; path = ../macPlugins/ZoomSDK/zUIRes.framework; sourceTree = "<group>"; };
+		D092AAF32D9F933400F9BFA0 /* zChatComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = zChatComponent.framework; path = ../macPlugins/ZoomSDK/zChatComponent.framework; sourceTree = "<group>"; };
+		D092AAF42D9F933400F9BFA0 /* ZoomTask.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomTask.framework; path = ../macPlugins/ZoomSDK/ZoomTask.framework; sourceTree = "<group>"; };
+		D092AAF52D9F933400F9BFA0 /* zMacResRetina.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zMacResRetina.bundle; path = ../macPlugins/ZoomSDK/zMacResRetina.bundle; sourceTree = "<group>"; };
+		D092AAF62D9F933400F9BFA0 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = ../macPlugins/ZoomSDK/Lottie.framework; sourceTree = "<group>"; };
+		D092AAF72D9F933400F9BFA0 /* RingtoneRes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = RingtoneRes.bundle; path = ../macPlugins/ZoomSDK/RingtoneRes.bundle; sourceTree = "<group>"; };
+		D092AAF82D9F933400F9BFA0 /* ZMScreenshotKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZMScreenshotKit.framework; path = ../macPlugins/ZoomSDK/ZMScreenshotKit.framework; sourceTree = "<group>"; };
+		D092AAF92D9F933400F9BFA0 /* ZoomUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomUnit.framework; path = ../macPlugins/ZoomSDK/ZoomUnit.framework; sourceTree = "<group>"; };
+		D092AAFA2D9F933400F9BFA0 /* xmpp_framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = xmpp_framework.framework; path = ../macPlugins/ZoomSDK/xmpp_framework.framework; sourceTree = "<group>"; };
+		D092AAFB2D9F933400F9BFA0 /* ZMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZMDB.framework; path = ../macPlugins/ZoomSDK/ZMDB.framework; sourceTree = "<group>"; };
+		D092AAFC2D9F933400F9BFA0 /* zPTKBCrypto.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zPTKBCrypto.bundle; path = ../macPlugins/ZoomSDK/zPTKBCrypto.bundle; sourceTree = "<group>"; };
+		D092AAFD2D9F933400F9BFA0 /* zlt.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zlt.bundle; path = ../macPlugins/ZoomSDK/zlt.bundle; sourceTree = "<group>"; };
+		D092AAFE2D9F933400F9BFA0 /* zNetUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = zNetUtils.framework; path = ../macPlugins/ZoomSDK/zNetUtils.framework; sourceTree = "<group>"; };
+		D092AAFF2D9F933400F9BFA0 /* zWebService.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zWebService.bundle; path = ../macPlugins/ZoomSDK/zWebService.bundle; sourceTree = "<group>"; };
+		D092AB002D9F933400F9BFA0 /* ZoomSDKVideoUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomSDKVideoUI.framework; path = ../macPlugins/ZoomSDK/ZoomSDKVideoUI.framework; sourceTree = "<group>"; };
+		D092AB012D9F933400F9BFA0 /* zPSApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zPSApp.bundle; path = ../macPlugins/ZoomSDK/zPSApp.bundle; sourceTree = "<group>"; };
+		D092AB022D9F933400F9BFA0 /* zVideoUIEx.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zVideoUIEx.bundle; path = ../macPlugins/ZoomSDK/zVideoUIEx.bundle; sourceTree = "<group>"; };
+		D092AB032D9F933400F9BFA0 /* AnnoUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AnnoUI.bundle; path = ../macPlugins/ZoomSDK/AnnoUI.bundle; sourceTree = "<group>"; };
+		D092AB042D9F933400F9BFA0 /* zbt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = zbt.dylib; path = ../macPlugins/ZoomSDK/zbt.dylib; sourceTree = "<group>"; };
+		D092AB052D9F933400F9BFA0 /* zAppUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zAppUI.bundle; path = ../macPlugins/ZoomSDK/zAppUI.bundle; sourceTree = "<group>"; };
+		D092AB062D9F933400F9BFA0 /* asproxy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = asproxy.framework; path = ../macPlugins/ZoomSDK/asproxy.framework; sourceTree = "<group>"; };
+		D092AB072D9F933400F9BFA0 /* zConfUniversalUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zConfUniversalUI.bundle; path = ../macPlugins/ZoomSDK/zConfUniversalUI.bundle; sourceTree = "<group>"; };
+		D092AB082D9F933400F9BFA0 /* libzContext.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libzContext.dylib; path = ../macPlugins/ZoomSDK/libzContext.dylib; sourceTree = "<group>"; };
+		D092AB092D9F933400F9BFA0 /* zData.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zData.bundle; path = ../macPlugins/ZoomSDK/zData.bundle; sourceTree = "<group>"; };
+		D092AB0A2D9F933400F9BFA0 /* tp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = tp.framework; path = ../macPlugins/ZoomSDK/tp.framework; sourceTree = "<group>"; };
+		D092AB0B2D9F933400F9BFA0 /* libcares.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcares.dylib; path = ../macPlugins/ZoomSDK/libcares.dylib; sourceTree = "<group>"; };
+		D092AB0C2D9F933400F9BFA0 /* ZMScreenshot.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = ZMScreenshot.app; path = ../macPlugins/ZoomSDK/ZMScreenshot.app; sourceTree = "<group>"; };
+		D092AB0D2D9F933400F9BFA0 /* Prism.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Prism.framework; path = ../macPlugins/ZoomSDK/Prism.framework; sourceTree = "<group>"; };
+		D092AB0E2D9F933400F9BFA0 /* zTelemetryBiz.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zTelemetryBiz.bundle; path = ../macPlugins/ZoomSDK/zTelemetryBiz.bundle; sourceTree = "<group>"; };
+		D092AB0F2D9F933400F9BFA0 /* zKBCrypto.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zKBCrypto.bundle; path = ../macPlugins/ZoomSDK/zKBCrypto.bundle; sourceTree = "<group>"; };
+		D092AB102D9F933400F9BFA0 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = ../macPlugins/ZoomSDK/libssl.dylib; sourceTree = "<group>"; };
+		D092AB112D9F933500F9BFA0 /* ZoomAppUISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomAppUISDK.framework; path = ../macPlugins/ZoomSDK/ZoomAppUISDK.framework; sourceTree = "<group>"; };
+		D092AB122D9F933500F9BFA0 /* zVideoUIBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = zVideoUIBridge.framework; path = ../macPlugins/ZoomSDK/zVideoUIBridge.framework; sourceTree = "<group>"; };
+		D092AB132D9F933500F9BFA0 /* curl64.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = curl64.framework; path = ../macPlugins/ZoomSDK/curl64.framework; sourceTree = "<group>"; };
+		D092AB142D9F933500F9BFA0 /* ZoomTelemetry.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ZoomTelemetry.bundle; path = ../macPlugins/ZoomSDK/ZoomTelemetry.bundle; sourceTree = "<group>"; };
+		D092AB152D9F933500F9BFA0 /* libzoombase_shared.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libzoombase_shared.dylib; path = ../macPlugins/ZoomSDK/libzoombase_shared.dylib; sourceTree = "<group>"; };
+		DD4E9E40C402F6FC71B81C01 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
+		E2CA13FA0BCB7C9C16E69AF5 /* Pods-RunnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E98FF398C3AD4C7688B596D7 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,7 +460,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7085E890EB3EEF040B654DC2 /* Pods_RunnerTests.framework in Frameworks */,
+				2974C29D2B0824B92F028A90 /* Pods_RunnerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,70 +468,70 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D066F07A2D8BB9D6000BD5C4 /* tp.framework in Frameworks */,
-				D066F0182D8BB9B0000BD5C4 /* libjson.dylib in Frameworks */,
-				D066F01C2D8BB9B1000BD5C4 /* libzContext.dylib in Frameworks */,
-				D066F07E2D8BB9D6000BD5C4 /* viper.framework in Frameworks */,
-				D066F0172D8BB9B0000BD5C4 /* libcrypto.dylib in Frameworks */,
-				D066F0312D8BB9B1000BD5C4 /* zbt.dylib in Frameworks */,
-				D066F05B2D8BB9D5000BD5C4 /* asproxy.framework in Frameworks */,
-				D066F08F2D8BB9D7000BD5C4 /* zMsgAppCommon.framework in Frameworks */,
-				D066F08B2D8BB9D7000BD5C4 /* ZMDB.framework in Frameworks */,
-				D066F05D2D8BB9D6000BD5C4 /* cmmbiz.framework in Frameworks */,
-				D066F0B12D8BB9D8000BD5C4 /* zVideoUIBridge.framework in Frameworks */,
-				D066F06C2D8BB9D6000BD5C4 /* Lottie.framework in Frameworks */,
-				D066F07C2D8BB9D6000BD5C4 /* util.framework in Frameworks */,
-				D066F0A32D8BB9D7000BD5C4 /* ZoomSetting.framework in Frameworks */,
-				D066F0912D8BB9D7000BD5C4 /* zNetUtils.framework in Frameworks */,
-				D066F0782D8BB9D6000BD5C4 /* SwiftZoomKit.framework in Frameworks */,
-				D066F0A52D8BB9D7000BD5C4 /* ZoomTask.framework in Frameworks */,
-				D066F01E2D8BB9B1000BD5C4 /* libzoombase_shared.dylib in Frameworks */,
-				D066F0AD2D8BB9D8000BD5C4 /* zUIRes.framework in Frameworks */,
-				D066F09F2D8BB9D7000BD5C4 /* ZoomSDKCustomVideoUI.framework in Frameworks */,
-				D066F0A12D8BB9D7000BD5C4 /* ZoomSDKVideoUI.framework in Frameworks */,
-				D066F0762D8BB9D6000BD5C4 /* PTUIBridge.framework in Frameworks */,
-				D066F0952D8BB9D7000BD5C4 /* ZoomAppUISDK.framework in Frameworks */,
-				D066F09D2D8BB9D7000BD5C4 /* ZoomSDKChatUI.framework in Frameworks */,
-				D066F01A2D8BB9B0000BD5C4 /* libminizip.dylib in Frameworks */,
-				D066F0612D8BB9D6000BD5C4 /* curl64.framework in Frameworks */,
-				D066F01B2D8BB9B1000BD5C4 /* libssl.dylib in Frameworks */,
-				D066F0702D8BB9D6000BD5C4 /* Pods_Runner.framework in Frameworks */,
-				D066F0972D8BB9D7000BD5C4 /* ZoomKit.framework in Frameworks */,
-				D066F0742D8BB9D6000BD5C4 /* protobuf.framework in Frameworks */,
-				D066F09B2D8BB9D7000BD5C4 /* ZoomSDK.framework in Frameworks */,
-				D066F0852D8BB9D7000BD5C4 /* zBusinessUIComponent.framework in Frameworks */,
-				D066F05F2D8BB9D6000BD5C4 /* cmmlib.framework in Frameworks */,
-				D066F0AF2D8BB9D8000BD5C4 /* zUnifyWebView.framework in Frameworks */,
-				D066F0822D8BB9D6000BD5C4 /* xmpp_framework.framework in Frameworks */,
-				D066F06E2D8BB9D6000BD5C4 /* nydus.framework in Frameworks */,
-				D066F0892D8BB9D7000BD5C4 /* zEventTracker.framework in Frameworks */,
-				D066F0A92D8BB9D8000BD5C4 /* zUI.framework in Frameworks */,
-				D066F0722D8BB9D6000BD5C4 /* Prism.framework in Frameworks */,
-				D066F0872D8BB9D7000BD5C4 /* zChatComponent.framework in Frameworks */,
-				D066F0A72D8BB9D8000BD5C4 /* ZoomUnit.framework in Frameworks */,
-				D066F0162D8BB9B0000BD5C4 /* libcares.dylib in Frameworks */,
-				D066F0932D8BB9D7000BD5C4 /* ZoomAIC.framework in Frameworks */,
-				D066F0802D8BB9D6000BD5C4 /* vtAdapter.framework in Frameworks */,
-				D066F01D2D8BB9B1000BD5C4 /* libzoombase_crypto_shared.dylib in Frameworks */,
-				D066F0AB2D8BB9D8000BD5C4 /* zUIClient.framework in Frameworks */,
-				D066F0992D8BB9D7000BD5C4 /* ZoomMeetingBridge.framework in Frameworks */,
-				D066F08D2D8BB9D7000BD5C4 /* ZMScreenshotKit.framework in Frameworks */,
-				D066F0192D8BB9B0000BD5C4 /* liblooper.dylib in Frameworks */,
+				D092AB942D9F933800F9BFA0 /* libzoombase_shared.dylib in Frameworks */,
+				D092AB4E2D9F933500F9BFA0 /* viper.framework in Frameworks */,
+				D092AB382D9F933500F9BFA0 /* cmmlib.framework in Frameworks */,
+				D092AB822D9F933700F9BFA0 /* tp.framework in Frameworks */,
+				D092AB8F2D9F933800F9BFA0 /* zVideoUIBridge.framework in Frameworks */,
+				D092AB572D9F933600F9BFA0 /* util.framework in Frameworks */,
+				D092AB5F2D9F933600F9BFA0 /* zChatComponent.framework in Frameworks */,
+				D092AB3D2D9F933500F9BFA0 /* ZoomSDKCustomVideoUI.framework in Frameworks */,
+				D092AB262D9F933500F9BFA0 /* vtAdapter.framework in Frameworks */,
+				D092AB202D9F933500F9BFA0 /* libjson.dylib in Frameworks */,
+				D092AB792D9F933700F9BFA0 /* zbt.dylib in Frameworks */,
+				D092AB3F2D9F933500F9BFA0 /* zUI.framework in Frameworks */,
+				D092AB8D2D9F933700F9BFA0 /* ZoomAppUISDK.framework in Frameworks */,
+				D092AB912D9F933800F9BFA0 /* curl64.framework in Frameworks */,
+				D092AB6B2D9F933600F9BFA0 /* xmpp_framework.framework in Frameworks */,
+				D092AB2D2D9F933500F9BFA0 /* cmmbiz.framework in Frameworks */,
+				D092AB7C2D9F933700F9BFA0 /* asproxy.framework in Frameworks */,
+				D092AB282D9F933500F9BFA0 /* zMsgAppCommon.framework in Frameworks */,
+				D092AB2F2D9F933500F9BFA0 /* ZoomSDK.framework in Frameworks */,
+				D092AB2B2D9F933500F9BFA0 /* zEventTracker.framework in Frameworks */,
+				D092AB412D9F933500F9BFA0 /* PTUIBridge.framework in Frameworks */,
+				D092AB712D9F933600F9BFA0 /* zNetUtils.framework in Frameworks */,
+				D092AB842D9F933700F9BFA0 /* libcares.dylib in Frameworks */,
+				D092AB3A2D9F933500F9BFA0 /* SwiftZoomKit.framework in Frameworks */,
+				D092AB592D9F933600F9BFA0 /* liblooper.dylib in Frameworks */,
+				D092AB5D2D9F933600F9BFA0 /* zUIRes.framework in Frameworks */,
+				D092AB432D9F933500F9BFA0 /* libcrypto.dylib in Frameworks */,
+				D092AB692D9F933600F9BFA0 /* ZoomUnit.framework in Frameworks */,
+				D092AB312D9F933500F9BFA0 /* libminizip.dylib in Frameworks */,
+				D092AB462D9F933500F9BFA0 /* zUnifyWebView.framework in Frameworks */,
+				D092AB872D9F933700F9BFA0 /* Prism.framework in Frameworks */,
+				D092AB612D9F933600F9BFA0 /* ZoomTask.framework in Frameworks */,
+				D092AB162D9F933500F9BFA0 /* ZoomMeetingBridge.framework in Frameworks */,
+				D092AB8B2D9F933700F9BFA0 /* libssl.dylib in Frameworks */,
+				D092AB182D9F933500F9BFA0 /* ZoomSetting.framework in Frameworks */,
+				D092AB552D9F933500F9BFA0 /* ZoomAIC.framework in Frameworks */,
+				D092AB742D9F933600F9BFA0 /* ZoomSDKVideoUI.framework in Frameworks */,
+				D092AB492D9F933500F9BFA0 /* nydus.framework in Frameworks */,
+				D092AB502D9F933500F9BFA0 /* ZoomKit.framework in Frameworks */,
+				D092AB6D2D9F933600F9BFA0 /* ZMDB.framework in Frameworks */,
+				D092AB672D9F933600F9BFA0 /* ZMScreenshotKit.framework in Frameworks */,
+				D092AB522D9F933500F9BFA0 /* ZoomSDKChatUI.framework in Frameworks */,
+				D092AB362D9F933500F9BFA0 /* zUIClient.framework in Frameworks */,
+				D092AB342D9F933500F9BFA0 /* zBusinessUIComponent.framework in Frameworks */,
+				DF65BE9C2F61B80AB466F91D /* Pods_Runner.framework in Frameworks */,
+				D092AB642D9F933600F9BFA0 /* Lottie.framework in Frameworks */,
+				D092AB7F2D9F933700F9BFA0 /* libzContext.dylib in Frameworks */,
+				D092AB4C2D9F933500F9BFA0 /* libzoombase_crypto_shared.dylib in Frameworks */,
+				D092AB1B2D9F933500F9BFA0 /* protobuf.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01E364DE4FBDD38E140CA37F /* Pods */ = {
+		0EC461975ADA688CE33FF21B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				27D501D948B08F1AFF304EEB /* Pods-Runner.debug.xcconfig */,
-				0C38FB2377FAD7A64B292387 /* Pods-Runner.release.xcconfig */,
-				38B16797C7AAE452AEC8511E /* Pods-Runner.profile.xcconfig */,
-				5AE12B4D022D893E29D566DD /* Pods-RunnerTests.debug.xcconfig */,
-				4F3514519A9DBF0C9B644AFC /* Pods-RunnerTests.release.xcconfig */,
-				CB2450C6384E4779F6E6022C /* Pods-RunnerTests.profile.xcconfig */,
+				5820C8753CBB02891719D4C1 /* Pods-Runner.debug.xcconfig */,
+				DD4E9E40C402F6FC71B81C01 /* Pods-Runner.release.xcconfig */,
+				49F437FA17CB50C25480427A /* Pods-Runner.profile.xcconfig */,
+				E2CA13FA0BCB7C9C16E69AF5 /* Pods-RunnerTests.debug.xcconfig */,
+				72748E500B62C3A4517EB100 /* Pods-RunnerTests.release.xcconfig */,
+				349D52CB20DD2FE8087CE2CD /* Pods-RunnerTests.profile.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -449,13 +558,12 @@
 		33CC10E42044A3C60003C045 = {
 			isa = PBXGroup;
 			children = (
-				D066F00A2D8BB9B0000BD5C4 /* ZoomSDK */,
 				33FAB671232836740065AC1E /* Runner */,
 				33CEB47122A05771004F2AC0 /* Flutter */,
 				331C80D6294CF71000263BE5 /* RunnerTests */,
 				33CC10EE2044A3C60003C045 /* Products */,
 				D73912EC22F37F3D000D13A0 /* Frameworks */,
-				01E364DE4FBDD38E140CA37F /* Pods */,
+				0EC461975ADA688CE33FF21B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -503,98 +611,91 @@
 			path = Runner;
 			sourceTree = "<group>";
 		};
-		D066F00A2D8BB9B0000BD5C4 /* ZoomSDK */ = {
-			isa = PBXGroup;
-			children = (
-				D066EFBA2D8BB9B0000BD5C4 /* airhost.app */,
-				D066EFBB2D8BB9B0000BD5C4 /* annoter.bundle */,
-				D066EFBC2D8BB9B0000BD5C4 /* AnnoUI.bundle */,
-				D066EFBD2D8BB9B0000BD5C4 /* aomagent.bundle */,
-				D066EFBE2D8BB9B0000BD5C4 /* aomhost.app */,
-				D066EFBF2D8BB9B0000BD5C4 /* asproxy.framework */,
-				D066EFC02D8BB9B0000BD5C4 /* capHost.app */,
-				D066EFC12D8BB9B0000BD5C4 /* cmmbiz.framework */,
-				D066EFC22D8BB9B0000BD5C4 /* cmmlib.framework */,
-				D066EFC32D8BB9B0000BD5C4 /* CptHost.app */,
-				D066EFC42D8BB9B0000BD5C4 /* curl64.framework */,
-				D066EFC52D8BB9B0000BD5C4 /* libcares.dylib */,
-				D066EFC62D8BB9B0000BD5C4 /* libcrypto.dylib */,
-				D066EFC72D8BB9B0000BD5C4 /* libjson.dylib */,
-				D066EFC82D8BB9B0000BD5C4 /* liblooper.dylib */,
-				D066EFC92D8BB9B0000BD5C4 /* libminizip.dylib */,
-				D066EFCA2D8BB9B0000BD5C4 /* libssl.dylib */,
-				D066EFCB2D8BB9B0000BD5C4 /* libzContext.dylib */,
-				D066EFCC2D8BB9B0000BD5C4 /* libzoombase_crypto_shared.dylib */,
-				D066EFCD2D8BB9B0000BD5C4 /* libzoombase_shared.dylib */,
-				D066EFCE2D8BB9B0000BD5C4 /* Lottie.framework */,
-				D066EFCF2D8BB9B0000BD5C4 /* mcm.bundle */,
-				D066EFD02D8BB9B0000BD5C4 /* nydus.framework */,
-				D066EFD12D8BB9B0000BD5C4 /* Prism.framework */,
-				D066EFD22D8BB9B0000BD5C4 /* protobuf.framework */,
-				D066EFD32D8BB9B0000BD5C4 /* PTUIBridge.framework */,
-				D066EFD42D8BB9B0000BD5C4 /* RingtoneRes.bundle */,
-				D066EFD52D8BB9B0000BD5C4 /* SDK_Transcode.app */,
-				D066EFD62D8BB9B0000BD5C4 /* ssb_sdk.bundle */,
-				D066EFD72D8BB9B0000BD5C4 /* SwiftZoomKit.framework */,
-				D066EFD82D8BB9B0000BD5C4 /* tp.framework */,
-				D066EFD92D8BB9B0000BD5C4 /* util.framework */,
-				D066EFDA2D8BB9B0000BD5C4 /* viper.framework */,
-				D066EFDB2D8BB9B0000BD5C4 /* viperex.bundle */,
-				D066EFDC2D8BB9B0000BD5C4 /* vtAdapter.framework */,
-				D066EFDD2D8BB9B0000BD5C4 /* xmpp_framework.framework */,
-				D066EFDE2D8BB9B0000BD5C4 /* zApp.bundle */,
-				D066EFDF2D8BB9B0000BD5C4 /* zAppUI.bundle */,
-				D066EFE02D8BB9B0000BD5C4 /* zbt.dylib */,
-				D066EFE12D8BB9B0000BD5C4 /* zBusinessUIComponent.framework */,
-				D066EFE22D8BB9B0000BD5C4 /* zChatComponent.framework */,
-				D066EFE32D8BB9B0000BD5C4 /* zConfUniversalUI.bundle */,
-				D066EFE42D8BB9B0000BD5C4 /* zData.bundle */,
-				D066EFE52D8BB9B0000BD5C4 /* zEventTracker.framework */,
-				D066EFE62D8BB9B0000BD5C4 /* zKBCrypto.bundle */,
-				D066EFE72D8BB9B0000BD5C4 /* zlt.bundle */,
-				D066EFE82D8BB9B0000BD5C4 /* zMacRes.bundle */,
-				D066EFE92D8BB9B0000BD5C4 /* zMacResRetina.bundle */,
-				D066EFEA2D8BB9B0000BD5C4 /* zmb.bundle */,
-				D066EFEB2D8BB9B0000BD5C4 /* ZMDB.framework */,
-				D066EFEC2D8BB9B0000BD5C4 /* zmLoader.bundle */,
-				D066EFED2D8BB9B0000BD5C4 /* ZMScreenshot.app */,
-				D066EFEE2D8BB9B0000BD5C4 /* ZMScreenshotKit.framework */,
-				D066EFEF2D8BB9B0000BD5C4 /* zMsgAppCommon.framework */,
-				D066EFF02D8BB9B0000BD5C4 /* zNet.bundle */,
-				D066EFF12D8BB9B0000BD5C4 /* zNetUtils.framework */,
-				D066EFF22D8BB9B0000BD5C4 /* ZoomAIC.framework */,
-				D066EFF32D8BB9B0000BD5C4 /* ZoomAppUISDK.framework */,
-				D066EFF42D8BB9B0000BD5C4 /* ZoomKit.framework */,
-				D066EFF52D8BB9B0000BD5C4 /* ZoomMeetingBridge.framework */,
-				D066EFF62D8BB9B0000BD5C4 /* ZoomSDK.framework */,
-				D066EFF72D8BB9B0000BD5C4 /* ZoomSDKChatUI.framework */,
-				D066EFF82D8BB9B0000BD5C4 /* ZoomSDKCustomVideoUI.framework */,
-				D066EFF92D8BB9B0000BD5C4 /* ZoomSDKVideoUI.framework */,
-				D066EFFA2D8BB9B0000BD5C4 /* ZoomSetting.framework */,
-				D066EFFB2D8BB9B0000BD5C4 /* ZoomTask.framework */,
-				D066EFFC2D8BB9B0000BD5C4 /* ZoomTelemetry.bundle */,
-				D066EFFD2D8BB9B0000BD5C4 /* ZoomUnit.framework */,
-				D066EFFE2D8BB9B0000BD5C4 /* zPSApp.bundle */,
-				D066EFFF2D8BB9B0000BD5C4 /* zPTApp.bundle */,
-				D066F0002D8BB9B0000BD5C4 /* zPTKBCrypto.bundle */,
-				D066F0012D8BB9B0000BD5C4 /* zTelemetryBiz.bundle */,
-				D066F0022D8BB9B0000BD5C4 /* zUI.framework */,
-				D066F0032D8BB9B0000BD5C4 /* zUIClient.framework */,
-				D066F0042D8BB9B0000BD5C4 /* zUIRes.framework */,
-				D066F0052D8BB9B0000BD5C4 /* zUnifyWebView.framework */,
-				D066F0062D8BB9B0000BD5C4 /* zVideoApp.bundle */,
-				D066F0072D8BB9B0000BD5C4 /* zVideoUIBridge.framework */,
-				D066F0082D8BB9B0000BD5C4 /* zVideoUIEx.bundle */,
-				D066F0092D8BB9B0000BD5C4 /* zWebService.bundle */,
-			);
-			path = ZoomSDK;
-			sourceTree = "<group>";
-		};
 		D73912EC22F37F3D000D13A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AFC772E319D45B098E263AE6 /* Pods_Runner.framework */,
-				31A20BAB0DB5DC525690E8F4 /* Pods_RunnerTests.framework */,
+				D092AACE2D9F933300F9BFA0 /* airhost.app */,
+				D092AAF12D9F933400F9BFA0 /* annoter.bundle */,
+				D092AB032D9F933400F9BFA0 /* AnnoUI.bundle */,
+				D092AAE72D9F933300F9BFA0 /* aomagent.bundle */,
+				D092AAD42D9F933300F9BFA0 /* aomhost.app */,
+				D092AB062D9F933400F9BFA0 /* asproxy.framework */,
+				D092AACA2D9F933300F9BFA0 /* capHost.app */,
+				D092AAD62D9F933300F9BFA0 /* cmmbiz.framework */,
+				D092AADC2D9F933300F9BFA0 /* cmmlib.framework */,
+				D092AAC82D9F933300F9BFA0 /* CptHost.app */,
+				D092AB132D9F933500F9BFA0 /* curl64.framework */,
+				D092AB0B2D9F933400F9BFA0 /* libcares.dylib */,
+				D092AAE22D9F933300F9BFA0 /* libcrypto.dylib */,
+				D092AACD2D9F933300F9BFA0 /* libjson.dylib */,
+				D092AAEF2D9F933400F9BFA0 /* liblooper.dylib */,
+				D092AAD82D9F933300F9BFA0 /* libminizip.dylib */,
+				D092AB102D9F933400F9BFA0 /* libssl.dylib */,
+				D092AB082D9F933400F9BFA0 /* libzContext.dylib */,
+				D092AAE82D9F933300F9BFA0 /* libzoombase_crypto_shared.dylib */,
+				D092AB152D9F933500F9BFA0 /* libzoombase_shared.dylib */,
+				D092AAF62D9F933400F9BFA0 /* Lottie.framework */,
+				D092AACC2D9F933300F9BFA0 /* mcm.bundle */,
+				D092AAE62D9F933300F9BFA0 /* nydus.framework */,
+				D092AB0D2D9F933400F9BFA0 /* Prism.framework */,
+				D092AAC92D9F933300F9BFA0 /* protobuf.framework */,
+				D092AAE12D9F933300F9BFA0 /* PTUIBridge.framework */,
+				D092AAF72D9F933400F9BFA0 /* RingtoneRes.bundle */,
+				D092AACF2D9F933300F9BFA0 /* SDK_Transcode.app */,
+				D092AAE52D9F933300F9BFA0 /* ssb_sdk.bundle */,
+				D092AADD2D9F933300F9BFA0 /* SwiftZoomKit.framework */,
+				D092AB0A2D9F933400F9BFA0 /* tp.framework */,
+				D092AAEE2D9F933400F9BFA0 /* util.framework */,
+				D092AAE92D9F933400F9BFA0 /* viper.framework */,
+				D092AADE2D9F933300F9BFA0 /* viperex.bundle */,
+				D092AAD22D9F933300F9BFA0 /* vtAdapter.framework */,
+				D092AAFA2D9F933400F9BFA0 /* xmpp_framework.framework */,
+				D092AAF02D9F933400F9BFA0 /* zApp.bundle */,
+				D092AB052D9F933400F9BFA0 /* zAppUI.bundle */,
+				D092AB042D9F933400F9BFA0 /* zbt.dylib */,
+				D092AADA2D9F933300F9BFA0 /* zBusinessUIComponent.framework */,
+				D092AAF32D9F933400F9BFA0 /* zChatComponent.framework */,
+				D092AB072D9F933400F9BFA0 /* zConfUniversalUI.bundle */,
+				D092AB092D9F933400F9BFA0 /* zData.bundle */,
+				D092AAD52D9F933300F9BFA0 /* zEventTracker.framework */,
+				D092AB0F2D9F933400F9BFA0 /* zKBCrypto.bundle */,
+				D092AAFD2D9F933400F9BFA0 /* zlt.bundle */,
+				D092AAD92D9F933300F9BFA0 /* zMacRes.bundle */,
+				D092AAF52D9F933400F9BFA0 /* zMacResRetina.bundle */,
+				D092AAD02D9F933300F9BFA0 /* zmb.bundle */,
+				D092AAFB2D9F933400F9BFA0 /* ZMDB.framework */,
+				D092AAD12D9F933300F9BFA0 /* zmLoader.bundle */,
+				D092AB0C2D9F933400F9BFA0 /* ZMScreenshot.app */,
+				D092AAF82D9F933400F9BFA0 /* ZMScreenshotKit.framework */,
+				D092AAD32D9F933300F9BFA0 /* zMsgAppCommon.framework */,
+				D092AACB2D9F933300F9BFA0 /* zNet.bundle */,
+				D092AAFE2D9F933400F9BFA0 /* zNetUtils.framework */,
+				D092AAED2D9F933400F9BFA0 /* ZoomAIC.framework */,
+				D092AB112D9F933500F9BFA0 /* ZoomAppUISDK.framework */,
+				D092AAEA2D9F933400F9BFA0 /* ZoomKit.framework */,
+				D092AAC62D9F933300F9BFA0 /* ZoomMeetingBridge.framework */,
+				D092AAD72D9F933300F9BFA0 /* ZoomSDK.framework */,
+				D092AAEB2D9F933400F9BFA0 /* ZoomSDKChatUI.framework */,
+				D092AADF2D9F933300F9BFA0 /* ZoomSDKCustomVideoUI.framework */,
+				D092AB002D9F933400F9BFA0 /* ZoomSDKVideoUI.framework */,
+				D092AAC72D9F933300F9BFA0 /* ZoomSetting.framework */,
+				D092AAF42D9F933400F9BFA0 /* ZoomTask.framework */,
+				D092AB142D9F933500F9BFA0 /* ZoomTelemetry.bundle */,
+				D092AAF92D9F933400F9BFA0 /* ZoomUnit.framework */,
+				D092AB012D9F933400F9BFA0 /* zPSApp.bundle */,
+				D092AAE32D9F933300F9BFA0 /* zPTApp.bundle */,
+				D092AAFC2D9F933400F9BFA0 /* zPTKBCrypto.bundle */,
+				D092AB0E2D9F933400F9BFA0 /* zTelemetryBiz.bundle */,
+				D092AAE02D9F933300F9BFA0 /* zUI.framework */,
+				D092AADB2D9F933300F9BFA0 /* zUIClient.framework */,
+				D092AAF22D9F933400F9BFA0 /* zUIRes.framework */,
+				D092AAE42D9F933300F9BFA0 /* zUnifyWebView.framework */,
+				D092AAEC2D9F933400F9BFA0 /* zVideoApp.bundle */,
+				D092AB122D9F933500F9BFA0 /* zVideoUIBridge.framework */,
+				D092AB022D9F933400F9BFA0 /* zVideoUIEx.bundle */,
+				D092AAFF2D9F933400F9BFA0 /* zWebService.bundle */,
+				E98FF398C3AD4C7688B596D7 /* Pods_Runner.framework */,
+				159E218B43112AE4E583AC68 /* Pods_RunnerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -606,7 +707,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 331C80DE294CF71000263BE5 /* Build configuration list for PBXNativeTarget "RunnerTests" */;
 			buildPhases = (
-				5DC57F7289E8BCDCA611517D /* [CP] Check Pods Manifest.lock */,
+				CC218B32FA743BA0894C031B /* [CP] Check Pods Manifest.lock */,
 				331C80D1294CF70F00263BE5 /* Sources */,
 				331C80D2294CF70F00263BE5 /* Frameworks */,
 				331C80D3294CF70F00263BE5 /* Resources */,
@@ -625,12 +726,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33CC10FB2044A3C60003C045 /* Build configuration list for PBXNativeTarget "Runner" */;
 			buildPhases = (
-				5645D4797DD20AF2A80A5394 /* [CP] Check Pods Manifest.lock */,
+				225471CF30100B38FBA29567 /* [CP] Check Pods Manifest.lock */,
 				33CC10E92044A3C60003C045 /* Sources */,
 				33CC10EA2044A3C60003C045 /* Frameworks */,
 				33CC10EB2044A3C60003C045 /* Resources */,
 				33CC110E2044A8840003C045 /* Bundle Framework */,
 				3399D490228B24CF009A79C7 /* ShellScript */,
+				D092AB962D9F933800F9BFA0 /* Embed PlugIns */,
+				D092AB972D9F939F00F9BFA0 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -705,46 +808,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D066F0592D8BB9B1000BD5C4 /* zVideoUIEx.bundle in Resources */,
-				D066F0262D8BB9B1000BD5C4 /* SDK_Transcode.app in Resources */,
+				D092AB232D9F933500F9BFA0 /* SDK_Transcode.app in Resources */,
+				D092AB1D2D9F933500F9BFA0 /* capHost.app in Resources */,
+				D092AB1A2D9F933500F9BFA0 /* CptHost.app in Resources */,
+				D092AB2A2D9F933500F9BFA0 /* aomhost.app in Resources */,
+				D092AB862D9F933700F9BFA0 /* ZMScreenshot.app in Resources */,
 				33CC10F32044A3C60003C045 /* Assets.xcassets in Resources */,
-				D066F0342D8BB9B1000BD5C4 /* zConfUniversalUI.bundle in Resources */,
-				D066F00C2D8BB9B0000BD5C4 /* annoter.bundle in Resources */,
-				D066F0522D8BB9B1000BD5C4 /* zTelemetryBiz.bundle in Resources */,
-				D066F00B2D8BB9B0000BD5C4 /* airhost.app in Resources */,
-				D066F0202D8BB9B1000BD5C4 /* mcm.bundle in Resources */,
-				D066F0412D8BB9B1000BD5C4 /* zNet.bundle in Resources */,
-				D066F04F2D8BB9B1000BD5C4 /* zPSApp.bundle in Resources */,
-				D066F00F2D8BB9B0000BD5C4 /* aomhost.app in Resources */,
-				D066F05A2D8BB9B1000BD5C4 /* zWebService.bundle in Resources */,
-				D066F0572D8BB9B1000BD5C4 /* zVideoApp.bundle in Resources */,
-				D066F0372D8BB9B1000BD5C4 /* zKBCrypto.bundle in Resources */,
-				D066F0272D8BB9B1000BD5C4 /* ssb_sdk.bundle in Resources */,
-				D066F0502D8BB9B1000BD5C4 /* zPTApp.bundle in Resources */,
-				D066F0112D8BB9B0000BD5C4 /* capHost.app in Resources */,
-				D066F03B2D8BB9B1000BD5C4 /* zmb.bundle in Resources */,
-				D066F00E2D8BB9B0000BD5C4 /* aomagent.bundle in Resources */,
-				D066F02C2D8BB9B1000BD5C4 /* viperex.bundle in Resources */,
-				D066F03E2D8BB9B1000BD5C4 /* ZMScreenshot.app in Resources */,
-				D066F03D2D8BB9B1000BD5C4 /* zmLoader.bundle in Resources */,
-				D066F03A2D8BB9B1000BD5C4 /* zMacResRetina.bundle in Resources */,
-				D066F0382D8BB9B1000BD5C4 /* zlt.bundle in Resources */,
-				D066F0142D8BB9B0000BD5C4 /* CptHost.app in Resources */,
-				D066F0352D8BB9B1000BD5C4 /* zData.bundle in Resources */,
-				D066F0392D8BB9B1000BD5C4 /* zMacRes.bundle in Resources */,
-				D066F0252D8BB9B1000BD5C4 /* RingtoneRes.bundle in Resources */,
-				D066F0512D8BB9B1000BD5C4 /* zPTKBCrypto.bundle in Resources */,
-				D066F04D2D8BB9B1000BD5C4 /* ZoomTelemetry.bundle in Resources */,
-				D066F00D2D8BB9B0000BD5C4 /* AnnoUI.bundle in Resources */,
-				D066F02F2D8BB9B1000BD5C4 /* zApp.bundle in Resources */,
-				D066F0302D8BB9B1000BD5C4 /* zAppUI.bundle in Resources */,
 				33CC10F62044A3C60003C045 /* MainMenu.xib in Resources */,
+				D092AB222D9F933500F9BFA0 /* airhost.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		225471CF30100B38FBA29567 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Runner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3399D490228B24CF009A79C7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -783,29 +882,7 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/macos_assemble.sh && touch Flutter/ephemeral/tripwire";
 		};
-		5645D4797DD20AF2A80A5394 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Runner-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5DC57F7289E8BCDCA611517D /* [CP] Check Pods Manifest.lock */ = {
+		CC218B32FA743BA0894C031B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -878,7 +955,7 @@
 /* Begin XCBuildConfiguration section */
 		331C80DB294CF71000263BE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AE12B4D022D893E29D566DD /* Pods-RunnerTests.debug.xcconfig */;
+			baseConfigurationReference = E2CA13FA0BCB7C9C16E69AF5 /* Pods-RunnerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CURRENT_PROJECT_VERSION = 1;
@@ -893,7 +970,7 @@
 		};
 		331C80DC294CF71000263BE5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F3514519A9DBF0C9B644AFC /* Pods-RunnerTests.release.xcconfig */;
+			baseConfigurationReference = 72748E500B62C3A4517EB100 /* Pods-RunnerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CURRENT_PROJECT_VERSION = 1;
@@ -908,7 +985,7 @@
 		};
 		331C80DD294CF71000263BE5 /* Profile */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB2450C6384E4779F6E6022C /* Pods-RunnerTests.profile.xcconfig */;
+			baseConfigurationReference = 349D52CB20DD2FE8087CE2CD /* Pods-RunnerTests.profile.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CURRENT_PROJECT_VERSION = 1;
@@ -955,6 +1032,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = "/Users/justin/Documents/zoom_flutter_sdk/example/macPlugins/ZoomSDK/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -962,6 +1040,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "/Users/justin/Documents/zoom_flutter_sdk/example/macPlugins/ZoomSDK/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -979,18 +1058,10 @@
 				CODE_SIGN_ENTITLEMENTS = Runner/DebugProfile.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ZoomSDK",
-				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ZoomSDK",
 				);
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1039,6 +1110,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = "/Users/justin/Documents/zoom_flutter_sdk/example/macPlugins/ZoomSDK/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1052,6 +1124,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "/Users/justin/Documents/zoom_flutter_sdk/example/macPlugins/ZoomSDK/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1095,6 +1168,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = "/Users/justin/Documents/zoom_flutter_sdk/example/macPlugins/ZoomSDK/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1102,6 +1176,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "/Users/justin/Documents/zoom_flutter_sdk/example/macPlugins/ZoomSDK/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -1119,18 +1194,10 @@
 				CODE_SIGN_ENTITLEMENTS = Runner/DebugProfile.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ZoomSDK",
-				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ZoomSDK",
 				);
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1147,18 +1214,10 @@
 				CODE_SIGN_ENTITLEMENTS = Runner/Release.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ZoomSDK",
-				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ZoomSDK",
 				);
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
