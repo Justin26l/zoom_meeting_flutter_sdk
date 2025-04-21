@@ -15,13 +15,12 @@ In order to work correctly there needs to be some platform specific setup. Check
 
 
 <details><summary>Android</summary>
-download zoom sdk for android by running this command in terminal
+download zoom sdk (mobilertc.aar) for android :  
+https://www.dropbox.com/scl/fi/krasgg3f82pru38wbsb3o/mobilertc.aar?rlkey=mpq34pxe2ipjikks34mapytd6&st=txhipze8&dl=0
 
-```
-dart run zoom_meeting_flutter_sdk:download
-```
-thin command will download mobilertc.aar into package directory  
-"/Users/justin/.pub-cache/hosted/pub.dev/zoom_meeting_flutter_sdk/android/mobilertc/" 
+put it as 
+`/Users/YourName/.pub-cache/hosted/pub.dev/zoom_meeting_flutter_sdk<PackageVersion>/android/mobilertc/mobilertc.aar`
+
 </details>
 
 <details><summary>iOS</summary>

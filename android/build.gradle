@@ -99,6 +99,6 @@ dependencies {
 
     // implementation project(path: ':commonlib')
     // implementation project(path: ':mobilertc')
-    api(name: 'commonlib', ext: 'aar')
+    // api(name: 'commonlib', ext: 'aar')
     api(name: 'mobilertc', ext: 'aar')
 }
